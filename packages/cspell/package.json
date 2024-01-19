@@ -1,0 +1,39 @@
+{
+  "name": "@raipiot-infra/cspell",
+  "version": "0.0.0",
+  "description": "Collection of internal cspell dicts.",
+  "author": "Bruce Song <recall4056@gmail.com> (https://github.com/recallwei/)",
+  "homepage": "https://github.com/raipiot/raipiot-infra#readme",
+  "bugs": "https://github.com/raipiot/raipiot-infra/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/raipiot/raipiot-infra.git",
+    "directory": "packages/prettier"
+  },
+  "keywords": [
+    "raipiot",
+    "cspell",
+    "cspell-dict"
+  ],
+  "files": [
+    "dict/common.txt",
+    "cspell-ext.json"
+  ],
+  "exports": {
+    ".": "./cspell-ext.json",
+    "./cspell": "./cspell-ext.json",
+    "./cspell-ext.json": "./cspell-ext.json"
+  },
+  "scripts": {
+    "cspell:check": "cspell --no-progress --show-suggestions --show-context --cache **",
+    "sort:dict": "sort -u -o dict/raipiot.txt dict/raipiot.txt",
+    "prepublish": "sort:dict"
+  },
+  "peerDependencies": {
+    "cspell": ">=8.3.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,29 @@
+{
+  "name": "@raipiot-infra/prettier",
+  "version": "0.0.0",
+  "description": "Collection of internal Prettier configurations.",
+  "author": "Bruce Song <recall4056@gmail.com> (https://github.com/recallwei/)",
+  "homepage": "https://github.com/raipiot/raipiot-infra#readme",
+  "bugs": "https://github.com/raipiot/raipiot-infra/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/raipiot/raipiot-infra.git",
+    "directory": "packages/prettier"
+  },
+  "keywords": [
+    "raipiot",
+    "prettier",
+    "prettier-config"
+  ],
+  "main": "index.json",
+  "scripts": {
+    "cspell:check": "cspell --no-progress --show-suggestions --show-context --cache **"
+  },
+  "peerDependencies": {
+    "prettier": ">=3.2.4"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "MIT"
+}

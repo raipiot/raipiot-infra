@@ -1,0 +1,51 @@
+{
+  "name": "raipiot-infra",
+  "description": "raipiot front-end infrastructure.",
+  "author": "Bruce Song <recall4056@gmail.com> (https://github.com/recallwei/)",
+  "scripts": {
+    "dev": "turbo dev",
+    "build": "turbo build",
+    "clean": "turbo clean && rm -rf node_modules",
+    "playground:dev": "turbo --filter=@raipiot-infra/vite-playground dev",
+    "cspell:sort:dict": "turbo --filter=@raipiot-infra/cspell sort:dict",
+    "cspell:check": "turbo cspell:check",
+    "type:check": "turbo type:check",
+    "prettier:check": "turbo prettier:check",
+    "prettier:fix": "turbo prettier:fix",
+    "eslint:check": "turbo eslint:check",
+    "eslint:fix": "turbo eslint:fix",
+    "cz": "git-cz",
+    "changeset": "pnpm changeset",
+    "changeset:version": "pnpm changeset version",
+    "changeset:publish": "pnpm changeset publish",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.27.1",
+    "@commitlint/cli": "^18.4.4",
+    "@commitlint/config-conventional": "^18.4.4",
+    "@raipiot-infra/cspell": "workspace:^",
+    "@raipiot-infra/prettier": "workspace:^",
+    "@raipiot-infra/tsconfig": "workspace:^",
+    "commitizen": "^4.3.0",
+    "cspell": "^8.3.2",
+    "cz-git": "^1.8.0",
+    "eslint": "^8.56.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.2.0",
+    "prettier": "^3.2.4",
+    "turbo": "^1.11.3",
+    "typescript": "^5.3.3"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-git"
+    }
+  },
+  "packageManager": "pnpm@8.0.0",
+  "engines": {
+    "node": ">=20"
+  },
+  "private": true,
+  "license": "MIT"
+}

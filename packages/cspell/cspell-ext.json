@@ -1,0 +1,39 @@
+{
+  "id": "raipiot",
+  "name": "raipiot",
+  "description": "raipiot dictionary for cspell.",
+  "readonly": true,
+  "dictionaryDefinitions": [
+    {
+      "name": "raipiot",
+      "path": "./dict/raipiot.txt",
+      "description": "raipiot dictionary for cspell."
+    }
+  ],
+  "dictionaries": [],
+  "languageSettings": [
+    {
+      "languageId": "*",
+      "locale": "*",
+      "includeRegExpList": [],
+      "ignoreRegExpList": [],
+      "patterns": [],
+      "dictionaries": ["raipiot"],
+      "dictionaryDefinitions": []
+    }
+  ],
+  "ignorePaths": [
+    ".github/workflows/**",
+    ".vscode/*.json",
+    "**/.vercel",
+    "**/dist/**",
+    "**/build/**",
+    "**/node_modules/**",
+    "**/public/**",
+    "**/assets/**",
+    "**/CHANGELOG.md",
+    "**/CONTRIBUTORS.md",
+    "pnpm-lock.yaml",
+    "README.md"
+  ]
+}

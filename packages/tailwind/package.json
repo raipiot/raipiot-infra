@@ -1,0 +1,34 @@
+{
+  "name": "@raipiot-infra/tailwind-config",
+  "version": "0.0.0",
+  "description": "Collection of internal TailwindCSS configurations.",
+  "author": "Bruce Song <recall4056@gmail.com> (https://github.com/recallwei/)",
+  "homepage": "https://github.com/raipiot/raipiot-infra#readme",
+  "bugs": "https://github.com/raipiot/raipiot-infra/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/raipiot/raipiot-infra.git",
+    "directory": "packages/tailwind-config"
+  },
+  "keywords": [
+    "raipiot",
+    "tailwind",
+    "tailwind-config"
+  ],
+  "exports": {
+    ".": "./tailwind.config.ts"
+  },
+  "scripts": {
+    "cspell:check": "cspell --no-progress --show-suggestions --show-context --cache **"
+  },
+  "peerDependencies": {
+    "tailwindcss": "^3.4.1"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "MIT"
+}

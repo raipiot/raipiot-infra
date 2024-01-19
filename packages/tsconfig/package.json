@@ -1,0 +1,28 @@
+{
+  "name": "@raipiot-infra/tsconfig",
+  "version": "0.0.0",
+  "description": "Collection of internal TypeScript configurations.",
+  "author": "Bruce Song <recall4056@gmail.com> (https://github.com/recallwei/)",
+  "homepage": "https://github.com/raipiot/raipiot-infra#readme",
+  "bugs": "https://github.com/raipiot/raipiot-infra/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/raipiot/raipiot-infra.git",
+    "directory": "packages/tsconfig"
+  },
+  "keywords": [
+    "raipiot",
+    "tsconfig",
+    "typescript-config"
+  ],
+  "scripts": {
+    "cspell:check": "cspell --no-progress --show-suggestions --show-context --cache **"
+  },
+  "peerDependencies": {
+    "eslint": ">=8.56.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "MIT"
+}
