@@ -54,7 +54,7 @@ importers:
         specifier: ^5.3.3
         version: 5.3.3
 
-  apps/vite-playground:
+  apps/react-ts:
     dependencies:
       react:
         specifier: ^18.2.0
