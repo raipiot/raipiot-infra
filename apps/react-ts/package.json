@@ -1,5 +1,5 @@
 {
-  "name": "@raipiot-infra/vite-playground",
+  "name": "@raipiot-infra/react-ts",
   "type": "module",
   "scripts": {
     "dev": "vite",
