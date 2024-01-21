@@ -55,6 +55,7 @@ tabler
 tailwindcss
 tanstack
 tauri
+tsbuildinfo
 twotone
 typecheck
 unimport

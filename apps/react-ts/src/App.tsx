@@ -30,8 +30,8 @@ function App() {
           />
         </a>
       </div>
-      <h1>Vite + React</h1>
-      <h2>raipiot Vite Playground</h2>
+      <h1>Vite + React + TypeScript</h1>
+      <h2>raipiot Playground</h2>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>count is {count}</button>
         <p>
