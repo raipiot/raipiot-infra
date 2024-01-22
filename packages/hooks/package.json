@@ -1,18 +1,19 @@
 {
-  "name": "@raipiot-infra/config",
+  "name": "@raipiot-infra/hooks",
   "version": "0.0.0",
-  "description": "Collection of internal team configurations.",
+  "description": "Collection of internal hooks.",
   "author": "Bruce Song <recall4056@gmail.com> (https://github.com/recallwei/)",
   "homepage": "https://github.com/raipiot/raipiot-infra#readme",
   "bugs": "https://github.com/raipiot/raipiot-infra/issues",
   "repository": {
     "type": "git",
     "url": "https://github.com/raipiot/raipiot-infra.git",
-    "directory": "packages/config"
+    "directory": "packages/hooks"
   },
   "keywords": [
     "raipiot",
-    "config"
+    "hooks",
+    "react-hooks"
   ],
   "main": "dist/index.js",
   "module": "dist/index.mjs",

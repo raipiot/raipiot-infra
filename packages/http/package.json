@@ -1,18 +1,19 @@
 {
-  "name": "@raipiot-infra/config",
+  "name": "@raipiot-infra/http",
   "version": "0.0.0",
-  "description": "Collection of internal team configurations.",
+  "description": "Collection of internal antd components.",
   "author": "Bruce Song <recall4056@gmail.com> (https://github.com/recallwei/)",
   "homepage": "https://github.com/raipiot/raipiot-infra#readme",
   "bugs": "https://github.com/raipiot/raipiot-infra/issues",
   "repository": {
     "type": "git",
     "url": "https://github.com/raipiot/raipiot-infra.git",
-    "directory": "packages/config"
+    "directory": "packages/http"
   },
   "keywords": [
     "raipiot",
-    "config"
+    "axios",
+    "http"
   ],
   "main": "dist/index.js",
   "module": "dist/index.mjs",
