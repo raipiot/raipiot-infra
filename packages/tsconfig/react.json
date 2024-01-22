@@ -7,18 +7,6 @@
     "declarationMap": false,
     "jsx": "react-jsx",
     "lib": ["ESNext", "DOM", "DOM.Iterable"],
-    "moduleResolution": "Node",
-    "types": ["unplugin-icons/types/react"],
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["src/*"]
-    }
-  },
-  "include": ["src", "@types/**/*.d.ts"],
-  "exclude": ["node_modules"],
-  "references": [
-    {
-      "path": "./vite.json"
-    }
-  ]
+    "moduleResolution": "Node"
+  }
 }

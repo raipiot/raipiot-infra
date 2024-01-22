@@ -25,6 +25,5 @@
     "strictNullChecks": true,
     "target": "ESNext",
     "useDefineForClassFields": true
-  },
-  "exclude": ["node_modules"]
+  }
 }

@@ -28,6 +28,7 @@ cssinjs
 ctyun
 echarts
 embla
+esbenp
 esbuild
 gesturestart
 gsap
@@ -56,6 +57,7 @@ tailwindcss
 tanstack
 tauri
 tsbuildinfo
+tsup
 twotone
 typecheck
 unimport

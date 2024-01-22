@@ -1,0 +1,12 @@
+{
+  "name": "@raipiot-infra/utils",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "dev": "tsup --watch",
+    "build": "tsup",
+    "clean": "rimraf dist",
+    "type:check": "tsc --pretty --noEmit"
+  }
+}

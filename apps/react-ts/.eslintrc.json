@@ -1,4 +1,5 @@
 {
+  "extends": "@raipiot-infra/eslint-config-next",
   "root": true
   // "env": { "browser": true, "es2020": true },
   // "extends": [

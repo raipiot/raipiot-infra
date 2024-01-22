@@ -1,6 +1,15 @@
 # raipiot-infra
 
-raipiot infra 用于存放我们的基础建设的配置文件、插件等。
+raipiot infra 用于存放我们的基础建设的配置文件、插件、组件库、工具库等。
+
+![npm](https://img.shields.io/npm/v/@raipiot-infra/tsconfig?color=%23EEE&label=tsconfig)
+![npm](https://img.shields.io/npm/v/@raipiot-infra/utils?color=%23EEE&label=utils)
+
+## Apps 和 Packages
+
+- [`cspell`](packages/cspell): 通用的 CSpell 配置
+- [`prettier`](packages/prettier): 通用的 Prettier 配置
+- [`tsconfig`](packages/tsconfig): 通用的 tsconfig 配置
 
 ## 在项目中使用
 
@@ -57,7 +66,7 @@ pnpm add -D prettier @raipiot-infra/prettier
 }
 ```
 
-### TypeScript
+### tsconfig
 
 ```json
 {}
@@ -77,6 +86,57 @@ pnpm add -D prettier @raipiot-infra/prettier
 {
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "never",
+    "source.fixAll.eslint": "explicit",
+    "source.fixAll.stylelint": "never",
+    "source.fixAll.sortJSON": "never",
+    "source.organizeImports": "never"
+  },
+  "[javascript]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[scss]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[less]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[yaml]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
 }
 ```

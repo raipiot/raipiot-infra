@@ -1,0 +1,4 @@
+{
+  "extends": "@raipiot-infra/eslint-config-next",
+  "root": true
+}
