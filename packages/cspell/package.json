@@ -26,7 +26,7 @@
   },
   "scripts": {
     "cspell:check": "cspell --no-progress --show-suggestions --show-context --cache **",
-    "sort:dict": "sort -u -o dict/raipiot.txt dict/raipiot.txt",
+    "cspell:sort:dict": "sort -u -o dict/raipiot.txt dict/raipiot.txt",
     "prepublish": "sort:dict"
   },
   "peerDependencies": {

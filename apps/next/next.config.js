@@ -1,3 +1,7 @@
+const { bootstrapLog } = require('@raipiot-infra/bootstrap-animation')
+
+bootstrapLog()
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'standalone',

@@ -1,13 +1,13 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
-import { add } from '@raipiot-infra/utils'
+
+import { useState } from 'react'
+
+import viteLogo from '/vite.svg'
+
+import reactLogo from './assets/react.svg'
 
 function App() {
   const [count, setCount] = useState(0)
-
-  console.log(add(1, 2))
 
   return (
     <>
@@ -15,6 +15,7 @@ function App() {
         <a
           href="https://vitejs.dev"
           target="_blank"
+          rel="noreferrer"
         >
           <img
             src={viteLogo}
@@ -25,6 +26,7 @@ function App() {
         <a
           href="https://react.dev"
           target="_blank"
+          rel="noreferrer"
         >
           <img
             src={reactLogo}
@@ -36,7 +38,12 @@ function App() {
       <h1>Vite + React + TypeScript</h1>
       <h2>raipiot Playground</h2>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>count is {count}</button>
+        <button
+          type="button"
+          onClick={() => setCount((c) => c + 1)}
+        >
+          count is {count}
+        </button>
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>

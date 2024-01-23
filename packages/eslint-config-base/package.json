@@ -1,0 +1,30 @@
+{
+  "name": "@raipiot-infra/eslint-config-base",
+  "version": "0.0.0",
+  "description": "Base ESLint config for raipiot",
+  "author": "Bruce Song <recall4056@gmail.com> (https://github.com/recallwei/)",
+  "homepage": "https://github.com/raipiot/raipiot-infra#readme",
+  "bugs": "https://github.com/raipiot/raipiot-infra/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/raipiot/raipiot-infra.git",
+    "directory": "packages/eslint-config-base"
+  },
+  "keywords": [
+    "raipiot",
+    "eslint",
+    "eslint-config",
+    "eslint-config-base"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "cspell:check": "cspell --no-progress --show-suggestions --show-context --cache **"
+  },
+  "dependencies": {
+    "eslint-plugin-jsx-a11y": "6.8.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "MIT"
+}

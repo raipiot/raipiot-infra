@@ -12,10 +12,14 @@
       "outputs": ["dist/**", ".next/**", "!.next/cache/**"],
       "dotEnv": [".env.production.local", ".env.production", ".env.local", ".env"]
     },
+    "preview": {},
     "clean": {},
-    "lint": {},
+    "cspell:sort:dict": {},
     "cspell:check": {},
     "type:check": {},
-    "sort:dict": {}
+    "prettier:check": {},
+    "prettier:fix": {},
+    "eslint:check": {},
+    "eslint:fix": {}
   }
 }

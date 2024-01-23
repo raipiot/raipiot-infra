@@ -1,0 +1,38 @@
+{
+  "name": "@raipiot-infra/enums",
+  "version": "0.0.0",
+  "description": "Collection of internal enums.",
+  "author": "Bruce Song <recall4056@gmail.com> (https://github.com/recallwei/)",
+  "homepage": "https://github.com/raipiot/raipiot-infra#readme",
+  "bugs": "https://github.com/raipiot/raipiot-infra/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/raipiot/raipiot-infra.git",
+    "directory": "packages/enums"
+  },
+  "keywords": [
+    "raipiot",
+    "enums"
+  ],
+  "files": [
+    "dist"
+  ],
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "peerDependencies": {
+    "dayjs": "^1.11.10"
+  },
+  "scripts": {
+    "dev": "tsup --watch",
+    "build": "tsup",
+    "clean": "rimraf dist",
+    "type:check": "tsc --pretty --noEmit",
+    "cspell:check": "cspell --no-progress --show-suggestions --show-context --cache **",
+    "prepublishOnly": "pnpm build"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "MIT"
+}

@@ -7,16 +7,21 @@
     "build": "vite build",
     "preview": "vite preview",
     "clean": "rimraf node_modules",
-    "lint": "eslint .",
     "cspell:check": "cspell --no-progress --show-suggestions --show-context --cache **",
-    "type:check": "tsc --pretty --noEmit"
+    "type:check": "tsc --pretty --noEmit",
+    "prettier:check": "prettier --check .",
+    "prettier:fix": "prettier --write .",
+    "eslint:check": "eslint --ext .js,.jsx,.ts,.tsx .",
+    "eslint:fix": "eslint --ext .js,.jsx,.ts,.tsx . --fix"
   },
   "dependencies": {
+    "@raipiot-infra/utils": "workspace:*",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "@raipiot-infra/utils": "workspace:*"
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@raipiot-infra/bootstrap-animation": "workspace:^",
+    "@raipiot-infra/eslint-config-react": "workspace:*",
     "@types/react": "^18.2.48",
     "@types/react-dom": "^18.2.18",
     "@vitejs/plugin-react-swc": "^3.5.0",

@@ -14,9 +14,18 @@
     "raipiot",
     "utils"
   ],
+  "files": [
+    "dist"
+  ],
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
+  "peerDependencies": {
+    "dayjs": "^1.11.10"
+  },
+  "dependencies": {
+    "@raipiot-infra/enums": "workspace:*"
+  },
   "scripts": {
     "dev": "tsup --watch",
     "build": "tsup",

@@ -1,0 +1,46 @@
+{
+  "name": "@raipiot-infra/bootstrap-animation",
+  "version": "0.0.0",
+  "description": "Bootstrap animation for raipiot",
+  "author": "Bruce Song <recall4056@gmail.com> (https://github.com/recallwei/)",
+  "homepage": "https://github.com/raipiot/raipiot-infra#readme",
+  "bugs": "https://github.com/raipiot/raipiot-infra/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/raipiot/raipiot-infra.git",
+    "directory": "packages/bootstrap-animation"
+  },
+  "keywords": [
+    "raipiot",
+    "bootstrap-animation"
+  ],
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "dev": "tsup --watch",
+    "build": "tsup",
+    "clean": "rimraf dist",
+    "type:check": "tsc --pretty --noEmit",
+    "cspell:check": "cspell --no-progress --show-suggestions --show-context --cache **",
+    "prepublishOnly": "pnpm build"
+  },
+  "peerDependencies": {
+    "vite": "^5.0.0"
+  },
+  "dependencies": {
+    "@raipiot-infra/config": "workspace:*",
+    "figlet": "^1.7.0",
+    "gradient-string": "^2.0.2"
+  },
+  "devDependencies": {
+    "@types/figlet": "^1.5.8",
+    "@types/gradient-string": "^1.1.5",
+    "@types/node": "^20.11.5",
+    "vite": "^5.0.12"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "MIT"
+}

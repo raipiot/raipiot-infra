@@ -20,6 +20,7 @@ aliyuncs
 antd
 anticon
 autoplay
+classname
 clsx
 cnas
 commitlint
