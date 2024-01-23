@@ -1,5 +1,6 @@
 const { bootstrapLog } = require('@raipiot-infra/bootstrap-animation')
 
+// TODO: Now, bootstrap log will run twice, try to find a way to fix it.
 bootstrapLog()
 
 /** @type {import('next').NextConfig} */
