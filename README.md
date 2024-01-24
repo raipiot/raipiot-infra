@@ -1,14 +1,14 @@
 # raipiot-infra
 
-raipiot infra 是我们的基础建设仓库，是基于 Turborepo、Changesets、pnpm Workspace 的 Monorepo。用于存放我们的基础建设的前端工程化配置、通用配置文件、插件、组件库、工具类库等。
+raipiot infra 是我们的基础建设仓库，是基于 [`Turborepo`](https://turbo.build/repo)、[`Changesets`](https://github.com/changesets/changesets)、[`pnpm Workspace`](https://pnpm.io/workspaces) 的 Monorepo。用于存放我们的基础建设的**前端工程化配置**、**通用配置文件**、**插件**、**组件库**、**工具类库**等。
 
-![npm](https://img.shields.io/npm/v/@raipiot-infra/tsconfig?color=%23EEE&label=cspell)
+![npm](https://img.shields.io/npm/v/@raipiot-infra/cspell?color=%23EEE&label=cspell)
 ![npm](https://img.shields.io/npm/v/@raipiot-infra/tsconfig?color=%23EEE&label=tsconfig)
-![npm](https://img.shields.io/npm/v/@raipiot-infra/utils?color=%23EEE&label=utils)
+![npm](https://img.shields.io/npm/v/@raipiot-infra/utils?logo=npm&label=utils)
 
 ## Apps
 
-该 Monorepo 仓库 [`apps`](apps) 目录下存放的是演练场项目，用于测试基础建设的包。
+该 Monorepo 仓库 [`apps`](apps) 目录下存放的是演练场项目（Playground），用于测试基础建设的包。
 
 - [`next`](apps/next/): 基于 `Next.js` + `TypeScript`
 - [`react`](apps/react/): 基于 `React` + `Vite` + `TypeScript`
@@ -16,11 +16,26 @@ raipiot infra 是我们的基础建设仓库，是基于 Turborepo、Changesets�
 
 ## Packages
 
-- [`cspell`](packages/cspell): 通用的 CSpell 配置
-- [`prettier`](packages/prettier): 通用的 Prettier 配置
-- [`eslint`](packages/eslint): 通用的 ESLint 配置
-- [`commitlint`](packages/commitlint): 通用的 Commitlint 配置
-- [`tsconfig`](packages/tsconfig): 通用的 tsconfig 配置
+- [`antd`](packages/antd): 基于 [`antd`](https://ant.design/) 封装的业务组件库
+- [`auto-import`](packages/auto-import): [`unplugin-auto-import`](https://github.com/unplugin/unplugin-auto-import) 的预设配置，搭配 Vite 使用
+- [`axios`](packages/axios): 基于 [`axios`](https://axios-http.com/) 封装的网络请求库
+- [`bootstrap-animation`](packages/bootstrap-animation): 启动项目时打印的动画
+- [`commitlint-config`](packages/commitlint-config): 通用的 Commitlint 配置，用于检查提交信息是否符合规范、辅助生成提交信息
+- [`config`](packages/config): 通用的配置文件，包含一些与公司、品牌、团队相关的信息
+- [`cspell`](packages/cspell): 通用的 CSpell 配置，用于检查英文拼写
+- [`enums`](packages/enums): 通用的枚举，用于 TypeScript 项目
+- [`eslint-config`](packages/eslint-config): 通用的 ESLint 配置，该包默认使用 `eslint-config-react`
+- [`eslint-config-base`](packages/eslint-config-base): ESLint 的配置预设，用于构建 ESLint 配置文件
+- [`eslint-config-next`](packages/eslint-config-next): ESLint 的配置预设，用于 Next.js 项目
+- [`eslint-config-react`](packages/eslint-config-react): ESLint 的配置预设，用于 React 项目
+- [`eslint-config-react-native`](packages/eslint-config-react-native): ESLint 的配置预设，用于 React Native 项目
+- [`eslint-config-ts`](packages/eslint-config-ts): ESLint 的配置预设，用于 TypeScript 项目
+- [`eslint-config-vue`](packages/eslint-config-vue): ESLint 的配置预设，用于 Vue 项目
+- [`hooks`](packages/hooks): 通用的 React Hooks，用于 React 或 React Native 项目
+- [`prettier`](packages/prettier): 通用的 Prettier 配置，用于代码格式化
+- [`tailwind`](packages/tailwind)：通用的 TailwindCSS 配置
+- [`tsconfig`](packages/tsconfig): 通用的 tsconfig 配置，用于 TypeScript
+- [`utils`](packages/utils): 通用的工具类库
 
 ## 如何在其他项目中使用
 
