@@ -12,6 +12,7 @@ Popconfirm
 RFID
 Roboto
 Sider
+Turborepo
 Visio
 Zustand
 ahooks
