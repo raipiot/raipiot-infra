@@ -42,8 +42,16 @@ pnpm add -D cspell @raipiot-infra/cspell
 
 ### ESLint
 
+从 VSCode 插件中搜索并安装插件 **ESLint**。
+
+```bash
+pnpm add -D eslint @raipiot-infra/eslint-config
+```
+
 ```json
-{}
+{
+  "extends": "@raipiot-infra"
+}
 ```
 
 ### Prettier
@@ -69,7 +77,9 @@ pnpm add -D prettier @raipiot-infra/prettier
 ### tsconfig
 
 ```json
-{}
+{
+  "extends": "@raipiot-infra/tsconfig/base.json"
+}
 ```
 
 ### TailwindCSS

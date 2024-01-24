@@ -90,7 +90,7 @@ const simpleImportSortRules = {
 const unusedImportsRules = {
   'unused-imports/no-unused-imports': 'error',
   'unused-imports/no-unused-vars': [
-    'warn',
+    'error',
     {
       vars: 'all',
       varsIgnorePattern: '^_',
@@ -134,6 +134,7 @@ const typescriptEslintRules = {
   '@typescript-eslint/comma-dangle': 'off', // 由 Prettier 处理
   '@typescript-eslint/consistent-type-imports': 'error', // 强制使用 import type
   '@typescript-eslint/triple-slash-reference': 'off', // 允许使用 /// <reference path="" />
+  '@typescript-eslint/no-unused-vars': 'off', // 由 eslint-plugin-unused-imports 处理
   '@typescript-eslint/no-use-before-define': [
     'error',
     {

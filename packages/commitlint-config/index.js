@@ -1,6 +1,6 @@
 /** @type {import('cz-git').UserConfig} */
 module.exports = {
-  extends: ['@commitlint/config-conventional'],
+  extends: '@commitlint/config-conventional',
   prompt: {
     alias: {
       fd: 'docs: fix typos'

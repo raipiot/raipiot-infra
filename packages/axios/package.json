@@ -1,5 +1,5 @@
 {
-  "name": "@raipiot-infra/http",
+  "name": "@raipiot-infra/axios",
   "version": "0.0.0",
   "description": "Collection of internal antd components.",
   "author": "Bruce Song <recall4056@gmail.com> (https://github.com/recallwei/)",
@@ -8,16 +8,18 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/raipiot/raipiot-infra.git",
-    "directory": "packages/http"
+    "directory": "packages/axios"
   },
   "keywords": [
     "raipiot",
-    "axios",
-    "http"
+    "axios"
   ],
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "tsup --watch",
     "build": "tsup",
@@ -25,6 +27,9 @@
     "type:check": "tsc --pretty --noEmit",
     "cspell:check": "cspell --no-progress --show-suggestions --show-context --cache **",
     "prepublishOnly": "pnpm build"
+  },
+  "peerDependencies": {
+    "axios": "^1.6.5"
   },
   "publishConfig": {
     "access": "public"

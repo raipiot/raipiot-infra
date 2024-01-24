@@ -19,11 +19,18 @@
     "typescript"
   ],
   "main": "index.js",
+  "files": [
+    "index.js"
+  ],
   "scripts": {
-    "cspell:check": "cspell --no-progress --show-suggestions --show-context --cache **"
+    "cspell:check": "cspell --no-progress --show-suggestions --show-context --cache **",
+    "eslint:check": "eslint . --color",
+    "eslint:fix": "eslint . --color --fix",
+    "prettier:check": "prettier --check --ignore-unknown .",
+    "prettier:fix": "prettier --write --ignore-unknown ."
   },
   "peerDependencies": {
-    "eslint": ">=8.56.0",
+    "eslint": "^8.56.0",
     "typescript": ">=5.0.0"
   },
   "dependencies": {

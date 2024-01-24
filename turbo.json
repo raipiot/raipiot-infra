@@ -12,7 +12,11 @@
       "outputs": ["dist/**", ".next/**", "!.next/cache/**"],
       "dotEnv": [".env.production.local", ".env.production", ".env.local", ".env"]
     },
-    "preview": {},
+    "preview": {
+      "cache": false,
+      "persistent": true,
+      "dotEnv": [".env.preview.local", ".env.preview", ".env.local", ".env"]
+    },
     "clean": {},
     "cspell:sort:dict": {},
     "cspell:check": {},

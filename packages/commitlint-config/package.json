@@ -1,19 +1,19 @@
 {
-  "name": "@raipiot-infra/eslint-config",
+  "name": "@raipiot-infra/commitlint-config",
   "version": "0.0.0",
-  "description": "ESLint config for raipiot",
+  "description": "Commitlint config for raipiot",
   "author": "Bruce Song <recall4056@gmail.com> (https://github.com/recallwei/)",
   "homepage": "https://github.com/raipiot/raipiot-infra#readme",
   "bugs": "https://github.com/raipiot/raipiot-infra/issues",
   "repository": {
     "type": "git",
     "url": "https://github.com/raipiot/raipiot-infra.git",
-    "directory": "packages/eslint-config"
+    "directory": "packages/commitlint-config"
   },
   "keywords": [
     "raipiot",
-    "eslint",
-    "eslint-config"
+    "commitlint",
+    "commitlint-config"
   ],
   "main": "index.js",
   "files": [
@@ -27,11 +27,10 @@
     "prettier:fix": "prettier --write --ignore-unknown ."
   },
   "peerDependencies": {
-    "eslint": "^8.56.0",
-    "typescript": ">=5.0.0"
-  },
-  "dependencies": {
-    "@raipiot-infra/eslint-config-react": "workspace:*"
+    "@commitlint/cli": "^18.5.0",
+    "@commitlint/config-conventional": "^18.5.0",
+    "commitizen": "^4.3.0",
+    "cz-git": "^1.8.0"
   },
   "publishConfig": {
     "access": "public"

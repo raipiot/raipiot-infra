@@ -17,10 +17,12 @@
   ],
   "main": "index.json",
   "scripts": {
-    "cspell:check": "cspell --no-progress --show-suggestions --show-context --cache **"
+    "cspell:check": "cspell --no-progress --show-suggestions --show-context --cache **",
+    "prettier:check": "prettier --check --ignore-unknown .",
+    "prettier:fix": "prettier --write --ignore-unknown ."
   },
   "peerDependencies": {
-    "prettier": ">=3.2.4"
+    "prettier": "^3.2.4"
   },
   "publishConfig": {
     "access": "public"

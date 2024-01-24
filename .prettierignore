@@ -1,2 +1,4 @@
 .husky
 pnpm-lock.yaml
+node_modules
+dist
