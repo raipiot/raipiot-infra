@@ -100,6 +100,40 @@ importers:
         specifier: ^5.3.3
         version: 5.3.3
 
+  apps/react:
+    dependencies:
+      '@raipiot-infra/utils':
+        specifier: workspace:*
+        version: link:../../packages/utils
+      react:
+        specifier: ^18.2.0
+        version: 18.2.0
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.2.0(react@18.2.0)
+    devDependencies:
+      '@raipiot-infra/bootstrap-animation':
+        specifier: workspace:^
+        version: link:../../packages/bootstrap-animation
+      '@raipiot-infra/eslint-config-react':
+        specifier: workspace:*
+        version: link:../../packages/eslint-config-react
+      '@types/react':
+        specifier: ^18.2.48
+        version: 18.2.48
+      '@types/react-dom':
+        specifier: ^18.2.18
+        version: 18.2.18
+      '@vitejs/plugin-react-swc':
+        specifier: ^3.5.0
+        version: 3.5.0(vite@5.0.12)
+      typescript:
+        specifier: ^5.3.3
+        version: 5.3.3
+      vite:
+        specifier: ^5.0.12
+        version: 5.0.12(@types/node@20.11.5)
+
   apps/react-native:
     dependencies:
       react:
@@ -154,40 +188,6 @@ importers:
       typescript:
         specifier: ^5.3.3
         version: 5.3.3
-
-  apps/react-ts:
-    dependencies:
-      '@raipiot-infra/utils':
-        specifier: workspace:*
-        version: link:../../packages/utils
-      react:
-        specifier: ^18.2.0
-        version: 18.2.0
-      react-dom:
-        specifier: ^18.2.0
-        version: 18.2.0(react@18.2.0)
-    devDependencies:
-      '@raipiot-infra/bootstrap-animation':
-        specifier: workspace:^
-        version: link:../../packages/bootstrap-animation
-      '@raipiot-infra/eslint-config-react':
-        specifier: workspace:*
-        version: link:../../packages/eslint-config-react
-      '@types/react':
-        specifier: ^18.2.48
-        version: 18.2.48
-      '@types/react-dom':
-        specifier: ^18.2.18
-        version: 18.2.18
-      '@vitejs/plugin-react-swc':
-        specifier: ^3.5.0
-        version: 3.5.0(vite@5.0.12)
-      typescript:
-        specifier: ^5.3.3
-        version: 5.3.3
-      vite:
-        specifier: ^5.0.12
-        version: 5.0.12(@types/node@20.11.5)
 
   packages/antd: {}
 
