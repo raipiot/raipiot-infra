@@ -35,6 +35,11 @@
     "**/CONTRIBUTORS.md",
     "pnpm-lock.yaml",
     "README.md",
-    "**/tsconfig.tsbuildinfo"
+    "**/tsconfig.tsbuildinfo",
+    "**/.bundle/**",
+    "**/ios/**",
+    "**/android/**",
+    "**/vendor/**",
+    "**/patches/**"
   ]
 }

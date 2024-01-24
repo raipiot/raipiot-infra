@@ -32,6 +32,9 @@
     "prettier:fix": "prettier --write --ignore-unknown .",
     "prepublishOnly": "pnpm build"
   },
+  "devDependencies": {
+    "tsup": "^8.0.1"
+  },
   "publishConfig": {
     "access": "public"
   },

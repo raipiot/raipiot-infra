@@ -26,10 +26,11 @@
     "prepublishOnly": "pnpm build"
   },
   "peerDependencies": {
-    "unplugin-auto-import": "^0.17.3"
+    "unplugin-auto-import": "^0.17.4"
   },
   "devDependencies": {
-    "unimport": "^3.7.1"
+    "unimport": "^3.7.1",
+    "tsup": "^8.0.1"
   },
   "publishConfig": {
     "access": "public"

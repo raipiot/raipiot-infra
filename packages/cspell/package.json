@@ -26,8 +26,6 @@
   },
   "scripts": {
     "cspell:check": "cspell --no-progress --show-suggestions --show-context --cache **",
-    "eslint:check": "eslint . --color",
-    "eslint:fix": "eslint . --color --fix",
     "prettier:check": "prettier --check --ignore-unknown .",
     "prettier:fix": "prettier --write --ignore-unknown .",
     "cspell:sort:dict": "sort -u -o dict/raipiot.txt dict/raipiot.txt",

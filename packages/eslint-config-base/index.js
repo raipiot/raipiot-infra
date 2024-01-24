@@ -16,7 +16,7 @@ const defaultIgnorePatterns = ['node_modules/', 'dist/']
 
 const jsOverrides = {
   files: ['*.{js,cjs,mjs,jsx}'],
-  extends: ['plugin:@typescript-eslint/disable-type-checked'],
+  extends: 'plugin:@typescript-eslint/disable-type-checked',
   rules: {
     '@typescript-eslint/no-var-requires': 'off',
     '@typescript-eslint/no-require-imports': 'off'
@@ -35,6 +35,7 @@ const tsOverrides = {
   parser: '@typescript-eslint/parser',
   parserOptions: {
     project,
+    tsconfigRootDir: __dirname,
     ecmaVersion: 'latest',
     sourceType: 'module'
   },
@@ -240,7 +241,8 @@ const buildRules = (config) => {
     ...commonRules,
     ...unusedImportsRules,
     ...simpleImportSortRules,
-    ...(typescript ? { ...eslintPluginImportRules, ...typescriptEslintRules } : {}),
+    ...eslintPluginImportRules,
+    ...(typescript ? typescriptEslintRules : {}),
     ...(reactNative ? reactNativeRules : {}),
     ...(react || reactNative ? { ...reactRules, ...reactRefreshRules, ...a11yOff } : {}),
     ...(tailwindCSS ? tailwindcssRules : {}),

@@ -1,5 +1,5 @@
-import React from 'react'
 import type { PropsWithChildren } from 'react'
+import React from 'react'
 import {
   SafeAreaView,
   ScrollView,
@@ -9,7 +9,6 @@ import {
   useColorScheme,
   View
 } from 'react-native'
-
 import {
   Colors,
   DebugInstructions,
@@ -21,6 +20,25 @@ import {
 type SectionProps = PropsWithChildren<{
   title: string
 }>
+
+const styles = StyleSheet.create({
+  sectionContainer: {
+    marginTop: 32,
+    paddingHorizontal: 24
+  },
+  sectionTitle: {
+    fontSize: 24,
+    fontWeight: '600'
+  },
+  sectionDescription: {
+    marginTop: 8,
+    fontSize: 18,
+    fontWeight: '400'
+  },
+  highlight: {
+    fontWeight: '700'
+  }
+})
 
 function Section({ children, title }: SectionProps): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark'
@@ -90,24 +108,5 @@ function App(): React.JSX.Element {
     </SafeAreaView>
   )
 }
-
-const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600'
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400'
-  },
-  highlight: {
-    fontWeight: '700'
-  }
-})
 
 export default App

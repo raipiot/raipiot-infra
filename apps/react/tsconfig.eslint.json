@@ -1,0 +1,4 @@
+{
+  "extends": "@raipiot-infra/tsconfig/react.json",
+  "include": ["src", "vite.config.ts", "@types/**/*.d.ts"]
+}

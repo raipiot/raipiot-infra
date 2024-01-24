@@ -25,6 +25,7 @@ breakline
 classname
 clsx
 cnas
+cocoapods
 commitlint
 commitlintrc
 csee
@@ -53,6 +54,7 @@ raipiot
 rlig
 rootcloud
 rspress
+rushstack
 signup
 superjson
 svgr

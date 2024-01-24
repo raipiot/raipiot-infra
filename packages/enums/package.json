@@ -20,9 +20,6 @@
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
-  "peerDependencies": {
-    "dayjs": "^1.11.10"
-  },
   "scripts": {
     "dev": "tsup --watch",
     "build": "tsup",
@@ -30,6 +27,12 @@
     "type:check": "tsc --pretty --noEmit",
     "cspell:check": "cspell --no-progress --show-suggestions --show-context --cache **",
     "prepublishOnly": "pnpm build"
+  },
+  "peerDependencies": {
+    "dayjs": "^1.11.10"
+  },
+  "devDependencies": {
+    "tsup": "^8.0.1"
   },
   "publishConfig": {
     "access": "public"
