@@ -2,8 +2,25 @@
 
 raipiot infra 是我们的基础建设仓库，是基于 [`Turborepo`](https://turbo.build/repo)、[`Changesets`](https://github.com/changesets/changesets)、[`pnpm Workspace`](https://pnpm.io/workspaces) 的 Monorepo。用于存放我们的基础建设的**前端工程化配置**、**通用配置文件**、**插件**、**组件库**、**工具类库**等。
 
-![npm](https://img.shields.io/npm/v/@raipiot-infra/cspell?color=%23EEE&label=cspell)
-![npm](https://img.shields.io/npm/v/@raipiot-infra/tsconfig?color=%23EEE&label=tsconfig)
+![npm](https://img.shields.io/npm/v/@raipiot-infra/utils?logo=react&label=antd)
+![npm](https://img.shields.io/npm/v/@raipiot-infra/auto-import?logo=vite&label=auto-import)
+![npm](https://img.shields.io/npm/v/@raipiot-infra/axios?logo=axios&label=axios)
+![npm](https://img.shields.io/npm/v/@raipiot-infra/bootstrap-animation?logo=vite&label=bootstrap-animation)
+![npm](https://img.shields.io/npm/v/@raipiot-infra/commitlint-config?logo=commitlint&label=commitlint-config)
+![npm](https://img.shields.io/npm/v/@raipiot-infra/config?logo=npm&label=config)
+![npm](https://img.shields.io/npm/v/@raipiot-infra/cspell?logo=npm&label=cspell)
+![npm](https://img.shields.io/npm/v/@raipiot-infra/enums?logo=typescript&label=enums)
+![npm](https://img.shields.io/npm/v/@raipiot-infra/eslint-config?logo=eslint&label=eslint-config)
+![npm](https://img.shields.io/npm/v/@raipiot-infra/eslint-config-base?logo=eslint&label=eslint-config-base)
+![npm](https://img.shields.io/npm/v/@raipiot-infra/eslint-config-next?logo=eslint&label=eslint-config-next)
+![npm](https://img.shields.io/npm/v/@raipiot-infra/eslint-config-react?logo=eslint&label=eslint-config-react)
+![npm](https://img.shields.io/npm/v/@raipiot-infra/eslint-config-react-native?logo=eslint&label=eslint-config-react-native)
+![npm](https://img.shields.io/npm/v/@raipiot-infra/eslint-config-ts?logo=eslint&label=eslint-config-ts)
+![npm](https://img.shields.io/npm/v/@raipiot-infra/eslint-config-vue?logo=eslint&label=eslint-config-vue)
+![npm](https://img.shields.io/npm/v/@raipiot-infra/hooks?logo=react&label=hooks)
+![npm](https://img.shields.io/npm/v/@raipiot-infra/prettier?logo=prettier&label=prettier)
+![npm](https://img.shields.io/npm/v/@raipiot-infra/tailwind?logo=tailwindcss&label=tailwind)
+![npm](https://img.shields.io/npm/v/@raipiot-infra/tsconfig?logo=typescript&label=tsconfig)
 ![npm](https://img.shields.io/npm/v/@raipiot-infra/utils?logo=npm&label=utils)
 
 ## Apps
