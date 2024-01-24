@@ -19,12 +19,12 @@ raipiot infra 是我们的基础建设仓库，是基于 [`Turborepo`](https://t
 - [`antd`](packages/antd): 基于 [`antd`](https://ant.design/) 封装的业务组件库
 - [`auto-import`](packages/auto-import): [`unplugin-auto-import`](https://github.com/unplugin/unplugin-auto-import) 的预设配置，搭配 Vite 使用
 - [`axios`](packages/axios): 基于 [`axios`](https://axios-http.com/) 封装的网络请求库
-- [`bootstrap-animation`](packages/bootstrap-animation): 启动项目时打印的动画
+- [`bootstrap-animation`](packages/bootstrap-animation): 启动项目时命令行打印的品牌动画、支持 Vite 插件
 - [`commitlint-config`](packages/commitlint-config): 通用的 Commitlint 配置，用于检查提交信息是否符合规范、辅助生成提交信息
 - [`config`](packages/config): 通用的配置文件，包含一些与公司、品牌、团队相关的信息
 - [`cspell`](packages/cspell): 通用的 CSpell 配置，用于检查英文拼写
 - [`enums`](packages/enums): 通用的枚举，用于 TypeScript 项目
-- [`eslint-config`](packages/eslint-config): 通用的 ESLint 配置，该包默认使用 `eslint-config-react`
+- [`eslint-config`](packages/eslint-config): 通用的 ESLint 配置，该包默认使用 [`eslint-config-react`](package/eslint-config-react)
 - [`eslint-config-base`](packages/eslint-config-base): ESLint 的配置预设，用于构建 ESLint 配置文件
 - [`eslint-config-next`](packages/eslint-config-next): ESLint 的配置预设，用于 Next.js 项目
 - [`eslint-config-react`](packages/eslint-config-react): ESLint 的配置预设，用于 React 项目
@@ -86,6 +86,8 @@ pnpm add -D cspell @raipiot-infra/cspell
 pnpm cspell:check
 ```
 
+---
+
 ### Prettier
 
 我们使用 `Prettier` 来进行代码格式化，每次提交代码时，都会自动格式化代码。
@@ -109,6 +111,8 @@ pnpm add -D prettier @raipiot-infra/prettier
   "prettier": "@raipiot-infra/prettier"
 }
 ```
+
+---
 
 ### ESLint
 
@@ -146,6 +150,8 @@ pnpm add -D eslint @raipiot-infra/eslint-config
 ```sh
 pnpm eslint:check
 ```
+
+---
 
 ### Commitlint
 
@@ -191,6 +197,8 @@ git add .
 pnpm cz
 ```
 
+---
+
 ### tsconfig
 
 使用 `@raipiot-infra/tsconfig` 的预设，根目录下 `tsconfig.json`，内容如下：
@@ -201,6 +209,8 @@ pnpm cz
   "include": ["src"]
 }
 ```
+
+---
 
 ### TailwindCSS
 
