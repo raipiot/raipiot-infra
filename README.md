@@ -8,10 +8,11 @@ raipiot infra 是我们的基础建设仓库，是基于 Turborepo、Changesets�
 
 ## Apps
 
-该 Monorepo 仓库
+该 Monorepo 仓库 [`apps`](apps) 目录下存放的是演练场项目，用于测试基础建设的包。
 
-- [`react-ts`](apps/react-ts/): 一个基于 `React` + `Vite` + `TypeScript` 的演练场项目
-- [`next`](apps/next/): 一个基于 `Next.js` 的演练场项目
+- [`next`](apps/next/): 基于 `Next.js` + `TypeScript`
+- [`react`](apps/react/): 基于 `React` + `Vite` + `TypeScript`
+- [`react-native`](apps/react-native/): 基于 `React Native` + `TypeScript`
 
 ## Packages
 

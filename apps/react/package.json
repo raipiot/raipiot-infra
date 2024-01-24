@@ -1,5 +1,5 @@
 {
-  "name": "@raipiot-infra/react-ts",
+  "name": "@raipiot-infra/react",
   "author": "Bruce Song <recall4056@gmail.com> (https://github.com/recallwei/)",
   "type": "module",
   "scripts": {
