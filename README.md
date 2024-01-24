@@ -82,6 +82,48 @@ pnpm add -D prettier @raipiot-infra/prettier
 }
 ```
 
+### Commitlint
+
+```bash
+pnpm add -D @commitlint/cli @commitlint/config-conventional commitizen cz-git @raipiot-infra/commitlint-config
+```
+
+项目根目录添加 `.commitlintrc.json` 文件，内容如下：
+
+```json
+{
+  "extends": "@commitlint/config-conventional"
+}
+```
+
+在 `package.json` 中添加：
+
+```json
+{
+  "scripts": {
+    "cz": "git-cz"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-git"
+    }
+  }
+}
+```
+
+在 `husky` 的 `commit-msg` 钩子中添加：
+
+```sh
+npx --no -- commitlint --edit $1
+```
+
+通过 `git-cz` 命令来提交代码：
+
+```bash
+git add .
+pnpm cz
+```
+
 ### TailwindCSS
 
 ```json
