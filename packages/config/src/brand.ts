@@ -1,5 +1,11 @@
-import type { BrandConfig } from './types'
+export class BrandConfig {
+  /**
+   * 品牌名称
+   */
+  static readonly name: 'raipiot'
 
-export const brandConfig = Object.freeze<BrandConfig>({
-  name: 'raipiot'
-})
+  /**
+   * 官方网址
+   */
+  static readonly url: 'https://www.raipiot.com'
+}

@@ -1,5 +1,14 @@
 {
-  "extends": "@raipiot-infra/tsconfig/base.json",
-  "include": ["src", "tsup.config.ts"],
-  "exclude": ["node_modules", "dist"]
+  "extends": "@raipiot-infra/tsconfig/react.json",
+  "include": ["**/*.ts", "**/*.tsx"],
+  "exclude": [
+    "dist",
+    "node_modules",
+    "storybook-static",
+    ".turbo",
+    ".storybook",
+    "tsup.config.ts",
+    "**/*.stories.ts",
+    "**/*.stories.tsx"
+  ]
 }

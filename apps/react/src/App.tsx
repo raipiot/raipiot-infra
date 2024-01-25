@@ -1,5 +1,6 @@
 import './App.css'
 
+import { DetailField } from '@raipiot-infra/antd'
 import { useState } from 'react'
 
 import viteLogo from '/vite.svg'
@@ -38,6 +39,9 @@ function App() {
       <h1>Vite + React + TypeScript</h1>
       <h2>raipiot Playground</h2>
       <div className="card">
+        <p>
+          <DetailField.DateString value="2024-01-01 12:00:00" />
+        </p>
         <button
           type="button"
           onClick={() => setCount((c) => c + 1)}

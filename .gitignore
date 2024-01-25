@@ -25,6 +25,9 @@ coverage
 *.tsbuildinfo
 next-env.d.ts
 
+# Storybook
+storybook-static
+
 # Cache
 .cspellcache
 

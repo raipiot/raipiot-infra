@@ -1,3 +1,4 @@
+import { sassPlugin } from 'esbuild-sass-plugin'
 import { defineConfig } from 'tsup'
 
 export default defineConfig((options) => ({
@@ -10,5 +11,8 @@ export default defineConfig((options) => ({
   skipNodeModulesBundle: true,
   outDir: 'dist',
   format: ['cjs', 'esm'],
-  minify: !options.watch
+  minify: !options.watch,
+  bundle: true,
+  external: ['antd', 'react'],
+  esbuildPlugins: [sassPlugin()]
 }))

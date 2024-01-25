@@ -12,7 +12,8 @@
   },
   "keywords": [
     "raipiot",
-    "antd"
+    "antd",
+    "components"
   ],
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -20,12 +21,42 @@
   "scripts": {
     "dev": "tsup --watch",
     "build": "tsup",
-    "clean": "rimraf dist",
-    "type:check": "tsc --pretty --noEmit",
+    "clean": "rimraf dist .turbo storybook-static",
+    "storybook": "storybook dev -p 6006",
+    "build:storybook": "storybook build",
     "cspell:check": "cspell --no-progress --show-suggestions --show-context --cache **",
+    "type:check": "tsc --pretty --noEmit",
+    "eslint:check": "eslint . --color",
+    "eslint:fix": "eslint . --color --fix",
+    "prettier:check": "prettier --check --ignore-unknown .",
+    "prettier:fix": "prettier --write --ignore-unknown .",
     "prepublishOnly": "pnpm build"
   },
+  "peerDependencies": {
+    "antd": ">=5.13.2",
+    "react": ">=18.2.0"
+  },
+  "dependencies": {
+    "@raipiot-infra/utils": "workspace:*",
+    "clsx": "^2.1.0",
+    "lodash-es": "^4.17.21"
+  },
   "devDependencies": {
+    "@storybook/addon-essentials": "^7.6.10",
+    "@storybook/addon-interactions": "^7.6.10",
+    "@storybook/addon-links": "^7.6.10",
+    "@storybook/addon-onboarding": "^1.0.11",
+    "@storybook/blocks": "^7.6.10",
+    "@storybook/react": "^7.6.10",
+    "@storybook/react-vite": "^7.6.10",
+    "@storybook/test": "^7.6.10",
+    "@types/lodash-es": "^4.17.12",
+    "@types/react": "^18.2.48",
+    "esbuild-sass-plugin": "^2.16.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sass": "^1.70.0",
+    "storybook": "^7.6.8",
     "tsup": "^8.0.1"
   },
   "publishConfig": {

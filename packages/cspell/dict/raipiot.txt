@@ -20,6 +20,7 @@ alicloud
 aliyuncs
 antd
 anticon
+autodocs
 autoplay
 breakline
 classname
