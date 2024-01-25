@@ -1,6 +1,3 @@
-#!/usr/bin/env sh
-. "$(dirname -- "$0")/_/husky.sh"
-
 pnpm cspell:sort:dict
 git add ./packages/cspell/dict/raipiot.txt
 pnpm cspell:check

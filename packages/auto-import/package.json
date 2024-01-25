@@ -21,8 +21,12 @@
     "dev": "tsup --watch",
     "build": "tsup",
     "clean": "rimraf dist",
-    "type:check": "tsc --pretty --noEmit",
     "cspell:check": "cspell --no-progress --show-suggestions --show-context --cache **",
+    "type:check": "tsc --pretty --noEmit",
+    "eslint:check": "eslint . --color",
+    "eslint:fix": "eslint . --color --fix",
+    "prettier:check": "prettier --check --ignore-unknown .",
+    "prettier:fix": "prettier --write --ignore-unknown .",
     "prepublishOnly": "pnpm build"
   },
   "peerDependencies": {

@@ -33,7 +33,7 @@ raipiot infra 是我们的基础建设仓库，是基于 [`Turborepo`](https://t
 
 ## Packages
 
-- [`antd`](packages/antd): 基于 [`antd`](https://ant.design/) 封装的业务组件库
+- [`antd`](packages/antd): 基于 [`antd`](https://ant.design/) 封装的业务组件库，[访问地址](http://antd.raipiot.com)
 - [`auto-import`](packages/auto-import): [`unplugin-auto-import`](https://github.com/unplugin/unplugin-auto-import) 的预设配置，搭配 Vite 使用
 - [`axios`](packages/axios): 基于 [`axios`](https://axios-http.com/) 封装的网络请求库
 - [`bootstrap-animation`](packages/bootstrap-animation): 启动项目时命令行打印的品牌动画、支持 Vite 插件
@@ -233,6 +233,17 @@ pnpm cz
 
 ```json
 {}
+```
+
+### auto-import
+
+在 `Vite` 项目中使用 `@raipiot-infra/auto-import` 预设，可以帮助我们自动引入第三方库。
+
+在 `vite.config.ts` 中添加：
+
+```ts
+{
+}
 ```
 
 ## IDE 设置
