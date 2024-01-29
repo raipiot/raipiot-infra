@@ -1,5 +1,5 @@
 {
-  "name": "@raipiot-infra/next",
+  "name": "next-playground",
   "author": "Bruce Song <recall4056@gmail.com> (https://github.com/recallwei/)",
   "scripts": {
     "dev": "next dev --turbo",

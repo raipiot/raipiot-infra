@@ -1,6 +1,6 @@
-import { teamConfig } from '@raipiot-infra/config'
+import { TeamConfig } from '@raipiot-infra/config'
 
-const author = teamConfig.name
+const author = TeamConfig.name
 const version = '0.0.1'
 
 export const metadata = Object.freeze({
