@@ -36,7 +36,7 @@
   "dependencies": {
     "@raipiot-infra/eslint-config-base": "workspace:*",
     "@react-native/eslint-plugin": "^0.74.0",
-    "@tanstack/eslint-plugin-query": "^5.17.20",
+    "@tanstack/eslint-plugin-query": "^5.17.22",
     "@typescript-eslint/eslint-plugin": "^6.19.1",
     "@typescript-eslint/parser": "^6.19.1",
     "eslint-config-airbnb": "^19.0.4",

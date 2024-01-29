@@ -29,7 +29,7 @@
     "prepublishOnly": "pnpm build"
   },
   "peerDependencies": {
-    "axios": "^1.6.5"
+    "axios": "^1.6.7"
   },
   "devDependencies": {
     "tsup": "^8.0.1"

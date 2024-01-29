@@ -19,7 +19,7 @@
     "@ant-design/happy-work-theme": "^1.0.0",
     "@raipiot-infra/antd": "workspace:*",
     "@raipiot-infra/utils": "workspace:*",
-    "antd": "^5.13.2",
+    "antd": "^5.13.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

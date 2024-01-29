@@ -35,7 +35,7 @@
   },
   "dependencies": {
     "@raipiot-infra/eslint-config-base": "workspace:*",
-    "@tanstack/eslint-plugin-query": "^5.17.20",
+    "@tanstack/eslint-plugin-query": "^5.17.22",
     "@typescript-eslint/eslint-plugin": "^6.19.1",
     "@typescript-eslint/parser": "^6.19.1",
     "eslint-config-airbnb": "^19.0.4",
@@ -50,7 +50,7 @@
     "eslint-plugin-react-refresh": "^0.4.5",
     "eslint-plugin-simple-import-sort": "^10.0.0",
     "eslint-plugin-storybook": "^0.6.15",
-    "eslint-plugin-tailwindcss": "^3.14.0",
+    "eslint-plugin-tailwindcss": "^3.14.1",
     "eslint-plugin-unused-imports": "^3.0.0"
   },
   "publishConfig": {

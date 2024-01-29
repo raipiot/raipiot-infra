@@ -30,7 +30,7 @@
     "prepublishOnly": "pnpm build"
   },
   "peerDependencies": {
-    "unplugin-auto-import": "^0.17.4"
+    "unplugin-auto-import": "^0.17.5"
   },
   "devDependencies": {
     "unimport": "^3.7.1",
