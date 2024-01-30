@@ -11,6 +11,7 @@ raipiot infra 是我们的基础建设仓库，是基于 [`Turborepo`](https://t
 ![npm](https://img.shields.io/npm/v/@raipiot-infra/cspell?logo=npm&label=cspell&registry_uri=http%3A%2F%2Fnpm-registry.raipiot.com%3A4873)
 ![npm](https://img.shields.io/npm/v/@raipiot-infra/enums?logo=typescript&label=enums&registry_uri=http%3A%2F%2Fnpm-registry.raipiot.com%3A4873)
 ![npm](https://img.shields.io/npm/v/@raipiot-infra/eslint-config?logo=eslint&label=eslint-config&registry_uri=http%3A%2F%2Fnpm-registry.raipiot.com%3A4873)
+![npm](https://img.shields.io/npm/v/@raipiot-infra/eslint-config-astro?logo=eslint&label=eslint-config-astro&registry_uri=http%3A%2F%2Fnpm-registry.raipiot.com%3A4873)
 ![npm](https://img.shields.io/npm/v/@raipiot-infra/eslint-config-base?logo=eslint&label=eslint-config-base&registry_uri=http%3A%2F%2Fnpm-registry.raipiot.com%3A4873)
 ![npm](https://img.shields.io/npm/v/@raipiot-infra/eslint-config-next?logo=eslint&label=eslint-config-next&registry_uri=http%3A%2F%2Fnpm-registry.raipiot.com%3A4873)
 ![npm](https://img.shields.io/npm/v/@raipiot-infra/eslint-config-react?logo=eslint&label=eslint-config-react&registry_uri=http%3A%2F%2Fnpm-registry.raipiot.com%3A4873)
@@ -43,6 +44,7 @@ raipiot infra 是我们的基础建设仓库，是基于 [`Turborepo`](https://t
 - [x] [`cspell`](packages/cspell): 通用的 CSpell 配置，用于检查英文拼写
 - [ ] [`enums`](packages/enums): 通用的枚举，用于 TypeScript 项目
 - [x] [`eslint-config`](packages/eslint-config): 通用的 ESLint 配置，该包默认使用 [`eslint-config-react`](package/eslint-config-react)
+- [x] [`eslint-config-astro`](packages/eslint-config-astro): ESLint 的配置预设，用于 Astro 项目
 - [x] [`eslint-config-base`](packages/eslint-config-base): ESLint 的配置预设，用于构建 ESLint 配置文件
 - [x] [`eslint-config-next`](packages/eslint-config-next): ESLint 的配置预设，用于 Next.js 项目
 - [x] [`eslint-config-react`](packages/eslint-config-react): ESLint 的配置预设，用于 React 项目

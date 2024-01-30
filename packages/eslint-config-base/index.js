@@ -52,6 +52,26 @@ const vueOverrides = {
   }
 }
 
+const astroOverrides = {
+  files: ['*.astro'],
+  parser: 'astro-eslint-parser',
+  parserOptions: {
+    parser: '@typescript-eslint/parser',
+    extraFileExtensions: ['.astro'],
+    project,
+    ecmaVersion: 'latest',
+    sourceType: 'module'
+  },
+  globals: {
+    Astro: 'readonly'
+  },
+  rules: {
+    'react/no-unknown-property': 'off', // .astro 中无须校验未知属性
+    'react/jsx-filename-extension': [1, { extensions: ['.astro'] }],
+    'consistent-return': 'off' // TODO: 如何在顶层返回 Astro 组件
+  }
+}
+
 const commonRules = {
   quotes: ['error', 'single'], // 强制使用单引号
   semi: ['error', 'never'], // 禁止使用分号
@@ -214,14 +234,17 @@ const vueRules = {
  * @param {OverridesConfig} config
  * @typedef {Object} OverridesConfig
  * @property {boolean} typescript
+ * @property {boolean} vue
+ * @property {boolean} astro
  */
 const buildOverrides = (config) => {
-  const { typescript, vue } = config
+  const { typescript, vue, astro } = config
   return [
     jsOverrides,
     dtsOverrides,
     ...(typescript ? [tsOverrides] : []),
-    ...(vue ? [vueOverrides] : [])
+    ...(vue ? [vueOverrides] : []),
+    ...(astro ? [astroOverrides] : [])
   ]
 }
 

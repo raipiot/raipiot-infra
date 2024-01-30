@@ -31,7 +31,7 @@
     "cz": "git-cz",
     "release:generate": "pnpm changeset",
     "release:version": "pnpm changeset version",
-    "publish:packages": "pnpm build:packages && pnpm changeset publish",
+    "release:publish": "pnpm build:packages && pnpm changeset publish",
     "prepare": "husky"
   },
   "devDependencies": {
