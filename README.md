@@ -38,7 +38,7 @@ raipiot infra 是我们的基础建设仓库，是基于 [`Turborepo`](https://t
 - [ ] [`axios`](packages/axios): 基于 [`axios`](https://axios-http.com/) 封装的网络请求库
 - [ ] [`bootstrap-animation`](packages/bootstrap-animation): 启动项目时命令行打印的品牌动画、支持 Vite 插件
 - [x] [`commitlint-config`](packages/commitlint-config): 通用的 Commitlint 配置，用于检查提交信息是否符合规范、辅助生成提交信息
-- [ ] [`config`](packages/config): 通用的配置文件，包含一些与公司、品牌、团队相关的信息
+- [x] [`config`](packages/config): 通用的配置文件，包含一些与公司、品牌、团队相关的信息
 - [x] [`cspell`](packages/cspell): 通用的 CSpell 配置，用于检查英文拼写
 - [ ] [`enums`](packages/enums): 通用的枚举，用于 TypeScript 项目
 - [x] [`eslint-config`](packages/eslint-config): 通用的 ESLint 配置，该包默认使用 [`eslint-config-react`](package/eslint-config-react)
