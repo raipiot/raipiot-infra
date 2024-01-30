@@ -162,6 +162,14 @@ pnpm add -D eslint @raipiot-infra/eslint-config
 }
 ```
 
+其他 ESLint 配置详见对应 `README.md`：
+
+- [`eslint-config-next`](packages/eslint-config-next/README.md)
+- [`eslint-config-react`](packages/eslint-config-react/README.md)
+- [`eslint-config-react-native`](packages/eslint-config-react-native/README.md)
+- [`eslint-config-ts`](packages/eslint-config-ts/README.md)
+- [`eslint-config-vue`](packages/eslint-config-vue/README.md)
+
 在 `husky` 的 `pre-commit` 钩子中添加：
 
 ```sh
@@ -249,6 +257,8 @@ pnpm cz
 ## IDE 设置
 
 ### VSCode
+
+根目录下添加 `.vscode/settings.json` 文件，内容如下：
 
 ```json
 {
