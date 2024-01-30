@@ -51,7 +51,7 @@ raipiot infra 是我们的基础建设仓库，是基于 [`Turborepo`](https://t
 - [ ] [`hooks`](packages/hooks): 通用的 React Hooks，用于 React 或 React Native 项目
 - [x] [`prettier`](packages/prettier): 通用的 Prettier 配置，用于代码格式化
 - [ ] [`tailwind`](packages/tailwind)：通用的 TailwindCSS 配置
-- [ ] [`tsconfig`](packages/tsconfig): 通用的 tsconfig 配置，用于 TypeScript
+- [x] [`tsconfig`](packages/tsconfig): 通用的 tsconfig 配置，用于 TypeScript
 - [ ] [`utils`](packages/utils): 通用的工具类库
 
 ## 如何在其他项目中使用
@@ -226,6 +226,8 @@ pnpm eslint:check
 
 我们使用 `commitlint` 来进行提交信息的规范检查，每次提交代码时，都会自动检查提交信息是否符合规范。
 
+安装依赖：
+
 ```bash
 pnpm add -D @commitlint/cli @commitlint/config-conventional commitizen cz-git @raipiot-infra/commitlint-config
 ```
@@ -270,6 +272,12 @@ pnpm cz
 
 ### tsconfig
 
+安装依赖：
+
+```bash
+pnpm add -D @raipiot-infra/tsconfig
+```
+
 使用 `@raipiot-infra/tsconfig` 的预设，根目录下 `tsconfig.json`，内容如下：
 
 ```json
@@ -279,7 +287,7 @@ pnpm cz
 }
 ```
 
----
+## 详细的配置说明请查看 [`@raipiot-infra/tsconfig`](packages/tsconfig/README.md)。
 
 ### TailwindCSS
 
