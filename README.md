@@ -186,11 +186,11 @@ pnpm eslint:check
 pnpm add -D @commitlint/cli @commitlint/config-conventional commitizen cz-git @raipiot-infra/commitlint-config
 ```
 
-项目根目录添加 `.commitlintrc.json` 文件，内容如下：
+在根目录下添加 `.commitlintrc.json` 文件，内容如下：
 
 ```json
 {
-  "extends": "@commitlint/config-conventional"
+  "extends": ["@raipiot-infra/commitlint-config"]
 }
 ```
 
@@ -209,10 +209,10 @@ pnpm add -D @commitlint/cli @commitlint/config-conventional commitizen cz-git @r
 }
 ```
 
-在 `husky` 的 `commit-msg` 钩子中添加：
+在 `husky` 的 `commit-msg` 钩子中添加脚本：
 
-```sh
-npx --no -- commitlint --edit $1
+```bash
+echo "npx --no -- commitlint --edit \"$1\"" > .husky/commit-msg
 ```
 
 通过 `git-cz` 命令来提交代码：
