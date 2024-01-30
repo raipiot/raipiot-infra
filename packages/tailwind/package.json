@@ -1,5 +1,5 @@
 {
-  "name": "@raipiot-infra/tailwind-config",
+  "name": "@raipiot-infra/tailwind",
   "version": "0.0.0",
   "description": "Collection of internal TailwindCSS configurations.",
   "author": "Bruce Song <recall4056@gmail.com> (https://github.com/recallwei/)",
@@ -8,12 +8,15 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/raipiot/raipiot-infra.git",
-    "directory": "packages/tailwind-config"
+    "directory": "packages/tailwind"
   },
   "keywords": [
     "raipiot",
     "tailwind",
     "tailwind-config"
+  ],
+  "files": [
+    "tailwind.config.ts"
   ],
   "exports": {
     ".": "./tailwind.config.ts"
@@ -26,9 +29,6 @@
     "prettier:fix": "prettier --write --ignore-unknown ."
   },
   "peerDependencies": {
-    "tailwindcss": "^3.4.1"
-  },
-  "devDependencies": {
     "tailwindcss": "^3.4.1"
   },
   "publishConfig": {
