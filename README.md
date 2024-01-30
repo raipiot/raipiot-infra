@@ -49,7 +49,7 @@ raipiot infra 是我们的基础建设仓库，是基于 [`Turborepo`](https://t
 - [x] [`eslint-config-ts`](packages/eslint-config-ts): ESLint 的配置预设，用于 TypeScript 项目
 - [x] [`eslint-config-vue`](packages/eslint-config-vue): ESLint 的配置预设，用于 Vue 项目
 - [ ] [`hooks`](packages/hooks): 通用的 React Hooks，用于 React 或 React Native 项目
-- [ ] [`prettier`](packages/prettier): 通用的 Prettier 配置，用于代码格式化
+- [x] [`prettier`](packages/prettier): 通用的 Prettier 配置，用于代码格式化
 - [ ] [`tailwind`](packages/tailwind)：通用的 TailwindCSS 配置
 - [ ] [`tsconfig`](packages/tsconfig): 通用的 tsconfig 配置，用于 TypeScript
 - [ ] [`utils`](packages/utils): 通用的工具类库
@@ -144,7 +144,7 @@ pnpm add -D cspell @raipiot-infra/cspell
 在 `husky` 的 `pre-commit` 钩子中添加脚本：
 
 ```bash
-echo "pnpm cspell:check" > temp_file && cat .husky/pre-commit >> temp_file && mv temp_file .husky/pre-commit
+echo "pnpm cspell:check" >> .husky/pre-commit
 ```
 
 ---

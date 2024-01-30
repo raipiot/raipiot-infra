@@ -1,6 +1,6 @@
 # @raipiot-infra/commitlint-config
 
-![npm](https://img.shields.io/npm/v/@raipiot-infra/commitlint-config?logo=eslint&label=commitlint-config&registry_uri=http%3A%2F%2Fnpm-registry.raipiot.com%3A4873)
+![npm](https://img.shields.io/npm/v/@raipiot-infra/commitlint-config?logo=commitlint&label=commitlint-config&registry_uri=http%3A%2F%2Fnpm-registry.raipiot.com%3A4873)
 
 ## 安装
 

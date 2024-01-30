@@ -15,6 +15,9 @@
     "prettier",
     "prettier-config"
   ],
+  "files": [
+    "index.json"
+  ],
   "main": "index.json",
   "scripts": {
     "cspell:check": "cspell --no-progress --show-suggestions --show-context --cache **",
