@@ -1,11 +1,11 @@
-# @raipiot-infra/eslint-config-react-vue
+# @raipiot-infra/eslint-config-vue
 
-![npm](https://img.shields.io/npm/v/@raipiot-infra/eslint-config-react-vue?logo=eslint&label=eslint-config-react-vue&registry_uri=http%3A%2F%2Fnpm-registry.raipiot.com%3A4873)
+![npm](https://img.shields.io/npm/v/@raipiot-infra/eslint-config-vue?logo=eslint&label=eslint-config-vue&registry_uri=http%3A%2F%2Fnpm-registry.raipiot.com%3A4873)
 
 ## 安装
 
 ```bash
-pnpm add -D eslint @raipiot-infra/eslint-config-react-vue
+pnpm add -D eslint @raipiot-infra/eslint-config-vue
 ```
 
 ## 配置
@@ -14,6 +14,6 @@ pnpm add -D eslint @raipiot-infra/eslint-config-react-vue
 
 ```json
 {
-  "extends": ["@raipiot-infra/eslint-config-react-vue"]
+  "extends": ["@raipiot-infra/eslint-config-vue"]
 }
 ```

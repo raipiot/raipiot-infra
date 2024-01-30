@@ -1,11 +1,11 @@
-# @raipiot-infra/eslint-config-react-ts
+# @raipiot-infra/eslint-config-ts
 
-![npm](https://img.shields.io/npm/v/@raipiot-infra/eslint-config-react-ts?logo=eslint&label=eslint-config-react-ts&registry_uri=http%3A%2F%2Fnpm-registry.raipiot.com%3A4873)
+![npm](https://img.shields.io/npm/v/@raipiot-infra/eslint-config-ts?logo=eslint&label=eslint-config-ts&registry_uri=http%3A%2F%2Fnpm-registry.raipiot.com%3A4873)
 
 ## 安装
 
 ```bash
-pnpm add -D eslint @raipiot-infra/eslint-config-react-ts
+pnpm add -D eslint @raipiot-infra/eslint-config-ts
 ```
 
 ## 配置
@@ -14,6 +14,6 @@ pnpm add -D eslint @raipiot-infra/eslint-config-react-ts
 
 ```json
 {
-  "extends": ["@raipiot-infra/eslint-config-react-ts"]
+  "extends": ["@raipiot-infra/eslint-config-ts"]
 }
 ```

@@ -1,11 +1,11 @@
-# @raipiot-infra/eslint-config-react-next
+# @raipiot-infra/eslint-config-next
 
-![npm](https://img.shields.io/npm/v/@raipiot-infra/eslint-config-react-next?logo=eslint&label=eslint-config-react-next&registry_uri=http%3A%2F%2Fnpm-registry.raipiot.com%3A4873)
+![npm](https://img.shields.io/npm/v/@raipiot-infra/eslint-config-next?logo=eslint&label=eslint-config-next&registry_uri=http%3A%2F%2Fnpm-registry.raipiot.com%3A4873)
 
 ## 安装
 
 ```bash
-pnpm add -D eslint @raipiot-infra/eslint-config-react-next
+pnpm add -D eslint @raipiot-infra/eslint-config-next
 ```
 
 ## 配置
@@ -14,6 +14,6 @@ pnpm add -D eslint @raipiot-infra/eslint-config-react-next
 
 ```json
 {
-  "extends": ["@raipiot-infra/eslint-config-react-next"]
+  "extends": ["@raipiot-infra/eslint-config-next"]
 }
 ```
