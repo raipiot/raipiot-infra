@@ -1,22 +1,24 @@
-import { TeamConfig } from '@raipiot-infra/config'
+import { BrandConfig, TeamConfig } from '@raipiot-infra/config'
 
-const author = TeamConfig.name
 const version = '0.0.1'
+
+const { name: author, githubUrl } = TeamConfig
+const { name: brandName } = BrandConfig
 
 export const metadata = Object.freeze({
   'zh-CN': {
-    name: 'raipiot',
+    name: brandName,
     description: '',
     version,
     author,
-    customContent: '由 raipiot 提供技术支持 - http://github.com/raipiot'
+    customContent: `由 ${brandName} 提供技术支持 - ${githubUrl}`
   },
   'en-US': {
-    name: 'raipiot',
+    name: brandName,
     description: '',
     version,
     author,
-    customContent: 'Powered by raipiot - http://github.com/raipiot'
+    customContent: `Powered by ${brandName} - ${githubUrl}`
   }
 })
 

@@ -1,0 +1,18 @@
+{
+  "App": {
+    "Description": "🚀 rpx: faster your code base"
+  },
+  "Commands": {
+    "Check": "Check the project engineering suite",
+    "Add": "Select engineering suites to install",
+    "Generate": "Generate contributors"
+  },
+  "Argument": {
+    "Action": "Specify the action you want to take"
+  },
+  "Generate.Contributors.Success": "Generate contributors successfully!",
+  "Generate.Contributors.Failed": "Generate contributors failed!",
+  "Display.Current.Version": "Display the current version",
+  "Display.Help.Command": "Display help for command",
+  "Action.Not.Match": "Action not match! Please check the command by 'tornado-x -h'"
+}

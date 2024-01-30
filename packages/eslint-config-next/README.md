@@ -2,6 +2,10 @@
 
 ![npm](https://img.shields.io/npm/v/@raipiot-infra/eslint-config-next?logo=eslint&label=eslint-config-next&registry_uri=http%3A%2F%2Fnpm-registry.raipiot.com%3A4873)
 
+我们使用 `ESLint` 来进行代码风格校验。
+
+从 VSCode 插件中搜索并安装插件 **ESLint**。
+
 ## 安装
 
 ```bash

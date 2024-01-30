@@ -1,22 +1,28 @@
 {
-  "name": "@raipiot-infra/config",
+  "name": "@raipiot-infra/rpx",
   "version": "0.0.0",
-  "description": "Collection of internal team configurations.",
+  "description": "Collection of internal repo tools.",
   "author": "Bruce Song <recall4056@gmail.com> (https://github.com/recallwei/)",
   "homepage": "https://github.com/raipiot/raipiot-infra#readme",
   "bugs": "https://github.com/raipiot/raipiot-infra/issues",
   "repository": {
     "type": "git",
     "url": "https://github.com/raipiot/raipiot-infra.git",
-    "directory": "packages/config"
+    "directory": "packages/rpx"
   },
   "keywords": [
     "raipiot",
-    "config"
+    "rpx",
+    "cli"
   ],
+  "bin": {
+    "rpx": "bin/index.js"
+  },
   "files": [
+    "bin",
     "dist"
   ],
+  "type": "module",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
@@ -33,6 +39,14 @@
     "prepublishOnly": "pnpm build"
   },
   "devDependencies": {
+    "@types/cross-spawn": "^6.0.6",
+    "@types/degit": "^2.8.6",
+    "@types/prompts": "^2.4.9",
+    "commander": "^11.1.0",
+    "cross-fetch": "^4.0.0",
+    "cross-spawn": "^7.0.3",
+    "kolorist": "^1.8.0",
+    "prompts": "^2.4.2",
     "tsup": "^8.0.1"
   },
   "publishConfig": {
