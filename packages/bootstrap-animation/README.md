@@ -14,6 +14,44 @@ pnpm add @raipiot-infra/bootstrap-animation
 
 ### Vite
 
+```ts
+// vite.config.ts
+import { BootstrapAnimation } from '@raipiot-infra/bootstrap-animation'
+
+export default defineConfig({
+  plugins: [BootstrapAnimation()]
+})
+```
+
 ### Next.js
 
+```js
+// next.config.js
+const { bootstrapLog } = require('@raipiot-infra/bootstrap-animation')
+
+bootstrapLog()
+```
+
 ### React Native
+
+```js
+// metro.config.js
+const { bootstrapLog } = require('@raipiot-infra/bootstrap-animation')
+
+bootstrapLog()
+```
+
+## 重写默认配置
+
+```ts
+// vite.config.ts
+import { BootstrapAnimation } from '@raipiot-infra/bootstrap-animation'
+
+export default defineConfig({
+  plugins: [
+    BootstrapAnimation({
+      author: ''
+    })
+  ]
+})
+```
