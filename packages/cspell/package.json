@@ -16,7 +16,7 @@
     "cspell-dict"
   ],
   "files": [
-    "dict/common.txt",
+    "dict/**",
     "cspell-ext.json"
   ],
   "exports": {
