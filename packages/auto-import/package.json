@@ -1,6 +1,6 @@
 {
   "name": "@raipiot-infra/auto-import",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Collection of internal auto import presets.",
   "author": "Bruce Song <recall4056@gmail.com> (https://github.com/recallwei/)",
   "homepage": "https://github.com/raipiot/raipiot-infra#readme",
