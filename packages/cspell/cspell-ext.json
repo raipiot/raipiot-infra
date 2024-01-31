@@ -41,6 +41,10 @@
     "**/android/**",
     "**/vendor/**",
     "**/patches/**",
-    "**/storybook-static/**"
+    "**/storybook-static/**",
+    "**/src-tauri/icons/**",
+    "**/src-tauri/target/**",
+    "**/Cargo.lock",
+    "**/Cargo.toml"
   ]
 }

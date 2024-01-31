@@ -38,6 +38,7 @@ echarts
 embla
 esbenp
 esbuild
+fullscreen
 gesturestart
 greenkeeper
 gsap
