@@ -7,7 +7,6 @@
     "storybook-static",
     ".turbo",
     ".storybook",
-    "tsup.config.ts",
     "**/*.stories.ts",
     "**/*.stories.tsx"
   ]

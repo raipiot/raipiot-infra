@@ -35,8 +35,8 @@ raipiot infra 是我们的基础建设仓库，是基于 [`Turborepo`](https://t
 
 ## Packages
 
-- [ ] [`antd`](packages/antd): 基于 [`antd`](https://ant.design/) 封装的业务组件库，[访问地址](http://antd.raipiot.com)
-- [ ] [`auto-import`](packages/auto-import): [`unplugin-auto-import`](https://github.com/unplugin/unplugin-auto-import) 的预设配置，搭配 Vite 使用
+- [x] [`antd`](packages/antd): 基于 [`antd`](https://ant.design/) 封装的业务组件库，[访问地址](http://antd.raipiot.com)
+- [x] [`auto-import`](packages/auto-import): [`unplugin-auto-import`](https://github.com/unplugin/unplugin-auto-import) 的预设配置，搭配 Vite 使用
 - [ ] [`axios`](packages/axios): 基于 [`axios`](https://axios-http.com/) 封装的网络请求库
 - [x] [`bootstrap-animation`](packages/bootstrap-animation): 启动项目时命令行打印的品牌动画、支持 Vite 插件
 - [x] [`commitlint-config`](packages/commitlint-config): 通用的 Commitlint 配置，用于检查提交信息是否符合规范、辅助生成提交信息
