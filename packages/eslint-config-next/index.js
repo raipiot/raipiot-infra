@@ -16,8 +16,6 @@ module.exports = {
     'airbnb/hooks',
     'plugin:@typescript-eslint/recommended',
     'plugin:react-hooks/recommended',
-    'eslint-config-turbo',
-    'plugin:storybook/recommended',
     'plugin:import/recommended',
     'plugin:import/typescript',
     'plugin:import/errors',

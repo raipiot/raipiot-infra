@@ -13,8 +13,6 @@ module.exports = {
     'airbnb-base',
     'airbnb-typescript/base',
     'plugin:@typescript-eslint/recommended',
-    'eslint-config-turbo',
-    'plugin:storybook/recommended',
     'plugin:import/recommended',
     'plugin:import/typescript',
     'plugin:import/errors',
