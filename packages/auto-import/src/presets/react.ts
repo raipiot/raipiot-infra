@@ -3,7 +3,6 @@ import type { ImportsMap, PresetName } from 'unplugin-auto-import/types'
 
 export const reactPresets: (ImportsMap | PresetName | InlinePreset)[] = [
   'react',
-  'react-router-dom',
   'react-i18next',
   {
     from: '@tanstack/react-query',
@@ -23,10 +22,6 @@ export const reactPresets: (ImportsMap | PresetName | InlinePreset)[] = [
   {
     from: 'clsx',
     imports: [['default', 'clsx']]
-  },
-  {
-    from: 'react',
-    imports: ['Suspense']
   },
   {
     from: 'use-immer',
