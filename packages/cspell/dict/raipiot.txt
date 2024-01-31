@@ -43,6 +43,7 @@ greenkeeper
 gsap
 hookform
 hoverable
+icns
 iconify
 immer
 juejin

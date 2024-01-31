@@ -24,7 +24,7 @@
     "build": "tsup",
     "clean": "rimraf dist storybook-static",
     "storybook": "storybook dev -p 6006",
-    "build:storybook": "storybook build",
+    "storybook:build": "storybook build",
     "cspell:check": "cspell --no-progress --show-suggestions --show-context --cache **",
     "type:check": "tsc --pretty --noEmit",
     "eslint:check": "eslint . --color",
