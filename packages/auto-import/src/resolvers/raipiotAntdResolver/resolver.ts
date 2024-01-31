@@ -6,7 +6,7 @@ import { raipiotAntdBuiltInComponents } from './presets'
 
 const PACKAGE_NAME = '@raipiot-infra/antd'
 
-export const antdResolver = (): Resolver => {
+export const raipiotAntdResolver = (): Resolver => {
   const componentsMap = getComponentsMap(raipiotAntdBuiltInComponents, 'Rp')
   return {
     type: 'component',

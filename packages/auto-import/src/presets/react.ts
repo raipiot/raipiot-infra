@@ -1,9 +1,7 @@
 import type { InlinePreset } from 'unimport'
 import type { ImportsMap, PresetName } from 'unplugin-auto-import/types'
 
-type Arrayable<T> = T | Array<T>
-
-export const reactPresets: Arrayable<ImportsMap | PresetName | InlinePreset> = [
+export const reactPresets: (ImportsMap | PresetName | InlinePreset)[] = [
   'react',
   'react-router-dom',
   'react-i18next',
