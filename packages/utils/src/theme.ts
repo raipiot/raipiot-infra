@@ -12,7 +12,7 @@ export class ThemeUtils {
    * @description 用于存储主题到 `localStorage` 中的键名
    * @default "theme"
    */
-  private static THEME_KEY = 'theme'
+  static readonly #THEME_KEY = 'theme'
 
   /**
    * 获取主题
@@ -24,7 +24,7 @@ export class ThemeUtils {
    * ```
    */
   static getTheme(): string | null {
-    return localStorage.getItem(this.THEME_KEY)
+    return localStorage.getItem(this.#THEME_KEY)
   }
 
   /**
@@ -38,7 +38,7 @@ export class ThemeUtils {
    * ```
    */
   static setTheme(theme: string) {
-    localStorage.setItem(this.THEME_KEY, theme)
+    localStorage.setItem(this.#THEME_KEY, theme)
   }
 
   /**
@@ -50,7 +50,7 @@ export class ThemeUtils {
    * ```
    */
   static clearTheme() {
-    localStorage.removeItem(this.THEME_KEY)
+    localStorage.removeItem(this.#THEME_KEY)
   }
 
   /**

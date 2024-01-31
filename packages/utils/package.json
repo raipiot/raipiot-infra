@@ -1,6 +1,6 @@
 {
   "name": "@raipiot-infra/utils",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Collection of internal utils.",
   "author": "Bruce Song <recall4056@gmail.com> (https://github.com/recallwei/)",
   "homepage": "https://github.com/raipiot/raipiot-infra#readme",
@@ -15,7 +15,8 @@
     "utils"
   ],
   "files": [
-    "dist"
+    "dist",
+    "meta.json"
   ],
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -29,10 +30,8 @@
     "prepublishOnly": "pnpm build"
   },
   "peerDependencies": {
+    "@raipiot-infra/enums": "workspace:*",
     "dayjs": "^1.11.10"
-  },
-  "dependencies": {
-    "@raipiot-infra/enums": "workspace:*"
   },
   "devDependencies": {
     "tsup": "^8.0.1"

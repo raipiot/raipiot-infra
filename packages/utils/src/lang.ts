@@ -12,7 +12,7 @@ export class LangUtils {
    * @description 用于存储语言到 `localStorage` 中的键名
    * @default "lang"
    */
-  private static LANG_KEY = 'lang'
+  static readonly #LANG_KEY = 'lang'
 
   /**
    * 获取语言
@@ -24,7 +24,7 @@ export class LangUtils {
    * ```
    */
   static getLang(): string | null {
-    return localStorage.getItem(this.LANG_KEY)
+    return localStorage.getItem(this.#LANG_KEY)
   }
 
   /**
@@ -37,7 +37,7 @@ export class LangUtils {
    * ```
    */
   static setLang(lang: string) {
-    localStorage.setItem(this.LANG_KEY, lang)
+    localStorage.setItem(this.#LANG_KEY, lang)
   }
 
   /**
@@ -49,7 +49,7 @@ export class LangUtils {
    * ```
    */
   static clearLang() {
-    localStorage.removeItem(this.LANG_KEY)
+    localStorage.removeItem(this.#LANG_KEY)
   }
 
   /**

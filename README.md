@@ -42,7 +42,7 @@ raipiot infra 是我们的基础建设仓库，是基于 [`Turborepo`](https://t
 - [x] [`commitlint-config`](packages/commitlint-config): 通用的 Commitlint 配置，用于检查提交信息是否符合规范、辅助生成提交信息
 - [x] [`config`](packages/config): 通用的配置文件，包含一些与公司、品牌、团队相关的信息
 - [x] [`cspell`](packages/cspell): 通用的 CSpell 配置，用于检查英文拼写
-- [ ] [`enums`](packages/enums): 通用的枚举，用于 TypeScript 项目
+- [x] [`enums`](packages/enums): 通用的枚举，用于 TypeScript 项目
 - [x] [`eslint-config`](packages/eslint-config): 通用的 ESLint 配置，该包默认使用 [`eslint-config-react`](package/eslint-config-react)
 - [x] [`eslint-config-astro`](packages/eslint-config-astro): ESLint 的配置预设，用于 Astro 项目
 - [x] [`eslint-config-base`](packages/eslint-config-base): ESLint 的配置预设，用于构建 ESLint 配置文件
@@ -56,7 +56,7 @@ raipiot infra 是我们的基础建设仓库，是基于 [`Turborepo`](https://t
 - [x] [`rpx`](packages/rpx): 一个命令行工具，用于管理 raipiot 项目仓库
 - [x] [`tailwind`](packages/tailwind)：通用的 TailwindCSS 配置
 - [x] [`tsconfig`](packages/tsconfig): 通用的 tsconfig 配置，用于 TypeScript
-- [ ] [`utils`](packages/utils): 通用的工具类库
+- [x] [`utils`](packages/utils): 通用的工具类库
 
 ## IDE 设置
 

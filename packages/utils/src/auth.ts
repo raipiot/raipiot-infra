@@ -9,47 +9,33 @@ export class AuthUtils {
    * 访问令牌存储键名
    * @default "access_token"
    */
-  private static ACCESS_TOKEN_KEY = 'access_token'
+  static readonly #ACCESS_TOKEN_KEY = 'access_token'
 
   /**
    * 刷新令牌存储键名
    * @default "refresh_token"
    */
-  private static REFRESH_TOKEN_KEY = 'refresh_token'
+  static readonly #REFRESH_TOKEN_KEY = 'refresh_token'
 
   /**
    * 记住密码相关信息存储键名
    * @default "login_account_data"
    */
-  static REMEMBERED_ACCOUNT_KEY = 'login_account_data'
+  static readonly #REMEMBERED_ACCOUNT_KEY = 'login_account_data'
 
   /**
    * 默认管理员用户名
    * @description 用于内置管理员角色登录的用户名
    * @default "admin"
    */
-  static DEFAULT_ADMIN_USERNAME = 'admin'
+  static readonly DEFAULT_ADMIN_USERNAME = 'raipiot'
 
   /**
    * 默认管理员密码
    * @description 用于内置管理员角色登录的密码
    * @default "123456"
    */
-  static DEFAULT_ADMIN_PASSWORD = '123456'
-
-  /**
-   * 默认访客用户名
-   * @description 用于内置访客角色登录的用户名
-   * @default "visitor"
-   */
-  static DEFAULT_VISITOR_USERNAME = 'visitor'
-
-  /**
-   * 默认访客密码
-   * @description 用于内置访客角色登录的密码
-   * @default "123456"
-   */
-  static DEFAULT_VISITOR_PASSWORD = '123456'
+  static readonly DEFAULT_ADMIN_PASSWORD = '123456'
 
   /**
    * 获取访问令牌
@@ -61,7 +47,7 @@ export class AuthUtils {
    * ```
    */
   static getAccessToken(): string {
-    return localStorage.getItem(this.ACCESS_TOKEN_KEY) ?? ''
+    return localStorage.getItem(this.#ACCESS_TOKEN_KEY) ?? ''
   }
 
   /**
@@ -89,7 +75,7 @@ export class AuthUtils {
    * ```
    */
   static setAccessToken(token: string) {
-    localStorage.setItem(this.ACCESS_TOKEN_KEY, token)
+    localStorage.setItem(this.#ACCESS_TOKEN_KEY, token)
   }
 
   /**
@@ -101,7 +87,7 @@ export class AuthUtils {
    * ```
    */
   static clearAccessToken() {
-    localStorage.removeItem(this.ACCESS_TOKEN_KEY)
+    localStorage.removeItem(this.#ACCESS_TOKEN_KEY)
   }
 
   /**
@@ -114,7 +100,7 @@ export class AuthUtils {
    * ```
    */
   static getRefreshToken(): string {
-    return localStorage.getItem(this.REFRESH_TOKEN_KEY) ?? ''
+    return localStorage.getItem(this.#REFRESH_TOKEN_KEY) ?? ''
   }
 
   /**
@@ -127,7 +113,7 @@ export class AuthUtils {
    * ```
    */
   static setRefreshToken(token: string) {
-    localStorage.setItem(this.REFRESH_TOKEN_KEY, token)
+    localStorage.setItem(this.#REFRESH_TOKEN_KEY, token)
   }
 
   /**
@@ -139,7 +125,7 @@ export class AuthUtils {
    * ```
    */
   static clearRefreshToken() {
-    localStorage.removeItem(this.REFRESH_TOKEN_KEY)
+    localStorage.removeItem(this.#REFRESH_TOKEN_KEY)
   }
 
   /**
@@ -152,7 +138,7 @@ export class AuthUtils {
    * ```
    */
   static isAuthenticated(): boolean {
-    return !!localStorage.getItem(this.ACCESS_TOKEN_KEY)
+    return !!localStorage.getItem(this.#ACCESS_TOKEN_KEY)
   }
 
   /**
@@ -165,7 +151,7 @@ export class AuthUtils {
    * ```
    */
   static getRememberedAccount(): string | null {
-    return localStorage.getItem(this.REMEMBERED_ACCOUNT_KEY)
+    return localStorage.getItem(this.#REMEMBERED_ACCOUNT_KEY)
   }
 
   /**
@@ -182,7 +168,7 @@ export class AuthUtils {
    * ```
    */
   static setRememberedAccount(data: string) {
-    localStorage.setItem(this.REMEMBERED_ACCOUNT_KEY, data)
+    localStorage.setItem(this.#REMEMBERED_ACCOUNT_KEY, data)
   }
 
   /**
@@ -194,6 +180,6 @@ export class AuthUtils {
    * ```
    */
   static clearRememberedAccount() {
-    localStorage.removeItem(this.REMEMBERED_ACCOUNT_KEY)
+    localStorage.removeItem(this.#REMEMBERED_ACCOUNT_KEY)
   }
 }
