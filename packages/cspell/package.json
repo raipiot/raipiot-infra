@@ -1,6 +1,6 @@
 {
   "name": "@raipiot-infra/cspell",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Collection of internal cspell dicts.",
   "author": "Bruce Song <recall4056@gmail.com> (https://github.com/recallwei/)",
   "homepage": "https://github.com/raipiot/raipiot-infra#readme",
@@ -8,7 +8,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/raipiot/raipiot-infra.git",
-    "directory": "packages/prettier"
+    "directory": "packages/cspell"
   },
   "keywords": [
     "raipiot",

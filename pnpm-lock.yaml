@@ -773,6 +773,14 @@ importers:
         specifier: ^3.4.1
         version: 3.4.1
 
+  packages/tanstack-query: {}
+
+  packages/theme:
+    dependencies:
+      antd:
+        specifier: ^5.13.3
+        version: 5.13.3(react-dom@18.2.0)(react@18.2.0)
+
   packages/tsconfig:
     dependencies:
       typescript:
