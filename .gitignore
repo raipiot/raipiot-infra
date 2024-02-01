@@ -38,6 +38,8 @@ build
 dist
 dist-ssr
 
+# TypeDoc
+type-docs
 
 # Debug
 logs
@@ -63,3 +65,7 @@ lerna-debug.log*
 *.njsproj
 *.sln
 *.sw?
+
+# Zip
+*.zip
+*.rar

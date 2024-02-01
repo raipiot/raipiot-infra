@@ -8,7 +8,7 @@ import type { CommonTimeFormatter, LocalTimeFormatter } from './types'
  * @author Bruce Song <recall4056@gmail.com>
  * @license MIT
  */
-export class TimeUtils {
+export class DateUtils {
   /**
    * dayjs
    * @description dayjs 的方法

@@ -138,7 +138,8 @@ const eslintPluginImportRules = {
     {
       devDependencies: true,
       peerDependencies: true,
-      optionalDependencies: false
+      optionalDependencies: false,
+      packageDir: [__dirname, join(__dirname, '../..')]
     }
   ], // 允许 devDependencies，peerDependencies，不允许 optionalDependencies
   'import/no-mutable-exports': 'error', // 禁止导出 let, var 声明的变量

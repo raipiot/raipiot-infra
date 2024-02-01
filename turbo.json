@@ -24,6 +24,15 @@
     "build:storybook": {
       "outputs": ["storybook-static/**"]
     },
+    "test": {
+      "cache": false,
+      "persistent": true
+    },
+    "coverage": {
+      "cache": false,
+      "persistent": true,
+      "outputs": ["coverage/**"]
+    },
     "clean": {},
     "cspell:sort:dict": {},
     "cspell:check": {},

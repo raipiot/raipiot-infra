@@ -24,6 +24,8 @@
   "scripts": {
     "dev": "tsup --watch",
     "build": "tsup",
+    "test": "vitest",
+    "coverage": "vitest --coverage",
     "clean": "rimraf dist",
     "type:check": "tsc --pretty --noEmit",
     "cspell:check": "cspell --no-progress --show-suggestions --show-context --cache **",

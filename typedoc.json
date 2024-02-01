@@ -1,0 +1,9 @@
+{
+  "name": "raipiot Infra Docs",
+  "entryPoints": ["packages/*"],
+  "entryPointStrategy": "packages",
+  "includeVersion": false,
+  "out": "type-docs",
+  "plugin": ["typedoc-material-theme"],
+  "themeColor": "#cb9820"
+}
