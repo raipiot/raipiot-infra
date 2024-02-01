@@ -1,0 +1,39 @@
+{
+  "name": "@raipiot-infra/tanstack-query",
+  "version": "0.0.2",
+  "description": "Collection of internal Tanstack Query configurations.",
+  "author": "Bruce Song <recall4056@gmail.com> (https://github.com/recallwei/)",
+  "homepage": "https://github.com/raipiot/raipiot-infra#readme",
+  "bugs": "https://github.com/raipiot/raipiot-infra/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/raipiot/raipiot-infra.git",
+    "directory": "packages/tanstack-query"
+  },
+  "keywords": [
+    "raipiot",
+    "theme"
+  ],
+  "files": [
+    "dist"
+  ],
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "dev": "tsup --watch",
+    "build": "tsup",
+    "clean": "rimraf dist",
+    "cspell:check": "cspell --no-progress --show-suggestions --show-context --cache **",
+    "type:check": "tsc --pretty --noEmit",
+    "eslint:check": "eslint . --color",
+    "eslint:fix": "eslint . --color --fix",
+    "prettier:check": "prettier --check --ignore-unknown .",
+    "prettier:fix": "prettier --write --ignore-unknown .",
+    "prepublishOnly": "pnpm build"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "MIT"
+}

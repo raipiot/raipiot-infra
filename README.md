@@ -22,6 +22,7 @@ raipiot infra 是我们的基础建设仓库，是基于 [`Turborepo`](https://t
 ![npm](https://img.shields.io/npm/v/@raipiot-infra/prettier?logo=prettier&label=prettier&registry_uri=http%3A%2F%2Fnpm-registry.raipiot.com%3A4873)
 ![npm](https://img.shields.io/npm/v/@raipiot-infra/rpx?logo=npm&label=rpx&registry_uri=http%3A%2F%2Fnpm-registry.raipiot.com%3A4873)
 ![npm](https://img.shields.io/npm/v/@raipiot-infra/tailwind?logo=tailwindcss&label=tailwind&registry_uri=http%3A%2F%2Fnpm-registry.raipiot.com%3A4873)
+![npm](https://img.shields.io/npm/v/@raipiot-infra/tanstack-query?logo=npm&label=tanstack-query&registry_uri=http%3A%2F%2Fnpm-registry.raipiot.com%3A4873)
 ![npm](https://img.shields.io/npm/v/@raipiot-infra/theme?logo=npm&label=theme&registry_uri=http%3A%2F%2Fnpm-registry.raipiot.com%3A4873)
 ![npm](https://img.shields.io/npm/v/@raipiot-infra/tsconfig?logo=typescript&label=tsconfig&registry_uri=http%3A%2F%2Fnpm-registry.raipiot.com%3A4873)
 ![npm](https://img.shields.io/npm/v/@raipiot-infra/utils?logo=npm&label=utils&registry_uri=http%3A%2F%2Fnpm-registry.raipiot.com%3A4873)
@@ -56,6 +57,7 @@ raipiot infra 是我们的基础建设仓库，是基于 [`Turborepo`](https://t
 - [x] [`prettier`](packages/prettier): 通用的 Prettier 配置，用于代码格式化
 - [x] [`rpx`](packages/rpx): 一个命令行工具，用于管理 raipiot 项目仓库
 - [x] [`tailwind`](packages/tailwind)：通用的 TailwindCSS 配置
+- [x] [`tanstack-query`](packages/tanstack-query): 通用的 Tanstack Query 配置信息
 - [x] [`theme`](packages/theme): 通用的主题配置
 - [x] [`tsconfig`](packages/tsconfig): 通用的 tsconfig 配置，用于 TypeScript
 - [x] [`utils`](packages/utils): 通用的工具类库
