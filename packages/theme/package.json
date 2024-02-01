@@ -1,0 +1,47 @@
+{
+  "name": "@raipiot-infra/theme",
+  "version": "0.0.1",
+  "description": "Collection of internal theme configurations.",
+  "author": "Bruce Song <recall4056@gmail.com> (https://github.com/recallwei/)",
+  "homepage": "https://github.com/raipiot/raipiot-infra#readme",
+  "bugs": "https://github.com/raipiot/raipiot-infra/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/raipiot/raipiot-infra.git",
+    "directory": "packages/theme"
+  },
+  "keywords": [
+    "raipiot",
+    "theme"
+  ],
+  "files": [
+    "dist"
+  ],
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "dev": "tsup --watch",
+    "build": "tsup",
+    "clean": "rimraf dist",
+    "cspell:check": "cspell --no-progress --show-suggestions --show-context --cache **",
+    "type:check": "tsc --pretty --noEmit",
+    "eslint:check": "eslint . --color",
+    "eslint:fix": "eslint . --color --fix",
+    "prettier:check": "prettier --check --ignore-unknown .",
+    "prettier:fix": "prettier --write --ignore-unknown .",
+    "prepublishOnly": "pnpm build"
+  },
+  "peerDependencies": {
+    "antd": "^5.13.3"
+  },
+  "peerDependenciesMeta": {
+    "antd": {
+      "optional": true
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "MIT"
+}
