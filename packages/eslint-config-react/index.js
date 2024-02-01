@@ -26,6 +26,7 @@ module.exports = {
     '@typescript-eslint',
     'react',
     'react-refresh',
+    'unicorn',
     'simple-import-sort',
     'import',
     'unused-imports'
@@ -37,7 +38,7 @@ module.exports = {
   },
   env: {
     browser: true,
-    es2023: true
+    es2024: true
   },
   settings: {
     'import/resolver': {
