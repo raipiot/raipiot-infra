@@ -1,7 +1,7 @@
 import './index.scss'
 
 import type { CommonTimeFormatter, LocalTimeFormatter } from '@raipiot-infra/utils'
-import { TimeUtils } from '@raipiot-infra/utils'
+import { DateUtils } from '@raipiot-infra/utils'
 import { Skeleton, Tooltip } from 'antd'
 import { isNil } from 'lodash-es'
 import { memo } from 'react'
@@ -35,9 +35,9 @@ export const DateString = memo<DateStringProps>(
     let label
     let fullLabel
     if (!isNil(value)) {
-      fullLabel = TimeUtils.formatTime(value, longDateFormatter)
-      label = TimeUtils.isCurrentYear(value)
-        ? TimeUtils.formatTime(value, shortDateFormatter)
+      fullLabel = DateUtils.formatTime(value, longDateFormatter)
+      label = DateUtils.isCurrentYear(value)
+        ? DateUtils.formatTime(value, shortDateFormatter)
         : fullLabel
     }
 

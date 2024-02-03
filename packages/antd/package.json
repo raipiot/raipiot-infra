@@ -1,6 +1,6 @@
 {
   "name": "@raipiot-infra/antd",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Collection of internal antd components.",
   "author": "Bruce Song <recall4056@gmail.com> (https://github.com/recallwei/)",
   "homepage": "https://github.com/raipiot/raipiot-infra#readme",
@@ -36,6 +36,7 @@
   "peerDependencies": {
     "antd": ">=5.13.3",
     "react": ">=18.2.0",
+    "@raipiot-infra/enums": "workspace:*",
     "@raipiot-infra/utils": "workspace:*"
   },
   "dependencies": {

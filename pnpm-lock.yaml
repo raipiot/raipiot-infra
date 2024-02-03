@@ -227,6 +227,9 @@ importers:
 
   packages/antd:
     dependencies:
+      '@raipiot-infra/enums':
+        specifier: workspace:*
+        version: link:../enums
       '@raipiot-infra/utils':
         specifier: workspace:*
         version: link:../utils

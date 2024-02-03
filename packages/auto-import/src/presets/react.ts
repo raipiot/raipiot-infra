@@ -5,6 +5,14 @@ export const reactPresets: (ImportsMap | PresetName | InlinePreset)[] = [
   'react',
   'react-i18next',
   {
+    from: 'react',
+    imports: ['Suspense']
+  },
+  {
+    from: '@tanstack/react-router',
+    imports: ['Link', 'Outlet', 'createFileRoute', 'createLazyFileRoute']
+  },
+  {
     from: '@tanstack/react-query',
     imports: [
       'QueryClient',
@@ -17,6 +25,23 @@ export const reactPresets: (ImportsMap | PresetName | InlinePreset)[] = [
       'keepPreviousData',
       'focusManager',
       'onlineManager'
+    ]
+  },
+  {
+    from: '@tanstack/react-router',
+    imports: [
+      'Link',
+      'Outlet',
+      'RouterProvider',
+      'createRouter',
+      'createFileRoute',
+      'createLazyFileRoute',
+      'createRootRouteWithContext',
+      'notFound',
+      'redirect',
+      'useNavigate',
+      'useRouter',
+      'NotFoundRoute'
     ]
   },
   {

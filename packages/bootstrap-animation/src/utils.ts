@@ -23,6 +23,6 @@ export const bootstrapLog = (pluginConfig?: PluginConfig) => {
       )}`
     )
     stdout.write(`\n${gradient.pastel(`> ${description ?? config.description}`)}`)
-    stdout.write(`\n${gradient.pastel(`> ${customContent ?? config.customContent}`)}\n\n`)
+    stdout.write(`\n${gradient.pastel(`> ${customContent ?? config.customContent}`)}\n`)
   })
 }
