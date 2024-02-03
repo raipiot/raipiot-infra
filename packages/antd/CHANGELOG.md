@@ -1,5 +1,13 @@
 # @raipiot-infra/antd
 
+## 0.0.8
+
+### Patch Changes
+
+- Updated dependencies
+  - @raipiot-infra/enums@0.0.4
+  - @raipiot-infra/utils@0.0.4
+
 ## 0.0.7
 
 ### Patch Changes
