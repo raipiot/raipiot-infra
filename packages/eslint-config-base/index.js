@@ -138,8 +138,8 @@ const eslintPluginImportRules = {
     {
       devDependencies: true,
       peerDependencies: true,
-      optionalDependencies: false,
-      packageDir: [__dirname, join(__dirname, '../..')]
+      optionalDependencies: true,
+      packageDir: ['.', '../..'] // 解决 monorepo 项目中的依赖检查问题
     }
   ], // 允许 devDependencies，peerDependencies，不允许 optionalDependencies
   'import/no-mutable-exports': 'error', // 禁止导出 let, var 声明的变量

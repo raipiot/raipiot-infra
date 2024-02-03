@@ -24,6 +24,7 @@
     "@babel/core": "^7.23.9",
     "@babel/preset-env": "^7.23.9",
     "@babel/runtime": "^7.23.9",
+    "@jest/globals": "^29.7.0",
     "@raipiot-infra/bootstrap-animation": "workspace:*",
     "@raipiot-infra/eslint-config-react-native": "workspace:*",
     "@react-native/babel-preset": "^0.73.20",
