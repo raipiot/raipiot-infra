@@ -12,7 +12,7 @@ pnpm add -D unplugin-auto-import @raipiot-infra/auto-import
 
 ## 配置
 
-在 `vite.config.ts` 中添加：
+### Vite
 
 ```ts
 // vite.config.ts
@@ -32,4 +32,27 @@ export default defineConfig({
     })
   ]
 })
+```
+
+### Next.js
+
+```js
+// next.config.js
+const AutoImport = require('unplugin-auto-import/next').default
+const { nextPresets } = require('@raipiot-infra/auto-import')
+
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  webpack: (config) => {
+    config.plugins.push(
+      AutoImport({
+        imports: [...nextPresets],
+        dts: '@types/auto-imports.d.ts'
+      })
+    )
+    return config
+  }
+}
+
+module.exports = nextConfig
 ```

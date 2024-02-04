@@ -54,7 +54,7 @@ export const reactPresets: (ImportsMap | PresetName | InlinePreset)[] = [
   },
   {
     from: '@raipiot-infra/config',
-    imports: ['TeamConfig', 'BrandConfig']
+    imports: ['TeamConfig', 'BrandConfig', 'StorageConfig']
   },
   {
     from: '@raipiot-infra/utils',
