@@ -17,9 +17,9 @@ importers:
       '@commitlint/config-conventional':
         specifier: ^18.6.0
         version: 18.6.0
-      '@raipiot-infra/commitlint-config':
+      '@raipiot-infra/commitlint':
         specifier: workspace:*
-        version: link:packages/commitlint-config
+        version: link:packages/commitlint
       '@raipiot-infra/cspell':
         specifier: workspace:*
         version: link:packages/cspell
@@ -336,7 +336,7 @@ importers:
         specifier: ^5.0.12
         version: 5.0.12(@types/node@20.11.16)(sass@1.70.0)
 
-  packages/commitlint-config:
+  packages/commitlint:
     dependencies:
       '@commitlint/cli':
         specifier: ^18.6.0

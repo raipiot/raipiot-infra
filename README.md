@@ -6,7 +6,7 @@ raipiot infra 是我们的基础建设仓库，是基于 [`Turborepo`](https://t
 ![npm](https://img.shields.io/npm/v/@raipiot-infra/auto-import?logo=vite&label=auto-import&registry_uri=http%3A%2F%2Fnpm-registry.raipiot.com%3A4873)
 ![npm](https://img.shields.io/npm/v/@raipiot-infra/axios?logo=axios&label=axios&registry_uri=http%3A%2F%2Fnpm-registry.raipiot.com%3A4873)
 ![npm](https://img.shields.io/npm/v/@raipiot-infra/bootstrap-animation?logo=vite&label=bootstrap-animation&registry_uri=http%3A%2F%2Fnpm-registry.raipiot.com%3A4873)
-![npm](https://img.shields.io/npm/v/@raipiot-infra/commitlint-config?logo=commitlint&label=commitlint-config&registry_uri=http%3A%2F%2Fnpm-registry.raipiot.com%3A4873)
+![npm](https://img.shields.io/npm/v/@raipiot-infra/commitlint?logo=commitlint&label=commitlint&registry_uri=http%3A%2F%2Fnpm-registry.raipiot.com%3A4873)
 ![npm](https://img.shields.io/npm/v/@raipiot-infra/config?logo=npm&label=config&registry_uri=http%3A%2F%2Fnpm-registry.raipiot.com%3A4873)
 ![npm](https://img.shields.io/npm/v/@raipiot-infra/cspell?logo=npm&label=cspell&registry_uri=http%3A%2F%2Fnpm-registry.raipiot.com%3A4873)
 ![npm](https://img.shields.io/npm/v/@raipiot-infra/enums?logo=typescript&label=enums&registry_uri=http%3A%2F%2Fnpm-registry.raipiot.com%3A4873)
@@ -41,7 +41,7 @@ raipiot infra 是我们的基础建设仓库，是基于 [`Turborepo`](https://t
 - [x] [`auto-import`](packages/auto-import): [`unplugin-auto-import`](https://github.com/unplugin/unplugin-auto-import) 的预设配置，搭配 Vite 使用
 - [ ] [`axios`](packages/axios): 基于 [`axios`](https://axios-http.com/) 封装的网络请求库
 - [x] [`bootstrap-animation`](packages/bootstrap-animation): 启动项目时命令行打印的品牌动画、支持 Vite 插件
-- [x] [`commitlint-config`](packages/commitlint-config): 通用的 Commitlint 配置，用于检查提交信息是否符合规范、辅助生成提交信息
+- [x] [`commitlint`](packages/commitlint): 通用的 Commitlint 配置，用于检查提交信息是否符合规范、辅助生成提交信息
 - [x] [`config`](packages/config): 通用的配置文件，包含一些与公司、品牌、团队相关的信息
 - [x] [`cspell`](packages/cspell): 通用的 CSpell 配置，用于检查英文拼写
 - [x] [`enums`](packages/enums): 通用的枚举，用于 TypeScript 项目
