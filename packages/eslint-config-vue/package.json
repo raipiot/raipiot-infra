@@ -1,6 +1,6 @@
 {
   "name": "@raipiot-infra/eslint-config-vue",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Vue ESLint config for raipiot",
   "author": "Bruce Song <recall4056@gmail.com> (https://github.com/recallwei/)",
   "homepage": "https://github.com/raipiot/raipiot-infra#readme",
@@ -45,7 +45,7 @@
     "eslint-plugin-simple-import-sort": "^10.0.0",
     "eslint-plugin-tailwindcss": "^3.14.1",
     "eslint-plugin-unused-imports": "^3.0.0",
-    "eslint-plugin-vue": "^9.21.0",
+    "eslint-plugin-vue": "^9.21.1",
     "vue-eslint-parser": "^9.4.2"
   },
   "publishConfig": {

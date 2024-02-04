@@ -1,6 +1,6 @@
 {
   "name": "@raipiot-infra/rpx",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Collection of internal repo tools.",
   "author": "Bruce Song <recall4056@gmail.com> (https://github.com/recallwei/)",
   "homepage": "https://github.com/raipiot/raipiot-infra#readme",
@@ -42,12 +42,11 @@
     "@types/cross-spawn": "^6.0.6",
     "@types/degit": "^2.8.6",
     "@types/prompts": "^2.4.9",
-    "commander": "^11.1.0",
+    "commander": "^12.0.0",
     "cross-fetch": "^4.0.0",
     "cross-spawn": "^7.0.3",
     "kolorist": "^1.8.0",
-    "prompts": "^2.4.2",
-    "tsup": "^8.0.1"
+    "prompts": "^2.4.2"
   },
   "publishConfig": {
     "access": "public"

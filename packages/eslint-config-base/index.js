@@ -133,15 +133,7 @@ const eslintPluginImportRules = {
   'import/no-absolute-path': 'off', // 允许导入绝对路径
   'import/no-duplicates': 'error', // 禁止重复导入
   'import/extensions': 'off', // 允许导入时带文件扩展名
-  'import/no-extraneous-dependencies': [
-    'error',
-    {
-      devDependencies: true,
-      peerDependencies: true,
-      optionalDependencies: true,
-      packageDir: ['.', '../..'] // 解决 monorepo 项目中的依赖检查问题
-    }
-  ], // 允许 devDependencies，peerDependencies，不允许 optionalDependencies
+  'import/no-extraneous-dependencies': 'off', // 解决 monorepo 依赖管理问题
   'import/no-mutable-exports': 'error', // 禁止导出 let, var 声明的变量
   'import/no-self-import': 'error', // 禁止自导入
   'import/prefer-default-export': 'off' // 仅导出一个变量时，不要求默认导出

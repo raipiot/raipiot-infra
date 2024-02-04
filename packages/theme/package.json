@@ -1,6 +1,6 @@
 {
   "name": "@raipiot-infra/theme",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Collection of internal theme configurations.",
   "author": "Bruce Song <recall4056@gmail.com> (https://github.com/recallwei/)",
   "homepage": "https://github.com/raipiot/raipiot-infra#readme",
@@ -33,7 +33,7 @@
     "prepublishOnly": "pnpm build"
   },
   "peerDependencies": {
-    "antd": "^5.13.3"
+    "antd": "^5.14.0"
   },
   "peerDependenciesMeta": {
     "antd": {
