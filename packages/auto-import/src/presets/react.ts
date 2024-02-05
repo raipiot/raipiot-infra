@@ -9,10 +9,6 @@ export const reactPresets: (ImportsMap | PresetName | InlinePreset)[] = [
     imports: ['Suspense']
   },
   {
-    from: '@tanstack/react-router',
-    imports: ['Link', 'Outlet', 'createFileRoute', 'createLazyFileRoute']
-  },
-  {
     from: '@tanstack/react-query',
     imports: [
       'QueryClient',
@@ -41,7 +37,14 @@ export const reactPresets: (ImportsMap | PresetName | InlinePreset)[] = [
       'redirect',
       'useNavigate',
       'useRouter',
-      'NotFoundRoute'
+      'useLoaderData',
+      'useMatch',
+      'useParams',
+      'useRouteContext',
+      'useSearch',
+      'LoaderContext',
+      'NotFoundRoute',
+      'getRouteApi'
     ]
   },
   {
