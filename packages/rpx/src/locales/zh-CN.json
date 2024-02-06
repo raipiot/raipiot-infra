@@ -12,6 +12,7 @@
   },
   "Generate.Contributors.Success": "生成贡献者信息成功！",
   "Generate.Contributors.Failed": "生成贡献者信息失败！",
+  "Need.Org.Or.Repo": "需要在 raipiot.config.js 中指定 org 和 repo",
   "Display.Current.Version": "显示当前版本",
   "Display.Help.Command": "显示帮助命令",
   "Action.Not.Match": "该命令不存在，请通过调用 -h 检查"

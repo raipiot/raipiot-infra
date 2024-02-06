@@ -9,6 +9,6 @@ export default defineConfig((options) => ({
   dts: true,
   skipNodeModulesBundle: true,
   outDir: 'dist',
-  format: ['cjs', 'esm'],
+  format: ['esm'], // 使用了 Top Level Await，所以需要使用 ESM
   minify: !options.watch
 }))

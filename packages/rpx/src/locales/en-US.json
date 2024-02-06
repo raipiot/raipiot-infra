@@ -12,6 +12,7 @@
   },
   "Generate.Contributors.Success": "Generate contributors successfully!",
   "Generate.Contributors.Failed": "Generate contributors failed!",
+  "Need.Org.Or.Repo": "No org or repo found in raipiot.config.js",
   "Display.Current.Version": "Display the current version",
   "Display.Help.Command": "Display help for command",
   "Action.Not.Match": "Action not match! Please check the command by 'tornado-x -h'"

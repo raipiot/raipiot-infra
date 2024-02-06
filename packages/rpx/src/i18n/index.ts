@@ -1,21 +1,10 @@
-import path from 'path'
-
 import { CliConfig } from '../config'
 import en_US from '../locales/en-US.json'
 import zh_CN from '../locales/zh-CN.json'
-import type { Lang, MessageSchema, RaipiotConfig, Translation } from '../types'
+import type { Lang, MessageSchema, Translation } from '../types'
+import { getRaipiotConfig } from '../utils'
 
-let config: RaipiotConfig | null = null
-
-// TODO: 优化配置文件的读取方式
-try {
-  // eslint-disable-next-line import/no-dynamic-require, global-require, @typescript-eslint/no-var-requires
-  config = require(path.resolve('raipiot.config.js')) as RaipiotConfig
-} catch {
-  config = null
-}
-
-const currentLang = config?.lang ?? CliConfig.defaultLang
+const currentLang = (await getRaipiotConfig())?.lang ?? CliConfig.defaultLang
 
 const translations: Record<Lang, Translation> = {
   'en-US': {},

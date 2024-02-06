@@ -1,22 +1,11 @@
+import fs from 'node:fs'
+
 import fetch from 'cross-fetch'
-import fs from 'fs'
 import path from 'path'
 
 import { t } from '../i18n'
 import { Logger } from '../log'
-import type { RaipiotConfig } from '../types'
-
-let config: RaipiotConfig | null = null
-
-// TODO: 优化配置文件的读取方式
-try {
-  // eslint-disable-next-line import/no-dynamic-require, global-require, @typescript-eslint/no-var-requires
-  config = require(path.resolve('raipiot.config.js')) as RaipiotConfig
-} catch {
-  config = null
-}
-
-const { org, repo } = config ?? {}
+import { getRaipiotConfig } from '../utils'
 
 // 忽略的用户，机器人
 const IGNORED_USERS = new Set([
@@ -31,7 +20,8 @@ const COMPLETELY_ARBITRARY_CONTRIBUTION_COUNT = 3
 // 每页最大贡献人数
 const PAGE_LIMIT = 100
 // GitHub 获取贡献者列表 API 地址
-const ContributorsApiUrl = `https://api.github.com/repos/${org}/${repo}/contributors?per_page=${PAGE_LIMIT}`
+const getContributorsApiUrl = (org: string, repo: string) =>
+  `https://api.github.com/repos/${org}/${repo}/contributors?per_page=${PAGE_LIMIT}`
 // GitHub token
 const GitHubToken = 'ghp_*'
 
@@ -72,11 +62,16 @@ async function getData<T>(url: string | undefined): Promise<T | null> {
 }
 
 async function* fetchUsers(page = 1): AsyncIterableIterator<Contributor[]> {
+  const { org, repo } = (await getRaipiotConfig()) ?? {}
+  if (!org || !repo) {
+    throw new Error(t('Need.Org.Or.Repo'))
+  }
+
   let lastLength = 0
   do {
     // eslint-disable-next-line no-await-in-loop
     const contributors = await getData<Contributor[] | { message: string }>(
-      `${ContributorsApiUrl}&page=${page}`
+      `${getContributorsApiUrl(org!, repo!)}&page=${page}`
     )
 
     if (!Array.isArray(contributors)) {
