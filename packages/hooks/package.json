@@ -1,6 +1,6 @@
 {
   "name": "@raipiot-infra/hooks",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Collection of internal hooks.",
   "author": "Bruce Song <recall4056@gmail.com> (https://github.com/recallwei/)",
   "homepage": "https://github.com/raipiot/raipiot-infra#readme",
@@ -31,7 +31,7 @@
     "react": "^18.2.0"
   },
   "devDependencies": {
-    "@types/react": "^18.2.52"
+    "@types/react": "^18.2.54"
   },
   "publishConfig": {
     "access": "public"

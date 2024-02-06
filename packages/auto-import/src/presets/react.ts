@@ -17,10 +17,16 @@ export const reactPresets: (ImportsMap | PresetName | InlinePreset)[] = [
       'useQuery',
       'useQueries',
       'useInfiniteQuery',
+      'useSuspenseQueries',
+      'useSuspenseInfiniteQuery',
       'useMutation',
+      'useIsFetching',
+      'useIsMutating',
+      'useMutationState',
       'keepPreviousData',
       'focusManager',
-      'onlineManager'
+      'onlineManager',
+      'queryOptions'
     ]
   },
   {
@@ -42,9 +48,14 @@ export const reactPresets: (ImportsMap | PresetName | InlinePreset)[] = [
       'useParams',
       'useRouteContext',
       'useSearch',
+      'useMatchRoute',
+      'useBlocker',
       'LoaderContext',
+      'MatchRoute',
       'NotFoundRoute',
-      'getRouteApi'
+      'getRouteApi',
+      'Await',
+      'Block'
     ]
   },
   {
