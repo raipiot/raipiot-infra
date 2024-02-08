@@ -1,3 +1,6 @@
 {
-  "extends": "@raipiot-infra/eslint-config-react"
+  "extends": [
+    "@raipiot-infra/eslint-config-react",
+    "plugin:@tanstack/eslint-plugin-query/recommended"
+  ]
 }

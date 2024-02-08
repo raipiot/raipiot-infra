@@ -10,6 +10,8 @@
     "dev:packages": "FORCE_COLOR=1 turbo dev --scope=@raipiot-infra/utils --scope=@raipiot-infra/config",
     "dev:utils": "FORCE_COLOR=1 turbo dev --filter=@raipiot-infra/utils",
     "dev:config": "FORCE_COLOR=1 turbo dev --filter=@raipiot-infra/config",
+    "dev:react-hooks": "FORCE_COLOR=1 turbo dev --filter=@raipiot-infra/react-hooks",
+    "dev:axios": "FORCE_COLOR=1 turbo dev --filter=@raipiot-infra/axios",
     "build:apps": "FORCE_COLOR=1 turbo build --filter=./apps/*",
     "build:react": "FORCE_COLOR=1 turbo build --filter=react-playground",
     "build:next": "FORCE_COLOR=1 turbo build --filter=next-playground",
@@ -46,6 +48,7 @@
     "@raipiot-infra/prettier": "workspace:*",
     "@raipiot-infra/rpx": "workspace:*",
     "@raipiot-infra/tsconfig": "workspace:*",
+    "@types/lodash-es": "^4.17.12",
     "@vitest/coverage-v8": "^1.2.2",
     "commitizen": "^4.3.0",
     "cspell": "^8.3.2",
@@ -72,5 +75,8 @@
     "node": ">=20"
   },
   "private": true,
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "lodash-es": "^4.17.21"
+  }
 }

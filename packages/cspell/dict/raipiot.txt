@@ -53,6 +53,7 @@ juejin
 kolorist
 lintstaged
 lintstagedrc
+lordicon
 lucide
 miterlimit
 nestjs
