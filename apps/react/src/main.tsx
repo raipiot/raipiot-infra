@@ -1,4 +1,5 @@
 import './styles/tailwind.css'
+import './styles/main.scss'
 
 import { createRouter, RouterProvider } from '@tanstack/react-router'
 import { StrictMode } from 'react'
@@ -25,3 +26,4 @@ if (root && !root?.innerHTML) {
     </StrictMode>
   )
 }
+

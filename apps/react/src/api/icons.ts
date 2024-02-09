@@ -18,6 +18,12 @@ type IconCollectionsResponse = {
   }
 }
 
+type IconSearchResponse = {
+  collections: IconCollectionsResponse
+  icons: string[]
+  total: number
+}
+
 export const iconsApi = {
   /**
    * 获取图标分类，默认获取所有图标分类
@@ -25,5 +31,13 @@ export const iconsApi = {
    * @returns
    */
   getIconCollections: (params?: { prefixes: string }) =>
-    instance.get<IconCollectionsResponse>('/collections', { params })
+    instance.get<IconCollectionsResponse>('/collections', { params }),
+
+  /**
+   *
+   * @param params limit default is 64, max is 999
+   * @returns
+   */
+  queryIcons: (params: { query: string; limit?: number }) =>
+    instance.get<IconSearchResponse>('/search', { params })
 }
