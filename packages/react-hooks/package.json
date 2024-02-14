@@ -4,7 +4,7 @@
   "description": "Collection of internal hooks.",
   "author": "Bruce Song <recall4056@gmail.com> (https://github.com/recallwei/)",
   "homepage": "https://github.com/raipiot/rp-hooks-doc#readme",
-  "bugs": "https://github.com/raipiot/rp-hooks-doc/issues",
+  "bugs": "https://github.com/raipiot/raipiot-infra/issues",
   "repository": {
     "type": "git",
     "url": "https://github.com/raipiot/raipiot-infra.git",
@@ -24,14 +24,14 @@
     "build": "tsup",
     "clean": "rimraf dist",
     "type:check": "tsc --pretty --noEmit",
-    "cspell:check": "cspell --no-progress --show-suggestions --show-context --cache **",
+    "cspell:check": "cspell --no-progress --show-suggestions --show-context **",
     "prepublishOnly": "pnpm build"
-  },
-  "dependencies": {
-    "lodash-es": "^4.17.21"
   },
   "peerDependencies": {
     "react": "^18.2.0"
+  },
+  "dependencies": {
+    "lodash-es": "^4.17.21"
   },
   "devDependencies": {
     "@types/react": "^18.2.54",

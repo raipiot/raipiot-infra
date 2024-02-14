@@ -25,7 +25,7 @@
     "clean": "rimraf dist storybook-static",
     "storybook": "storybook dev -p 6006",
     "storybook:build": "storybook build",
-    "cspell:check": "cspell --no-progress --show-suggestions --show-context --cache **",
+    "cspell:check": "cspell --no-progress --show-suggestions --show-context **",
     "type:check": "tsc --pretty --noEmit",
     "eslint:check": "eslint . --color",
     "eslint:fix": "eslint . --color --fix",
@@ -35,11 +35,11 @@
   },
   "peerDependencies": {
     "antd": ">=5.14.0",
-    "react": ">=18.2.0",
-    "@raipiot-infra/enums": "workspace:*",
-    "@raipiot-infra/utils": "workspace:*"
+    "react": ">=18.2.0"
   },
   "dependencies": {
+    "@raipiot-infra/enums": "workspace:^",
+    "@raipiot-infra/utils": "workspace:^",
     "clsx": "^2.1.0",
     "lodash-es": "^4.17.21"
   },

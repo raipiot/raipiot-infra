@@ -25,19 +25,14 @@
     "build": "tsup",
     "clean": "rimraf dist",
     "type:check": "tsc --pretty --noEmit",
-    "cspell:check": "cspell --no-progress --show-suggestions --show-context --cache **",
+    "cspell:check": "cspell --no-progress --show-suggestions --show-context **",
     "prepublishOnly": "pnpm build"
   },
   "peerDependencies": {
-    "vite": "^5.0.12",
-    "@raipiot-infra/config": "workspace:*"
-  },
-  "peerDependenciesMeta": {
-    "@raipiot-infra/config": {
-      "optional": true
-    }
+    "vite": "^5.0.12"
   },
   "dependencies": {
+    "@raipiot-infra/config": "workspace:^",
     "figlet": "^1.7.0",
     "gradient-string": "^2.0.2"
   },

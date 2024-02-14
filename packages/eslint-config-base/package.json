@@ -21,7 +21,7 @@
     "index.js"
   ],
   "scripts": {
-    "cspell:check": "cspell --no-progress --show-suggestions --show-context --cache **",
+    "cspell:check": "cspell --no-progress --show-suggestions --show-context **",
     "eslint:check": "eslint . --color",
     "eslint:fix": "eslint . --color --fix",
     "prettier:check": "prettier --check --ignore-unknown .",

@@ -7,5 +7,5 @@
 ## 安装
 
 ```bash
-pnpm add antd @raipiot-infra/antd @raipiot-infra/utils
+pnpm add antd @raipiot-infra/antd
 ```

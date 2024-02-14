@@ -23,7 +23,7 @@
     "index.js"
   ],
   "scripts": {
-    "cspell:check": "cspell --no-progress --show-suggestions --show-context --cache **",
+    "cspell:check": "cspell --no-progress --show-suggestions --show-context **",
     "eslint:check": "eslint . --color",
     "eslint:fix": "eslint . --color --fix",
     "prettier:check": "prettier --check --ignore-unknown .",
@@ -34,7 +34,7 @@
     "typescript": ">=5.0.0"
   },
   "dependencies": {
-    "@raipiot-infra/eslint-config-base": "workspace:*",
+    "@raipiot-infra/eslint-config-base": "workspace:^",
     "@typescript-eslint/eslint-plugin": "^6.20.0",
     "@typescript-eslint/parser": "^6.20.0",
     "eslint-config-airbnb-base": "^15.0.0",

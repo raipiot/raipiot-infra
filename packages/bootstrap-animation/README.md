@@ -10,12 +10,6 @@
 pnpm add -D @raipiot-infra/bootstrap-animation
 ```
 
-如果需要显示 raipiot 品牌需要安装可选依赖 `@raipiot-infra/config`。
-
-```bash
-pnpm add @raipiot-infra/config
-```
-
 ## 配置
 
 ### Vite

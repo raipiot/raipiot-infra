@@ -22,25 +22,25 @@ importers:
         specifier: ^18.6.0
         version: 18.6.0
       '@raipiot-infra/commitlint':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:packages/commitlint
       '@raipiot-infra/cspell':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:packages/cspell
       '@raipiot-infra/eslint-config':
         specifier: workspace:^
         version: link:packages/eslint-config
       '@raipiot-infra/eslint-config-ts':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:packages/eslint-config-ts
       '@raipiot-infra/prettier':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:packages/prettier
       '@raipiot-infra/rpx':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:packages/rpx
       '@raipiot-infra/tsconfig':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:packages/tsconfig
       '@types/lodash-es':
         specifier: ^4.17.12
@@ -104,10 +104,10 @@ importers:
         version: 18.2.0(react@18.2.0)
     devDependencies:
       '@raipiot-infra/bootstrap-animation':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../packages/bootstrap-animation
       '@raipiot-infra/eslint-config-next':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../packages/eslint-config-next
       '@types/node':
         specifier: 20.11.16
@@ -134,16 +134,16 @@ importers:
         specifier: ^1.4.1
         version: 1.4.1(react@18.2.0)
       '@raipiot-infra/antd':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../packages/antd
       '@raipiot-infra/axios':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../packages/axios
-      '@raipiot-infra/react-hooks':
-        specifier: workspace:*
+      '@raipiot-infra/hooks':
+        specifier: workspace:^
         version: link:../../packages/react-hooks
       '@raipiot-infra/utils':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../packages/utils
       '@tanstack/react-query':
         specifier: ^5.18.1
@@ -174,10 +174,10 @@ importers:
         specifier: ^0.1.4
         version: 0.1.4
       '@raipiot-infra/bootstrap-animation':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../packages/bootstrap-animation
       '@raipiot-infra/eslint-config-react':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../packages/eslint-config-react
       '@tanstack/eslint-plugin-query':
         specifier: ^5.18.1
@@ -238,10 +238,10 @@ importers:
         specifier: ^29.7.0
         version: 29.7.0
       '@raipiot-infra/bootstrap-animation':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../packages/bootstrap-animation
       '@raipiot-infra/eslint-config-react-native':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../packages/eslint-config-react-native
       '@react-native/babel-preset':
         specifier: ^0.73.20
@@ -283,10 +283,10 @@ importers:
   packages/antd:
     dependencies:
       '@raipiot-infra/enums':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../enums
       '@raipiot-infra/utils':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../utils
       antd:
         specifier: '>=5.14.0'
@@ -366,7 +366,7 @@ importers:
   packages/bootstrap-animation:
     dependencies:
       '@raipiot-infra/config':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../config
       figlet:
         specifier: ^1.7.0
@@ -416,7 +416,7 @@ importers:
   packages/eslint-config:
     dependencies:
       '@raipiot-infra/eslint-config-react':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../eslint-config-react
       eslint:
         specifier: ^8.56.0
@@ -428,7 +428,7 @@ importers:
   packages/eslint-config-astro:
     dependencies:
       '@raipiot-infra/eslint-config-base':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../eslint-config-base
       '@tanstack/eslint-plugin-query':
         specifier: ^5.18.1
@@ -491,7 +491,7 @@ importers:
   packages/eslint-config-next:
     dependencies:
       '@raipiot-infra/eslint-config-base':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../eslint-config-base
       '@typescript-eslint/eslint-plugin':
         specifier: ^6.20.0
@@ -548,7 +548,7 @@ importers:
   packages/eslint-config-react:
     dependencies:
       '@raipiot-infra/eslint-config-base':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../eslint-config-base
       '@tanstack/eslint-plugin-query':
         specifier: ^5.18.0
@@ -608,7 +608,7 @@ importers:
   packages/eslint-config-react-native:
     dependencies:
       '@raipiot-infra/eslint-config-base':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../eslint-config-base
       '@react-native/eslint-plugin':
         specifier: ^0.74.0
@@ -668,7 +668,7 @@ importers:
   packages/eslint-config-ts:
     dependencies:
       '@raipiot-infra/eslint-config-base':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../eslint-config-base
       '@typescript-eslint/eslint-plugin':
         specifier: ^6.20.0
@@ -710,7 +710,7 @@ importers:
   packages/eslint-config-vue:
     dependencies:
       '@raipiot-infra/eslint-config-base':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../eslint-config-base
       '@typescript-eslint/eslint-plugin':
         specifier: ^6.20.0

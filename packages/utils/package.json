@@ -26,14 +26,16 @@
     "build": "tsup",
     "test": "vitest",
     "coverage": "vitest --coverage",
-    "clean": "rimraf dist",
+    "clean": "rimraf dist coverage",
     "type:check": "tsc --pretty --noEmit",
-    "cspell:check": "cspell --no-progress --show-suggestions --show-context --cache **",
+    "cspell:check": "cspell --no-progress --show-suggestions --show-context **",
     "prepublishOnly": "pnpm build"
   },
   "peerDependencies": {
-    "@raipiot-infra/enums": "workspace:*",
     "dayjs": "^1.11.10"
+  },
+  "dependencies": {
+    "@raipiot-infra/enums": "workspace:*"
   },
   "publishConfig": {
     "access": "public"

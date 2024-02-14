@@ -7,7 +7,11 @@
 ## 安装
 
 ```bash
-pnpm add @raipiot-infra/utils @raipiot-infra/enums dayjs
+pnpm add @raipiot-infra/utils
 ```
 
 注意：工具库的时间处理依赖于 `dayjs`，所以需要安装 `dayjs`。
+
+```bash
+pnpm add dayjs
+```
