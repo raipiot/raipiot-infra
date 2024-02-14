@@ -1,6 +1,6 @@
 {
   "name": "@raipiot-infra/utils",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Collection of internal utils.",
   "author": "Bruce Song <recall4056@gmail.com> (https://github.com/recallwei/)",
   "homepage": "https://github.com/raipiot/raipiot-infra#readme",
@@ -33,6 +33,11 @@
   },
   "peerDependencies": {
     "dayjs": "^1.11.10"
+  },
+  "peerDependenciesMeta": {
+    "dayjs": {
+      "optional": true
+    }
   },
   "dependencies": {
     "@raipiot-infra/enums": "workspace:*"

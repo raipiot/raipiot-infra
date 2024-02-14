@@ -54,13 +54,13 @@
     "cspell": "^8.3.2",
     "cz-git": "^1.8.0",
     "eslint": "^8.56.0",
-    "husky": "^9.0.7",
-    "lint-staged": "^15.2.1",
-    "prettier": "^3.2.4",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
+    "prettier": "^3.2.5",
     "rimraf": "^5.0.5",
-    "tsup": "^8.0.1",
-    "turbo": "^1.12.2",
-    "typedoc": "^0.25.7",
+    "tsup": "^8.0.2",
+    "turbo": "^1.12.3",
+    "typedoc": "^0.25.8",
     "typedoc-material-theme": "^1.0.2",
     "typescript": "^5.3.3",
     "vitest": "^1.2.2"
@@ -75,8 +75,5 @@
     "node": ">=20"
   },
   "private": true,
-  "license": "MIT",
-  "dependencies": {
-    "lodash-es": "^4.17.21"
-  }
+  "license": "MIT"
 }

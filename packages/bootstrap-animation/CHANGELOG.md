@@ -1,5 +1,13 @@
 # @raipiot-infra/bootstrap-animation
 
+## 0.0.11
+
+### Patch Changes
+
+- update
+- Updated dependencies
+  - @raipiot-infra/config@0.0.9
+
 ## 0.0.10
 
 ### Patch Changes

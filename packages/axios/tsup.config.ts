@@ -11,5 +11,5 @@ export default defineConfig((options) => ({
   outDir: 'dist',
   format: ['cjs', 'esm'],
   minify: !options.watch,
-  external: ['dayjs']
+  external: ['axios']
 }))

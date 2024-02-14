@@ -1,6 +1,6 @@
 {
   "name": "@raipiot-infra/hooks",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Collection of internal hooks.",
   "author": "Bruce Song <recall4056@gmail.com> (https://github.com/recallwei/)",
   "homepage": "https://github.com/raipiot/rp-hooks-doc#readme",
@@ -34,7 +34,7 @@
     "lodash-es": "^4.17.21"
   },
   "devDependencies": {
-    "@types/react": "^18.2.54",
+    "@types/react": "^18.2.55",
     "@types/lodash-es": "^4.17.12"
   },
   "publishConfig": {

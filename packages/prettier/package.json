@@ -1,6 +1,6 @@
 {
   "name": "@raipiot-infra/prettier",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Collection of internal Prettier configurations.",
   "author": "Bruce Song <recall4056@gmail.com> (https://github.com/recallwei/)",
   "homepage": "https://github.com/raipiot/raipiot-infra#readme",
@@ -25,7 +25,7 @@
     "prettier:fix": "prettier --write --ignore-unknown ."
   },
   "peerDependencies": {
-    "prettier": "^3.2.4"
+    "prettier": "^3.2.5"
   },
   "publishConfig": {
     "access": "public"
