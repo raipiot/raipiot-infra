@@ -1,5 +1,5 @@
 {
-  "name": "react-playground",
+  "name": "@raipiot-infra/react-playground",
   "author": "Bruce Song <recall4056@gmail.com> (https://github.com/recallwei/)",
   "type": "module",
   "scripts": {
