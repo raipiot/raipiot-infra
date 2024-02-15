@@ -7,5 +7,9 @@
   "baseBranch": "main",
   "access": "public",
   "updateInternalDependencies": "patch",
-  "ignore": ["*-playground"]
+  "ignore": [
+    "@raipiot-infra/next-playground",
+    "@raipiot-infra/react-playground",
+    "@raipiot-infra/react-native-playground"
+  ]
 }

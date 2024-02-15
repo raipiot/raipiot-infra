@@ -28,14 +28,14 @@ export class AuthUtils {
    * @description 用于内置管理员角色登录的用户名
    * @default "admin"
    */
-  static readonly DEFAULT_ADMIN_USERNAME = 'raipiot'
+  static readonly DEFAULT_ADMIN_USERNAME = 'admin'
 
   /**
    * 默认管理员密码
    * @description 用于内置管理员角色登录的密码
-   * @default "123456"
+   * @default "admin"
    */
-  static readonly DEFAULT_ADMIN_PASSWORD = '123456'
+  static readonly DEFAULT_ADMIN_PASSWORD = 'admin'
 
   /**
    * 获取访问令牌
