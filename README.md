@@ -54,6 +54,7 @@ raipiot infra 是我们的基础建设仓库，是基于 [`Turborepo`](https://t
 - [x] [`eslint-config-ts`](packages/eslint-config-ts): ESLint 的配置预设，用于 TypeScript 项目
 - [x] [`eslint-config-vue`](packages/eslint-config-vue): ESLint 的配置预设，用于 Vue 项目
 - [x] [`hooks`](packages/hooks): 通用的 React Hooks，用于 React 或 React Native 项目
+- [ ] [`i18n`](packages/i18n): 通用的 i18n 插件，用于 React 项目
 - [x] [`prettier`](packages/prettier): 通用的 Prettier 配置，用于代码格式化
 - [x] [`rpx`](packages/rpx): 一个命令行工具，用于管理 raipiot 项目仓库
 - [x] [`tailwind`](packages/tailwind)：通用的 TailwindCSS 配置
