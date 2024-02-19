@@ -1,5 +1,11 @@
 # @raipiot-infra/cspell
 
+## 0.0.8
+
+### Patch Changes
+
+- add text
+
 ## 0.0.7
 
 ### Patch Changes
