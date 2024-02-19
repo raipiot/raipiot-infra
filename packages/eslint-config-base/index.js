@@ -12,7 +12,7 @@ const project = fs.existsSync(join(process.cwd(), 'tsconfig.eslint.json'))
   ? resolve(process.cwd(), 'tsconfig.eslint.json')
   : resolve(process.cwd(), 'tsconfig.json')
 
-const defaultIgnorePatterns = ['node_modules/', 'dist/']
+const defaultIgnorePatterns = ['node_modules', 'dist']
 
 const jsOverrides = {
   files: ['*.{js,cjs,mjs,jsx}'],
@@ -88,7 +88,8 @@ const commonRules = {
         'request',
         'args',
         'draft',
-        'acc'
+        'acc',
+        'props'
       ],
       ignorePropertyModificationsForRegex: ['^item', 'Item$']
     }
@@ -111,7 +112,7 @@ const simpleImportSortRules = {
 const unusedImportsRules = {
   'unused-imports/no-unused-imports': 'error',
   'unused-imports/no-unused-vars': [
-    'error',
+    'warn',
     {
       vars: 'all',
       varsIgnorePattern: '^_',
@@ -149,13 +150,8 @@ const typescriptEslintRules = {
   '@typescript-eslint/consistent-type-imports': 'error', // 强制使用 import type
   '@typescript-eslint/triple-slash-reference': 'off', // 允许使用 /// <reference path="" />
   '@typescript-eslint/no-unused-vars': 'off', // 由 eslint-plugin-unused-imports 处理
-  '@typescript-eslint/no-use-before-define': [
-    'error',
-    {
-      functions: false,
-      classes: false
-    }
-  ]
+  '@typescript-eslint/no-use-before-define': ['error', { functions: false, classes: false }],
+  '@typescript-eslint/no-throw-literal': 'off' // 允许 throw 字面量
 }
 
 /**
@@ -172,13 +168,7 @@ const reactRules = {
   'react/jsx-filename-extension': ['warn', { extensions: ['jsx', '.tsx'] }], // JSX 文件使用 .jsx 或 .tsx 扩展名
   'react/jsx-no-useless-fragment': ['error', { allowExpressions: true }], // 允许使用 <></> 包裹表达式，如 <>{children}</>
   'react/no-array-index-key': 'off', // 允许使用数组索引作为 key
-  'react/no-unstable-nested-components': [
-    'error',
-    {
-      allowAsProps: true,
-      customValidators: []
-    }
-  ]
+  'react/no-unstable-nested-components': ['error', { allowAsProps: true, customValidators: [] }]
 }
 
 /**

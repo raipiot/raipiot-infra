@@ -26,7 +26,6 @@ module.exports = {
     '@typescript-eslint',
     'react',
     'react-refresh',
-    'unicorn',
     'simple-import-sort',
     'import',
     'unused-imports'

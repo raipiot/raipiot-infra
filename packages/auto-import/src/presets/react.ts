@@ -43,12 +43,16 @@ export const reactPresets: (ImportsMap | PresetName | InlinePreset)[] = [
       'redirect',
       'useNavigate',
       'useRouter',
+      'useRouterState',
       'useLoaderData',
-      'useMatch',
       'useParams',
       'useRouteContext',
       'useSearch',
       'useMatchRoute',
+      'useMatch',
+      'useMatches',
+      'useParentMatches',
+      'useChildMatches',
       'useBlocker',
       'LoaderContext',
       'MatchRoute',
@@ -65,6 +69,10 @@ export const reactPresets: (ImportsMap | PresetName | InlinePreset)[] = [
   {
     from: 'use-immer',
     imports: ['useImmer']
+  },
+  {
+    from: 'framer-motion',
+    imports: ['motion', 'AnimatePresence']
   },
   {
     from: '@raipiot-infra/config',

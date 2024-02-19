@@ -1,6 +1,6 @@
 {
   "name": "@raipiot-infra/eslint-config-react",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "React ESLint config for raipiot",
   "author": "Bruce Song <recall4056@gmail.com> (https://github.com/recallwei/)",
   "homepage": "https://github.com/raipiot/raipiot-infra#readme",
@@ -49,7 +49,6 @@
     "eslint-plugin-react-refresh": "^0.4.5",
     "eslint-plugin-simple-import-sort": "^12.0.0",
     "eslint-plugin-tailwindcss": "^3.14.2",
-    "eslint-plugin-unicorn": "^51.0.1",
     "eslint-plugin-unused-imports": "^3.1.0"
   },
   "publishConfig": {
