@@ -17,6 +17,7 @@ export const reactPresets: (ImportsMap | PresetName | InlinePreset)[] = [
       'useQuery',
       'useQueries',
       'useInfiniteQuery',
+      'useSuspenseQuery',
       'useSuspenseQueries',
       'useSuspenseInfiniteQuery',
       'useMutation',

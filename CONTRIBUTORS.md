@@ -16,6 +16,7 @@ Thanks goes to these wonderful people:
 <table>
   <tr>
     <td align="center"><a href="https://github.com/recallwei"><img src="https://avatars.githubusercontent.com/u/62941121?v=4&size=100" width="100px;" alt=""/><br /><sub><b>Bruce</b></sub></a></td>
+    <td align="center"><a href="https://github.com/Developer27149"><img src="https://avatars.githubusercontent.com/u/23721611?v=4&size=100" width="100px;" alt=""/><br /><sub><b>Aaron</b></sub></a></td>
 </table>
 
 <!-- markdownlint-restore -->
