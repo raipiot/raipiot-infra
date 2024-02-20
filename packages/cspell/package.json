@@ -26,8 +26,8 @@
   },
   "scripts": {
     "cspell:check": "cspell --no-progress --show-suggestions --show-context **",
-    "prettier:check": "prettier --check --ignore-unknown .",
-    "prettier:fix": "prettier --write --ignore-unknown .",
+    "prettier:check": "prettier --check --cache --ignore-unknown --ignore-path=../../.prettierignore .",
+    "prettier:fix": "prettier --write --cache --ignore-unknown --ignore-path=../../.prettierignore .",
     "cspell:sort:dict": "sort -u -o dict/raipiot.txt dict/raipiot.txt",
     "prepublishOnly": "pnpm cspell:sort:dict"
   },

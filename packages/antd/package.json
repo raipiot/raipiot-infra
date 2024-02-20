@@ -29,8 +29,8 @@
     "type:check": "tsc --pretty --noEmit",
     "eslint:check": "eslint . --color",
     "eslint:fix": "eslint . --color --fix",
-    "prettier:check": "prettier --check --ignore-unknown .",
-    "prettier:fix": "prettier --write --ignore-unknown .",
+    "prettier:check": "prettier --check --cache --ignore-unknown --ignore-path=../../.prettierignore .",
+    "prettier:fix": "prettier --write --cache --ignore-unknown --ignore-path=../../.prettierignore .",
     "prepublishOnly": "pnpm build"
   },
   "peerDependencies": {
@@ -44,19 +44,19 @@
     "lodash-es": "^4.17.21"
   },
   "devDependencies": {
-    "@storybook/addon-essentials": "^7.6.16",
-    "@storybook/addon-interactions": "^7.6.16",
-    "@storybook/addon-links": "^7.6.16",
+    "@storybook/addon-essentials": "^7.6.17",
+    "@storybook/addon-interactions": "^7.6.17",
+    "@storybook/addon-links": "^7.6.17",
     "@storybook/addon-onboarding": "^1.0.11",
-    "@storybook/blocks": "^7.6.16",
-    "@storybook/react": "^7.6.16",
-    "@storybook/react-vite": "^7.6.16",
-    "@storybook/test": "^7.6.16",
+    "@storybook/blocks": "^7.6.17",
+    "@storybook/react": "^7.6.17",
+    "@storybook/react-vite": "^7.6.17",
+    "@storybook/test": "^7.6.17",
     "@types/lodash-es": "^4.17.12",
-    "@types/react": "^18.2.56",
+    "@types/react": "^18.2.57",
     "esbuild-sass-plugin": "^3.0.0",
     "sass": "^1.71.0",
-    "storybook": "^7.6.16"
+    "storybook": "^7.6.17"
   },
   "publishConfig": {
     "access": "public"

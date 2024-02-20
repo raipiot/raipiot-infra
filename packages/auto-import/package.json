@@ -25,8 +25,8 @@
     "type:check": "tsc --pretty --noEmit",
     "eslint:check": "eslint . --color",
     "eslint:fix": "eslint . --color --fix",
-    "prettier:check": "prettier --check --ignore-unknown .",
-    "prettier:fix": "prettier --write --ignore-unknown .",
+    "prettier:check": "prettier --check --cache --ignore-unknown --ignore-path=../../.prettierignore .",
+    "prettier:fix": "prettier --write --cache --ignore-unknown --ignore-path=../../.prettierignore .",
     "prepublishOnly": "pnpm build"
   },
   "peerDependencies": {

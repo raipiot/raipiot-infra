@@ -49,9 +49,9 @@
     "@raipiot-infra/rpx": "workspace:^",
     "@raipiot-infra/tsconfig": "workspace:^",
     "@types/lodash-es": "^4.17.12",
-    "@vitest/coverage-v8": "^1.3.0",
+    "@vitest/coverage-v8": "^1.3.1",
     "commitizen": "^4.3.0",
-    "cspell": "^8.3.2",
+    "cspell": "^8.4.1",
     "cz-git": "^1.8.0",
     "eslint": "^8.56.0",
     "husky": "^9.0.11",
@@ -63,7 +63,7 @@
     "typedoc": "^0.25.8",
     "typedoc-material-theme": "^1.0.2",
     "typescript": "^5.3.3",
-    "vitest": "^1.3.0"
+    "vitest": "^1.3.1"
   },
   "config": {
     "commitizen": {

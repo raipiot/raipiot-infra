@@ -21,8 +21,8 @@
   "main": "index.json",
   "scripts": {
     "cspell:check": "cspell --no-progress --show-suggestions --show-context **",
-    "prettier:check": "prettier --check --ignore-unknown .",
-    "prettier:fix": "prettier --write --ignore-unknown ."
+    "prettier:check": "prettier --check --cache --ignore-unknown --ignore-path=../../.prettierignore .",
+    "prettier:fix": "prettier --write --cache --ignore-unknown --ignore-path=../../.prettierignore ."
   },
   "peerDependencies": {
     "prettier": "^3.2.5"
