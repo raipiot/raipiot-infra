@@ -1,4 +1,7 @@
 {
+  "cSpell.allowCompoundWords": true,
+  "cSpell.language": "en,en-US",
+  "cSpell.enableFiletypes": ["astro"],
   "eslint.workingDirectories": [
     {
       "mode": "location"
