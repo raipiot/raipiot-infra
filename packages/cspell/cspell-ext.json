@@ -1,13 +1,15 @@
 {
   "id": "raipiot",
   "name": "raipiot",
-  "description": "raipiot dictionary for cspell.",
+  "description": "raipiot CSpell 通用字典。",
   "readonly": true,
+  "allowCompoundWords": true,
+  "enableFiletypes": ["astro"],
   "dictionaryDefinitions": [
     {
       "name": "raipiot",
       "path": "./dict/raipiot.txt",
-      "description": "raipiot dictionary for cspell."
+      "description": "raipiot CSpell 通用字典。"
     }
   ],
   "dictionaries": [],
@@ -46,6 +48,7 @@
     "**/src-tauri/target/**",
     "**/Cargo.lock",
     "**/Cargo.toml",
-    "**/coverage/**"
+    "**/coverage/**",
+    "**/stats.html"
   ]
 }

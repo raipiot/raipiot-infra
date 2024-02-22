@@ -1,5 +1,12 @@
 # @raipiot-infra/antd
 
+## 0.0.15
+
+### Patch Changes
+
+- Updated dependencies
+  - @raipiot-infra/utils@0.0.10
+
 ## 0.0.14
 
 ### Patch Changes

@@ -1,5 +1,4 @@
 {
   "extends": "@raipiot-infra/tsconfig/base.json",
-  "include": ["src"],
-  "exclude": ["node_modules", "dist"]
+  "include": ["src"]
 }

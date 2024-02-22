@@ -2,6 +2,7 @@ Antd
 Arrayable
 Bootstrapper
 Customizer
+DEPTS
 Geolocation
 Immer
 Neue
@@ -50,6 +51,7 @@ hoverable
 icns
 iconify
 immer
+immerable
 juejin
 kolorist
 lintstaged

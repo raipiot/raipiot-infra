@@ -1,7 +1,7 @@
 {
   "name": "@raipiot-infra/cspell",
-  "version": "0.0.8",
-  "description": "Collection of internal cspell dicts.",
+  "version": "0.0.9",
+  "description": "raipiot CSpell 通用字典",
   "author": "Bruce Song <recall4056@gmail.com> (https://github.com/recallwei/)",
   "homepage": "https://github.com/raipiot/raipiot-infra#readme",
   "bugs": "https://github.com/raipiot/raipiot-infra/issues",
@@ -32,7 +32,7 @@
     "prepublishOnly": "pnpm cspell:sort:dict"
   },
   "peerDependencies": {
-    "cspell": "^8.3.2"
+    "cspell": "^8.4.1"
   },
   "publishConfig": {
     "access": "public"
