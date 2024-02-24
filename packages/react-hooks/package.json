@@ -1,6 +1,6 @@
 {
   "name": "@raipiot-infra/hooks",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "raipiot 通用 Hooks",
   "author": "Bruce Song <recall4056@gmail.com> (https://github.com/recallwei/)",
   "homepage": "https://github.com/raipiot/rp-hooks-doc#readme",
@@ -36,7 +36,7 @@
     "lodash-es": "^4.17.21"
   },
   "devDependencies": {
-    "@types/react": "^18.2.57",
+    "@types/react": "^18.2.58",
     "@types/lodash-es": "^4.17.12"
   },
   "publishConfig": {

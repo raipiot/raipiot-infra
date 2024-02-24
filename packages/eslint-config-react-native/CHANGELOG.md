@@ -1,5 +1,11 @@
 # @raipiot-infra/eslint-config-react-native
 
+## 0.0.8
+
+### Patch Changes
+
+- update
+
 ## 0.0.7
 
 ### Patch Changes

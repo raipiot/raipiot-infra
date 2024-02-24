@@ -1,6 +1,6 @@
 {
   "name": "@raipiot-infra/eslint-config-ts",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "TypeScript ESLint config for raipiot",
   "author": "Bruce Song <recall4056@gmail.com> (https://github.com/recallwei/)",
   "homepage": "https://github.com/raipiot/raipiot-infra#readme",
@@ -29,13 +29,13 @@
     "prettier:fix": "prettier --write --cache --ignore-unknown --ignore-path=../../.prettierignore ."
   },
   "peerDependencies": {
-    "eslint": "^8.56.0",
+    "eslint": "^8.57.0",
     "typescript": ">=5.0.0"
   },
   "dependencies": {
     "@raipiot-infra/eslint-config-base": "workspace:^",
-    "@typescript-eslint/eslint-plugin": "^7.0.1",
-    "@typescript-eslint/parser": "^7.0.1",
+    "@typescript-eslint/eslint-plugin": "^7.0.2",
+    "@typescript-eslint/parser": "^7.0.2",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-airbnb-typescript": "^17.1.0",
     "eslint-config-prettier": "^9.1.0",
