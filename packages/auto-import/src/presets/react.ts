@@ -81,6 +81,6 @@ export const reactPresets: (ImportsMap | PresetName | InlinePreset)[] = [
   },
   {
     from: '@raipiot-infra/utils',
-    imports: ['AuthUtils', 'BrowserUtils', 'DateUtils', 'LangUtils', 'ThemeUtils']
+    imports: ['AuthUtils', 'BrowserUtils', 'DateUtils', 'I18nUtils', 'LangUtils', 'ThemeUtils']
   }
 ]

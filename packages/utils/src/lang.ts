@@ -2,7 +2,7 @@ import { Lang } from '@raipiot-infra/enums'
 
 /**
  * 语言工具类
- * @summary 用于处理国际化相关的逻辑
+ * @summary 用于用户语言相关的逻辑
  * @author Bruce Song <recall4056@gmail.com>
  * @license MIT
  */

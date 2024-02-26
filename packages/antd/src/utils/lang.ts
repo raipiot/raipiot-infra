@@ -5,7 +5,7 @@ import enUS from 'antd/locale/en_US'
 import zhCN from 'antd/locale/zh_CN'
 
 export const getDefaultLocale = (): Locale => {
-  const lang = LangUtils.getDefaultLang(Lang['en-US'])
+  const lang = LangUtils.getDefaultLang(Lang['zh-CN'])
   switch (lang) {
     case Lang['zh-CN']:
       return zhCN

@@ -1,6 +1,7 @@
 export * from './auth'
 export * from './browser'
 export * from './date'
+export * from './i18n'
 export * from './is'
 export * from './lang'
 export * from './theme'
