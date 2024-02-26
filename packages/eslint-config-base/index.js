@@ -77,6 +77,7 @@ const commonRules = {
   semi: ['error', 'never'], // 禁止使用分号
   'no-unused-vars': 'off',
   'class-methods-use-this': 'off', // 允许类方法不使用 this
+  'max-class-per-file': 'off', // 允许一个文件中有多个类
   'no-param-reassign': [
     'warn',
     {
