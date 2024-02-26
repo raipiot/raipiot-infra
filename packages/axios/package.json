@@ -1,6 +1,6 @@
 {
   "name": "@raipiot-infra/axios",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Collection of internal antd components.",
   "author": "Bruce Song <recall4056@gmail.com> (https://github.com/recallwei/)",
   "homepage": "https://github.com/raipiot/raipiot-infra#readme",

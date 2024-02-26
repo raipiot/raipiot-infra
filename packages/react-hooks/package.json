@@ -1,6 +1,6 @@
 {
   "name": "@raipiot-infra/hooks",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "raipiot 通用 Hooks",
   "author": "Bruce Song <recall4056@gmail.com> (https://github.com/recallwei/)",
   "homepage": "https://github.com/raipiot/rp-hooks-doc#readme",
