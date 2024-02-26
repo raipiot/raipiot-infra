@@ -1,6 +1,6 @@
 {
   "name": "@raipiot-infra/eslint-config-react-native",
-  "version": "0.0.11",
+  "version": "0.1.0",
   "description": "React Native ESLint config for raipiot",
   "author": "Bruce Song <recall4056@gmail.com> (https://github.com/recallwei/)",
   "homepage": "https://github.com/raipiot/raipiot-infra#readme",

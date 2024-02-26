@@ -1,5 +1,11 @@
 # @raipiot-infra/eslint-config-base
 
+## 0.1.0
+
+### Minor Changes
+
+- update
+
 ## 0.0.9
 
 ### Patch Changes

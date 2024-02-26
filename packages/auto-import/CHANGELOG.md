@@ -1,5 +1,11 @@
 # @raipiot-infra/auto-import
 
+## 0.1.0
+
+### Minor Changes
+
+- update
+
 ## 0.0.18
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @raipiot-infra/commitlint
 
+## 0.1.0
+
+### Minor Changes
+
+- update
+
 ## 0.0.6
 
 ### Patch Changes

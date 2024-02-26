@@ -1,5 +1,11 @@
 # @raipiot-infra/config
 
+## 0.1.0
+
+### Minor Changes
+
+- update
+
 ## 0.0.10
 
 ### Patch Changes
