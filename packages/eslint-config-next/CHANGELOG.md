@@ -1,5 +1,12 @@
 # @raipiot-infra/eslint-config-next
 
+## 0.0.11
+
+### Patch Changes
+
+- Updated dependencies
+  - @raipiot-infra/eslint-config-base@0.0.8
+
 ## 0.0.10
 
 ### Patch Changes
