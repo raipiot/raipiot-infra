@@ -1,6 +1,6 @@
 {
   "name": "@raipiot-infra/eslint-config-astro",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "React ESLint config for raipiot",
   "author": "Bruce Song <recall4056@gmail.com> (https://github.com/recallwei/)",
   "homepage": "https://github.com/raipiot/raipiot-infra#readme",

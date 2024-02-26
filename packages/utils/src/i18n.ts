@@ -16,7 +16,7 @@ export class I18nUtils {
    * const text = I18nUtils.getText(i18nString)
    * ```
    */
-  getText(text?: MaybeI18nString) {
+  static getText(text?: MaybeI18nString) {
     if (!text) {
       return ''
     }
