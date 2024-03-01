@@ -7,22 +7,22 @@
     "preview": "next start",
     "clean": "rimraf .next",
     "type:check": "tsc --pretty --noEmit",
-    "cspell:check": "cspell --no-progress --show-suggestions --show-context **",
-    "eslint:check": "eslint . --color",
-    "eslint:fix": "eslint . --color --fix",
+    "cspell:check": "cspell --no-progress --show-suggestions --show-context --cache **",
+    "eslint:check": "eslint . --color --cache",
+    "eslint:fix": "eslint . --color --cache --fix",
     "prettier:check": "prettier --check --cache --ignore-unknown --ignore-path=../../.prettierignore .",
     "prettier:fix": "prettier --write --cache --ignore-unknown --ignore-path=../../.prettierignore ."
   },
   "dependencies": {
-    "next": "^14.1.0",
+    "next": "^14.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@raipiot-infra/bootstrap-animation": "workspace:^",
     "@raipiot-infra/eslint-config-next": "workspace:^",
-    "@types/node": "20.11.20",
-    "@types/react": "18.2.58",
+    "@types/node": "20.11.24",
+    "@types/react": "18.2.61",
     "@types/react-dom": "18.2.19",
     "typescript": "^5.3.3"
   },

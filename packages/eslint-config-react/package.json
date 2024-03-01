@@ -1,6 +1,6 @@
 {
   "name": "@raipiot-infra/eslint-config-react",
-  "version": "0.1.1",
+  "version": "0.1.4",
   "description": "React ESLint config for raipiot",
   "author": "Bruce Song <recall4056@gmail.com> (https://github.com/recallwei/)",
   "homepage": "https://github.com/raipiot/raipiot-infra#readme",
@@ -23,9 +23,9 @@
     "index.js"
   ],
   "scripts": {
-    "cspell:check": "cspell --no-progress --show-suggestions --show-context **",
-    "eslint:check": "eslint . --color",
-    "eslint:fix": "eslint . --color --fix",
+    "cspell:check": "cspell --no-progress --show-suggestions --show-context --cache **",
+    "eslint:check": "eslint . --color --cache",
+    "eslint:fix": "eslint . --color --cache --fix",
     "prettier:check": "prettier --check --cache --ignore-unknown --ignore-path=../../.prettierignore .",
     "prettier:fix": "prettier --write --cache --ignore-unknown --ignore-path=../../.prettierignore ."
   },
@@ -36,8 +36,8 @@
   "dependencies": {
     "@raipiot-infra/eslint-config-base": "workspace:^",
     "@tanstack/eslint-plugin-query": "^5.20.1",
-    "@typescript-eslint/eslint-plugin": "^7.0.2",
-    "@typescript-eslint/parser": "^7.0.2",
+    "@typescript-eslint/eslint-plugin": "^7.1.0",
+    "@typescript-eslint/parser": "^7.1.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-typescript": "^17.1.0",
     "eslint-config-prettier": "^9.1.0",

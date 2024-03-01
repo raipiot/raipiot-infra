@@ -1,6 +1,34 @@
+import fs from 'node:fs'
+import path from 'node:path'
+
+const apps = fs.readdirSync(path.resolve(process.cwd(), 'apps'))
+const packages = fs.readdirSync(path.resolve(process.cwd(), 'packages'))
+
 /** @type {import('cz-git').UserConfig} */
-module.exports = {
+export default {
   extends: '@commitlint/config-conventional',
+  rules: {
+    'type-enum': [
+      2,
+      'always',
+      [
+        'build',
+        'chore',
+        'ci',
+        'deps',
+        'docs',
+        'feat',
+        'fix',
+        'i18n',
+        'perf',
+        'refactor',
+        'release',
+        'revert',
+        'style',
+        'test'
+      ]
+    ]
+  },
   prompt: {
     alias: {
       fd: 'docs: fix typos'
@@ -29,9 +57,9 @@ module.exports = {
         emoji: ':bug:'
       },
       {
-        value: 'docs',
-        name: 'docs:      📝 文档更新 | Documentation only changes.',
-        emoji: ':memo:'
+        value: 'refactor',
+        name: 'refactor:  ♻️  代码重构 | A code change that neither fixes a bug nor adds a feature.',
+        emoji: ':recycle:'
       },
       {
         value: 'style',
@@ -39,9 +67,9 @@ module.exports = {
         emoji: ':lipstick:'
       },
       {
-        value: 'refactor',
-        name: 'refactor:  ♻️  代码重构 | A code change that neither fixes a bug nor adds a feature.',
-        emoji: ':recycle:'
+        value: 'test',
+        name: 'test:      ✅ 测试相关 | Adding missing tests or correcting existing tests.',
+        emoji: ':white_check_mark:'
       },
       {
         value: 'perf',
@@ -49,9 +77,14 @@ module.exports = {
         emoji: ':zap:'
       },
       {
-        value: 'test',
-        name: 'test:      ✅ 测试相关 | Adding missing tests or correcting existing tests.',
-        emoji: ':white_check_mark:'
+        value: 'docs',
+        name: 'docs:      📝 文档更新 | Documentation only changes.',
+        emoji: ':memo:'
+      },
+      {
+        value: 'i18n',
+        name: 'i18n:      🌐 翻译更新 | Internationalization only changes.',
+        emoji: ':globe_with_meridians:'
       },
       {
         value: 'build',
@@ -62,6 +95,16 @@ module.exports = {
         value: 'ci',
         name: 'ci:        🎡 持续集成 | Changes to our CI configuration files and scripts.',
         emoji: ':ferris_wheel:'
+      },
+      {
+        value: 'release',
+        name: 'release:   🏷️  发布版本 | Release a new version.',
+        emoji: ':bookmark:'
+      },
+      {
+        value: 'deps',
+        name: 'deps:      🚀 依赖升级 | Dependencies upgrades.',
+        emoji: ':rocket:'
       },
       {
         value: 'revert',
@@ -79,7 +122,9 @@ module.exports = {
     useAI: false,
     aiNumber: 1,
     themeColorCode: '',
-    scopes: [],
+    scopes: [...apps, ...packages],
+    enableMultipleScopes: true,
+    scopeEnumSeparator: ',',
     allowCustomScopes: true,
     allowEmptyScopes: true,
     customScopesAlign: 'bottom',

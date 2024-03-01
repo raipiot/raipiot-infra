@@ -1,6 +1,6 @@
 {
   "name": "@raipiot-infra/cspell",
-  "version": "0.1.1",
+  "version": "0.1.4",
   "description": "raipiot CSpell 通用字典",
   "author": "Bruce Song <recall4056@gmail.com> (https://github.com/recallwei/)",
   "homepage": "https://github.com/raipiot/raipiot-infra#readme",
@@ -25,14 +25,14 @@
     "./cspell-ext.json": "./cspell-ext.json"
   },
   "scripts": {
-    "cspell:check": "cspell --no-progress --show-suggestions --show-context **",
+    "cspell:check": "cspell --no-progress --show-suggestions --show-context --cache **",
     "prettier:check": "prettier --check --cache --ignore-unknown --ignore-path=../../.prettierignore .",
     "prettier:fix": "prettier --write --cache --ignore-unknown --ignore-path=../../.prettierignore .",
     "cspell:sort:dict": "sort -u -o dict/raipiot.txt dict/raipiot.txt",
     "prepublishOnly": "pnpm cspell:sort:dict"
   },
   "peerDependencies": {
-    "cspell": "^8.4.1"
+    "cspell": "^8.5.0"
   },
   "publishConfig": {
     "access": "public"

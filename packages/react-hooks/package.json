@@ -1,6 +1,6 @@
 {
   "name": "@raipiot-infra/hooks",
-  "version": "0.1.1",
+  "version": "0.1.4",
   "description": "raipiot 通用 Hooks",
   "author": "Bruce Song <recall4056@gmail.com> (https://github.com/recallwei/)",
   "homepage": "https://github.com/raipiot/rp-hooks-doc#readme",
@@ -24,7 +24,7 @@
     "build": "tsup",
     "clean": "rimraf dist",
     "type:check": "tsc --pretty --noEmit",
-    "cspell:check": "cspell --no-progress --show-suggestions --show-context **",
+    "cspell:check": "cspell --no-progress --show-suggestions --show-context --cache **",
     "prettier:check": "prettier --check --cache --ignore-unknown --ignore-path=../../.prettierignore .",
     "prettier:fix": "prettier --write --cache --ignore-unknown --ignore-path=../../.prettierignore .",
     "prepublishOnly": "pnpm build"
@@ -36,7 +36,7 @@
     "lodash-es": "^4.17.21"
   },
   "devDependencies": {
-    "@types/react": "^18.2.58",
+    "@types/react": "^18.2.61",
     "@types/lodash-es": "^4.17.12"
   },
   "publishConfig": {

@@ -30,6 +30,7 @@ storybook-static
 
 # Cache
 .cspellcache
+.eslintcache
 
 # Build Outputs
 .next/

@@ -1,6 +1,6 @@
 {
   "name": "@raipiot-infra/utils",
-  "version": "0.1.1",
+  "version": "0.1.4",
   "description": "Collection of internal utils.",
   "author": "Bruce Song <recall4056@gmail.com> (https://github.com/recallwei/)",
   "homepage": "https://github.com/raipiot/raipiot-infra#readme",
@@ -28,7 +28,7 @@
     "coverage": "vitest --coverage",
     "clean": "rimraf dist coverage",
     "type:check": "tsc --pretty --noEmit",
-    "cspell:check": "cspell --no-progress --show-suggestions --show-context **",
+    "cspell:check": "cspell --no-progress --show-suggestions --show-context --cache **",
     "prettier:check": "prettier --check --cache --ignore-unknown --ignore-path=../../.prettierignore .",
     "prettier:fix": "prettier --write --cache --ignore-unknown --ignore-path=../../.prettierignore .",
     "prepublishOnly": "pnpm build"

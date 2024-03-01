@@ -1,5 +1,23 @@
 # @raipiot-infra/hooks
 
+## 0.1.4
+
+### Patch Changes
+
+- release
+
+## 0.1.3
+
+### Patch Changes
+
+- release
+
+## 0.1.2
+
+### Patch Changes
+
+- release
+
 ## 0.1.1
 
 ### Patch Changes

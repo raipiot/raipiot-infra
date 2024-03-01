@@ -1,6 +1,6 @@
 {
   "name": "@raipiot-infra/bootstrap-animation",
-  "version": "0.1.1",
+  "version": "0.1.4",
   "description": "Bootstrap animation for raipiot",
   "author": "Bruce Song <recall4056@gmail.com> (https://github.com/recallwei/)",
   "homepage": "https://github.com/raipiot/raipiot-infra#readme",
@@ -25,7 +25,7 @@
     "build": "tsup",
     "clean": "rimraf dist",
     "type:check": "tsc --pretty --noEmit",
-    "cspell:check": "cspell --no-progress --show-suggestions --show-context **",
+    "cspell:check": "cspell --no-progress --show-suggestions --show-context --cache **",
     "prepublishOnly": "pnpm build"
   },
   "peerDependencies": {
@@ -39,7 +39,7 @@
   "devDependencies": {
     "@types/figlet": "^1.5.8",
     "@types/gradient-string": "^1.1.5",
-    "@types/node": "^20.11.20",
+    "@types/node": "^20.11.24",
     "vite": "^5.1.4"
   },
   "publishConfig": {
