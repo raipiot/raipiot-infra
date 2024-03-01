@@ -1,8 +1,18 @@
 import fs from 'node:fs'
 import path from 'node:path'
 
-const apps = fs.readdirSync(path.resolve(process.cwd(), 'apps'))
-const packages = fs.readdirSync(path.resolve(process.cwd(), 'packages'))
+const appsDir = path.resolve(process.cwd(), 'apps')
+const packagesDir = path.resolve(process.cwd(), 'packages')
+
+let apps = []
+let packages = []
+
+if (fs.existsSync(appsDir)) {
+  apps = fs.readdirSync(appsDir)
+}
+if (fs.existsSync(packagesDir)) {
+  packages = fs.readdirSync(packagesDir)
+}
 
 /** @type {import('cz-git').UserConfig} */
 export default {

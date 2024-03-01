@@ -1,6 +1,6 @@
 {
   "name": "@raipiot-infra/rpx",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Collection of internal repo tools.",
   "author": "Bruce Song <recall4056@gmail.com> (https://github.com/recallwei/)",
   "homepage": "https://github.com/raipiot/raipiot-infra#readme",

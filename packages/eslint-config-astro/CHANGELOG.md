@@ -1,5 +1,13 @@
 # @raipiot-infra/eslint-config-astro
 
+## 0.1.5
+
+### Patch Changes
+
+- release
+- Updated dependencies
+  - @raipiot-infra/eslint-config-base@0.1.5
+
 ## 0.1.4
 
 ### Patch Changes
