@@ -8,11 +8,11 @@ const fs = require('node:fs')
 const { join, resolve } = require('node:path')
 
 /** @type {string} */
-const project = fs.existsSync(join(process.cwd(), 'tsconfig.eslint.json'))
-  ? resolve(process.cwd(), 'tsconfig.eslint.json')
-  : resolve(process.cwd(), 'tsconfig.json')
+const project = !fs.existsSync(join(process.cwd(), 'tsconfig.eslint.json'))
+  ? resolve(process.cwd(), 'tsconfig.json')
+  : resolve(process.cwd(), 'tsconfig.eslint.json')
 
-const defaultIgnorePatterns = ['node_modules', 'dist']
+const defaultIgnorePatterns = ['node_modules', 'dist', 'src-tauri', '@types/auto-imports.d.ts']
 
 const jsOverrides = {
   files: ['*.{js,cjs,mjs,jsx}'],
@@ -35,13 +35,19 @@ const tsOverrides = {
   parser: '@typescript-eslint/parser',
   parserOptions: {
     project,
-    tsconfigRootDir: __dirname,
     ecmaVersion: 'latest',
     sourceType: 'module'
   },
   rules: {
     'no-undef': 'off',
     'react/jsx-no-undef': 'off' // 由 TypeScript 静态检查
+  },
+  settings: {
+    'import/resolver': {
+      typescript: {
+        project
+      }
+    }
   }
 }
 
@@ -69,6 +75,13 @@ const astroOverrides = {
     'react/no-unknown-property': 'off', // .astro 中无须校验未知属性
     'react/jsx-filename-extension': [1, { extensions: ['.astro'] }],
     'consistent-return': 'off' // TODO: 如何在顶层返回 Astro 组件
+  },
+  settings: {
+    'import/resolver': {
+      typescript: {
+        project
+      }
+    }
   }
 }
 
@@ -135,7 +148,14 @@ const eslintPluginImportRules = {
   'import/no-absolute-path': 'off', // 允许导入绝对路径
   'import/no-duplicates': 'error', // 禁止重复导入
   'import/extensions': 'off', // 允许导入时带文件扩展名
-  'import/no-extraneous-dependencies': 'off', // 解决 monorepo 依赖管理问题
+  'import/no-extraneous-dependencies': [
+    'error',
+    {
+      devDependencies: true,
+      peerDependencies: true,
+      optionalDependencies: false
+    }
+  ], // 允许 devDependencies，peerDependencies，不允许 optionalDependencies}
   'import/no-mutable-exports': 'error', // 禁止导出 let, var 声明的变量
   'import/no-self-import': 'error', // 禁止自导入
   'import/prefer-default-export': 'off' // 仅导出一个变量时，不要求默认导出

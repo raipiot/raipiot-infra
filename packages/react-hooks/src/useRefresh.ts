@@ -1,6 +1,5 @@
 import { useCallback, useState } from 'react'
 
-
 export const useRefresh = <T>(callback?: () => Promise<T>) => {
   const [refreshing, setRefreshing] = useState(false)
 

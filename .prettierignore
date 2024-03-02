@@ -12,3 +12,4 @@ pnpm-lock.yaml
 
 apps/react/@types/auto-imports.d.ts
 apps/react/src/routeTree.gen.ts
+apps/react/src/assets

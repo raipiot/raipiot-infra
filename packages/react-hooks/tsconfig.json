@@ -1,4 +1,4 @@
 {
   "extends": "@raipiot-infra/tsconfig/base.json",
-  "include": ["src"]
+  "include": ["src", "tsup.config.ts"]
 }

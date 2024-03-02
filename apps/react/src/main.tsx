@@ -9,14 +9,12 @@ import { routeTree } from './routeTree.gen'
 
 const router = createRouter({ routeTree })
 
-// Register the router instance for type safety
 declare module '@tanstack/react-router' {
   interface Register {
     router: typeof router
   }
 }
 
-// Render the app
 const root = document.getElementById('root')
 if (root && !root?.innerHTML) {
   const rootElement = ReactDOM.createRoot(root)
@@ -26,4 +24,3 @@ if (root && !root?.innerHTML) {
     </StrictMode>
   )
 }
-

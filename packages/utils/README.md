@@ -2,7 +2,7 @@
 
 ![npm](https://img.shields.io/npm/v/@raipiot-infra/utils?logo=npm&label=utils&registry_uri=http%3A%2F%2Fnpm-registry.raipiot.com%3A4873)
 
-该仓库是通用的基础工具类库。
+raipiot infra 通用工具类库
 
 ## 安装
 

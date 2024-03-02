@@ -19,6 +19,14 @@ export class BrandConfig {
    */
   static readonly email: string = 'us@raipiot.com'
 
+  /**
+   * 获取 MailTo 链接
+   * @returns MailTo 链接
+   * @example
+   * ```typescript
+   * BrandConfig.getMailTo()
+   * ```
+   */
   static getMailTo(): string {
     return `mailto:${BrandConfig.email}`
   }
