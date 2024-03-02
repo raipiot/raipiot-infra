@@ -41,7 +41,6 @@
     "@changesets/cli": "^2.27.1",
     "@commitlint/cli": "^19.0.3",
     "@commitlint/config-conventional": "^19.0.3",
-    "@cspell/dict-aws": "^4.0.1",
     "@raipiot-infra/commitlint-config": "workspace:^",
     "@raipiot-infra/cspell": "workspace:^",
     "@raipiot-infra/eslint-config": "workspace:^",
