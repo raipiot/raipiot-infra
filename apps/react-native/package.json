@@ -1,5 +1,6 @@
 {
   "name": "@raipiot-infra/react-native-playground",
+  "description": "raipiot infra React Native 演练场",
   "author": "Bruce Song <recall4056@gmail.com> (https://github.com/recallwei/)",
   "scripts": {
     "dev": "react-native start --reset-cache",

@@ -1,5 +1,9 @@
 # @raipiot-infra/tsconfig
 
+![npm](https://img.shields.io/npm/v/@raipiot-infra/tsconfig?logo=npm&label=tsconfig&registry_uri=http%3A%2F%2Fnpm-registry.raipiot.com%3A4873)
+
+raipiot infra 通用 tsconfig 配置。
+
 目前支持的配置有：
 
 - `@raipiot-infra/tsconfig/base.json`：基础配置

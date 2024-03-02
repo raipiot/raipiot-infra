@@ -1,7 +1,7 @@
 {
   "name": "@raipiot-infra/eslint-config-next",
-  "version": "0.1.5",
-  "description": "Next.js config for raipiot",
+  "version": "0.1.6",
+  "description": "raipiot infra 通用 ESLint 配置，适用于 Next.js 项目",
   "author": "Bruce Song <recall4056@gmail.com> (https://github.com/recallwei/)",
   "homepage": "https://github.com/raipiot/raipiot-infra#readme",
   "bugs": "https://github.com/raipiot/raipiot-infra/issues",
@@ -25,8 +25,6 @@
   ],
   "scripts": {
     "cspell:check": "cspell --no-progress --show-suggestions --show-context --cache **",
-    "eslint:check": "eslint . --color --cache",
-    "eslint:fix": "eslint . --color --cache --fix",
     "prettier:check": "prettier --check --cache --ignore-unknown --ignore-path=../../.prettierignore .",
     "prettier:fix": "prettier --write --cache --ignore-unknown --ignore-path=../../.prettierignore ."
   },
@@ -39,7 +37,7 @@
     "@typescript-eslint/eslint-plugin": "^7.1.0",
     "@typescript-eslint/parser": "^7.1.0",
     "eslint-config-airbnb": "^19.0.4",
-    "eslint-config-airbnb-typescript": "^17.1.0",
+    "eslint-config-airbnb-typescript": "^18.0.0",
     "eslint-config-next": "^14.1.1",
     "eslint-config-prettier": "^9.1.0",
     "eslint-import-resolver-typescript": "^3.6.1",

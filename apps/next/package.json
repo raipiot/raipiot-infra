@@ -1,5 +1,6 @@
 {
   "name": "@raipiot-infra/next-playground",
+  "description": "raipiot infra Next.js 演练场",
   "author": "Bruce Song <recall4056@gmail.com> (https://github.com/recallwei/)",
   "scripts": {
     "dev": "next dev --turbo",

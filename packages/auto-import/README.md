@@ -2,7 +2,7 @@
 
 ![npm](https://img.shields.io/npm/v/@raipiot-infra/auto-import?logo=vite&label=auto-import&registry_uri=http%3A%2F%2Fnpm-registry.raipiot.com%3A4873)
 
-在 `Vite` 项目中使用 `@raipiot-infra/auto-import` 预设，可以帮助我们自动引入第三方库。
+raipiot infra 自动引入模块，在 `Vite` 项目中使用 `@raipiot-infra/auto-import` 预设，可以帮助我们自动引入第三方库。
 
 ## 安装
 
