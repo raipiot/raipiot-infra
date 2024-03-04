@@ -1,5 +1,13 @@
 # @raipiot-infra/tailwind
 
+## 0.1.9
+
+### Patch Changes
+
+- release
+- Updated dependencies
+  - @raipiot-infra/theme@0.1.9
+
 ## 0.1.8
 
 ### Patch Changes
