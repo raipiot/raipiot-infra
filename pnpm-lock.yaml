@@ -827,6 +827,9 @@ importers:
 
   packages/tailwind:
     dependencies:
+      '@raipiot-infra/theme':
+        specifier: workspace:^
+        version: link:../theme
       tailwindcss:
         specifier: ^3.4.1
         version: 3.4.1

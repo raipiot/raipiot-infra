@@ -32,6 +32,9 @@
   "peerDependencies": {
     "tailwindcss": "^3.4.1"
   },
+  "dependencies": {
+    "@raipiot-infra/theme": "workspace:^"
+  },
   "publishConfig": {
     "access": "public"
   },

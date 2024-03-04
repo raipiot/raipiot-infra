@@ -9,13 +9,25 @@ export const messageConfig = {
 }
 
 // 主题：基础配置
-const themeBaseToken: Partial<AliasToken> = {
+export const themeBaseToken: Partial<AliasToken> = {
   fontFamily:
-    'Nunito, Noto Sans SC, Noto Color Emoji, system-ui, -apple-system, Roboto, Helvetica Neue, Arial, sans-serif'
+    'Nunito, Noto Sans SC, Noto Color Emoji, system-ui, -apple-system, Roboto, Helvetica Neue, Arial, sans-serif',
+  screenXS: 0,
+  screenSM: 640,
+  screenMD: 768,
+  screenLG: 1024,
+  screenXL: 1280,
+  screenXXL: 1536,
+  screenXSMin: 0,
+  screenSMMin: 640,
+  screenMDMin: 768,
+  screenLGMin: 1024,
+  screenXLMin: 1280,
+  screenXXLMin: 1536
 }
 
 // 主题：组件配置
-const themeBaseComponents = {
+export const themeBaseComponents: ThemeConfig['components'] = {
   Card: {
     paddingLG: 16
   }
