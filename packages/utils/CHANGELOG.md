@@ -1,5 +1,13 @@
 # @raipiot-infra/utils
 
+## 0.1.9
+
+### Patch Changes
+
+- release
+- Updated dependencies
+  - @raipiot-infra/enums@0.1.9
+
 ## 0.1.8
 
 ### Patch Changes
