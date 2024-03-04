@@ -8,7 +8,10 @@ export const messageConfig = {
   duration: 1.5
 }
 
-// 主题：基础配置
+/**
+ * 主题：基础配置
+ * @link https://ant.design/docs/react/customize-theme-cn#aliastoken
+ */
 export const themeBaseToken: Partial<AliasToken> = {
   fontFamily:
     'Nunito, Noto Sans SC, Noto Color Emoji, system-ui, -apple-system, Roboto, Helvetica Neue, Arial, sans-serif',
@@ -23,7 +26,12 @@ export const themeBaseToken: Partial<AliasToken> = {
   screenMDMin: 768,
   screenLGMin: 1024,
   screenXLMin: 1280,
-  screenXXLMin: 1536
+  screenXXLMin: 1536,
+  screenXSMax: 639,
+  screenSMMax: 767,
+  screenMDMax: 1023,
+  screenLGMax: 1279,
+  screenXLMax: 1535
 }
 
 // 主题：组件配置
