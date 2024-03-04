@@ -1,6 +1,6 @@
 {
   "name": "@raipiot-infra/commitlint-config",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "raipiot infra 通用 commitlint 配置",
   "author": "Bruce Song <recall4056@gmail.com> (https://github.com/recallwei/)",
   "homepage": "https://github.com/raipiot/raipiot-infra#readme",
@@ -29,7 +29,7 @@
     "@commitlint/cli": "^19.0.3",
     "@commitlint/config-conventional": "^19.0.3",
     "commitizen": "^4.3.0",
-    "cz-git": "^1.8.1-beta.3"
+    "cz-git": "^1.9.0"
   },
   "peerDependenciesMeta": {
     "cz-git": {

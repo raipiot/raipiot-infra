@@ -52,7 +52,7 @@
     "@vitest/coverage-v8": "^1.3.1",
     "commitizen": "^4.3.0",
     "cspell": "^8.5.0",
-    "cz-git": "^1.8.1-beta.3",
+    "cz-git": "^1.9.0",
     "eslint": "^8.57.0",
     "husky": "^9.0.11",
     "lint-staged": "^15.2.2",
@@ -60,7 +60,7 @@
     "rimraf": "^5.0.5",
     "tsup": "^8.0.2",
     "turbo": "^1.12.4",
-    "typedoc": "^0.25.9",
+    "typedoc": "^0.25.10",
     "typedoc-material-theme": "^1.0.2",
     "typescript": "^5.3.3",
     "vitest": "^1.3.1"

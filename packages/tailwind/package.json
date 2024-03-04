@@ -1,6 +1,6 @@
 {
   "name": "@raipiot-infra/tailwind",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "raipiot infra 通用 Tailwind CSS 配置",
   "author": "Bruce Song <recall4056@gmail.com> (https://github.com/recallwei/)",
   "homepage": "https://github.com/raipiot/raipiot-infra#readme",
