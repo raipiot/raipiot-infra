@@ -22,16 +22,14 @@ export const Base: Story = {
 export const Footer: Story = {
   render: () => (
     <View>
-      <div className="text-lg">
-        <PageContainer
-          footer={
-            <Space>
-              <Button>取消</Button>
-              <Button>确认</Button>
-            </Space>
-          }
-        />
-      </div>
+      <PageContainer
+        footer={
+          <Space>
+            <Button>取消</Button>
+            <Button>确认</Button>
+          </Space>
+        }
+      />
     </View>
   )
 }
