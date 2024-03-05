@@ -1,0 +1,46 @@
+// @ts-nocheck
+import type HttpRequest from '@raipiot-2f/axios'
+
+import { BaseAPI } from '../../base'
+
+export * from './dto'
+export * from './vo'
+
+export class #{apiClassPrefix}API extends BaseAPI {
+  #API_PREFIX: string
+
+  constructor(httpRequest: HttpRequest) {
+    super(httpRequest)
+    // TODO: 定义当前目录的前缀
+    this.#API_PREFIX = `${this.BASE_API_PREFIX}/#{routeName}`
+  }
+
+  /**
+   * 获取
+   */
+  info({ signal }: { signal?: AbortSignal }) {
+    // TODO: 添加泛型响应类型
+    return this.httpRequest.get(
+      `${this.#API_PREFIX}/info`,
+      {},
+      {
+        signal
+      }
+    )
+  }
+
+  /**
+   * 删除
+   */
+  remove(ids: string) {
+    return this.httpRequest.post(
+      `${this.#API_PREFIX}/remove`,
+      {},
+      {
+        params: {
+          ids
+        }
+      }
+    )
+  }
+}

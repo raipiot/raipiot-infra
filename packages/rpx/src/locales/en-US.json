@@ -5,7 +5,8 @@
   "Commands": {
     "Check": "Check the project engineering suite",
     "Add": "Select engineering suites to install",
-    "Generate": "Generate contributors"
+    "Gen_contributors": "Generate contributors",
+    "Gen_code": "生成代码"
   },
   "Argument": {
     "Action": "Specify the action you want to take"

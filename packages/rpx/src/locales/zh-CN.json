@@ -5,7 +5,8 @@
   "Commands": {
     "Check": "检查当前项目的工程化套件",
     "Add": "选择工程化套件安装至项目",
-    "Generate": "生成贡献者信息"
+    "Gen_contributors": "生成贡献者信息",
+    "Gen_code": "生成代码"
   },
   "Argument": {
     "Action": "指定你想要操作"
