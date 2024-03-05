@@ -10,6 +10,7 @@
   "ignore": [
     "@raipiot-infra/next-playground",
     "@raipiot-infra/react-playground",
-    "@raipiot-infra/react-native-playground"
+    "@raipiot-infra/react-native-playground",
+    "@raipiot-infra/storybook"
   ]
 }

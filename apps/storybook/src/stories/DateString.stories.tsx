@@ -1,6 +1,7 @@
+import { DetailField } from '@raipiot-infra/antd'
 import type { Meta, StoryObj } from '@storybook/react'
 
-import { DateString } from '.'
+const { DateString } = DetailField
 
 const meta = {
   title: 'DetailField/DateString',
