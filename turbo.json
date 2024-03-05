@@ -9,20 +9,13 @@
     },
     "build": {
       "dependsOn": ["^type:check", "^build"],
-      "outputs": ["dist/**", ".next/**", "!.next/cache/**"],
+      "outputs": ["dist/**", ".next/**", "!.next/cache/**", "storybook-static/**"],
       "dotEnv": [".env.production.local", ".env.production", ".env.local", ".env"]
     },
     "preview": {
       "cache": false,
       "persistent": true,
       "dotEnv": [".env.preview.local", ".env.preview", ".env.local", ".env"]
-    },
-    "storybook": {
-      "cache": false,
-      "persistent": true
-    },
-    "build:storybook": {
-      "outputs": ["storybook-static/**"]
     },
     "test": {
       "cache": false,

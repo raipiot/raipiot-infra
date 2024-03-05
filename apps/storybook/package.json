@@ -1,0 +1,47 @@
+{
+  "name": "storybook",
+  "version": "0.1.9",
+  "description": "raipiot infra storybook",
+  "scripts": {
+    "dev": "storybook dev -p 6006",
+    "build": "storybook build",
+    "clean": "rimraf dist storybook-static",
+    "type:check": "tsc --pretty --noEmit",
+    "cspell:check": "cspell --no-progress --show-suggestions --show-context --cache **",
+    "eslint:check": "eslint . --color --cache",
+    "eslint:fix": "eslint . --color --cache --fix",
+    "prettier:check": "prettier --check --cache --ignore-unknown --ignore-path=../../.prettierignore .",
+    "prettier:fix": "prettier --write --cache --ignore-unknown --ignore-path=../../.prettierignore ."
+  },
+  "dependencies": {
+    "@raipiot-infra/antd": "workspace:^",
+    "antd": "^5.15.0",
+    "clsx": "^2.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@raipiot-infra/tailwind": "workspace:^",
+    "@storybook/addon-essentials": "^7.6.17",
+    "@storybook/addon-interactions": "^7.6.17",
+    "@storybook/addon-links": "^7.6.17",
+    "@storybook/addon-onboarding": "^1.0.11",
+    "@storybook/blocks": "^7.6.17",
+    "@storybook/builder-vite": "^7.6.17",
+    "@storybook/react": "^7.6.17",
+    "@storybook/react-vite": "^7.6.17",
+    "@storybook/test": "^7.6.17",
+    "@types/react": "^18.2.62",
+    "@types/react-dom": "^18.2.19",
+    "autoprefixer": "^10.4.18",
+    "eslint-plugin-storybook": "^0.8.0",
+    "postcss": "^8.4.35",
+    "sass": "^1.71.1",
+    "storybook": "^7.6.17",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5.3.3",
+    "vite": "^5.1.5"
+  },
+  "private": true,
+  "license": "MIT"
+}

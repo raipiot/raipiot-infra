@@ -34,6 +34,7 @@ raipiot infra 是我们的基础建设仓库，是基于 [`Turborepo`](https://t
 - [`next`](apps/next/): 基于 `Next.js` + `TypeScript`
 - [`react`](apps/react/): 基于 `React` + `Vite` + `TypeScript`
 - [`react-native`](apps/react-native/): 基于 `React Native` + `TypeScript`
+- [`storybook`](apps/storybook/): 基于 `Storybook` + `@raipiot-infra/antd`
 
 ## Packages
 

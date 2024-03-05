@@ -1,0 +1,58 @@
+// NOTE: 此处用于定制化全局样式
+// 修复 Message 文字字体、不对齐的问题
+.ant-message-custom-content {
+  display: flex;
+  font-family:
+    Nunito,
+    Noto Sans SC,
+    Noto Color Emoji,
+    system-ui,
+    -apple-system,
+    Roboto,
+    Helvetica Neue,
+    Arial,
+    sans-serif;
+}
+
+// 修改 Card 的阴影，仅修改非暗黑主题
+[data-theme]:not([data-theme='dark']) .ant-card-hoverable {
+  &:hover {
+    box-shadow:
+      0 1px 2px -2px rgba(0, 0, 0, 0.08),
+      0 3px 6px 0 rgba(0, 0, 0, 0.06),
+      0 5px 12px 4px rgba(0, 0, 0, 0.04);
+  }
+}
+
+// 移除 Table 分页器的下边距
+.ant-table-wrapper {
+  .ant-table-pagination.ant-pagination {
+    margin-bottom: 0;
+    margin-top: 12px;
+  }
+}
+
+// 移除 Sidebar 颜色的过渡动画
+.ant-layout .ant-layout-sider {
+  transition:
+    all 0.2s,
+    border 0s,
+    color 0s,
+    background 0s !important;
+}
+
+// 移除 Breadcrumb 的下拉箭头
+.ant-breadcrumb {
+  .anticon-down {
+    display: none;
+  }
+}
+
+// 略微调整 Modal 的 Header 和 Footer 与 Content 的间距
+.ant-modal-header {
+  margin-bottom: 1rem !important;
+}
+
+.ant-modal-footer {
+  margin-top: 1rem !important;
+}
