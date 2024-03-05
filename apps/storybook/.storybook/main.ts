@@ -15,20 +15,24 @@ const config: StorybookConfig = {
     getAbsolutePath('@storybook/addon-links'),
     getAbsolutePath('@storybook/addon-essentials'),
     getAbsolutePath('@storybook/addon-interactions'),
-    getAbsolutePath('@storybook/addon-themes')
+    getAbsolutePath('@storybook/addon-docs'),
+    getAbsolutePath('storybook-dark-mode')
   ],
   framework: {
     name: getAbsolutePath('@storybook/react-vite'),
     options: {}
   },
   docs: {
-    autodocs: 'tag'
+    autodocs: 'tag',
+    defaultName: '文档'
   },
   core: {
     builder: '@storybook/builder-vite'
   },
   typescript: {
-    reactDocgen: 'react-docgen'
+    reactDocgen: 'react-docgen',
+    skipBabel: true,
+    check: false
   },
   async viteFinal(config) {
     return mergeConfig(config, {

@@ -56,3 +56,5 @@ export const DateString = memo<DateStringProps>(
     )
   }
 )
+
+DateString.displayName = 'DateString'

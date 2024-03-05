@@ -5,7 +5,7 @@ import { Button, Space } from 'antd'
 import { View } from '@/components'
 
 const meta = {
-  title: 'Layout/PageContainer',
+  title: 'raipiot 设计系统/布局/PageContainer',
   component: PageContainer,
   parameters: {},
   tags: ['autodocs']
@@ -16,10 +16,12 @@ export default meta
 type Story = StoryObj<typeof meta>
 
 export const Base: Story = {
+  name: '基本',
   args: {}
 }
 
 export const Footer: Story = {
+  name: '底部操作栏',
   render: () => (
     <View>
       <PageContainer
@@ -27,6 +29,7 @@ export const Footer: Story = {
           <Space>
             <Button>取消</Button>
             <Button>确认</Button>
+            <div className="text-blue-500 dark:text-yellow-500">Text</div>
           </Space>
         }
       />
