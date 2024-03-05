@@ -24,6 +24,7 @@ export class BrowserUtils {
   /**
    * 复制到剪切板
    * @param text 需要复制的文本
+   * @
    * @example
    * ```ts
    * const copy = async (text: string) => {
@@ -35,8 +36,32 @@ export class BrowserUtils {
    * }
    * ```
    */
-  static setClipBoardText(text: string): Promise<void> {
-    return navigator.clipboard.writeText(text)
+  static async setClipBoardText(text: string): Promise<void> {
+    if (window.isSecureContext && navigator.clipboard) {
+      await navigator.clipboard.writeText(text)
+      return
+    }
+    this.#unsecuredCopyToClipboard(text)
+  }
+
+  /**
+   * 从剪切板获取文本【不安全】
+   * @param text 需要复制的文本
+   * @description 仅在 http 环境下使用
+   * @deprecated
+   * @see https://stackoverflow.com/questions/400212/how-do-i-copy-to-the-clipboard-in-javascript
+   */
+  static #unsecuredCopyToClipboard(text: string) {
+    const textArea = document.createElement('textarea')
+    textArea.value = text
+    textArea.style.top = '0'
+    textArea.style.left = '0'
+    textArea.style.position = 'fixed'
+    document.body.appendChild(textArea)
+    textArea.focus()
+    textArea.select()
+    document.execCommand('copy')
+    document.body.removeChild(textArea)
   }
 
   /**
