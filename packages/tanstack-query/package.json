@@ -1,6 +1,6 @@
 {
   "name": "@raipiot-infra/tanstack-query",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "description": "raipiot infra 通用 Tanstack Query 配置",
   "author": "Bruce Song <recall4056@gmail.com> (https://github.com/recallwei/)",
   "homepage": "https://github.com/raipiot/raipiot-infra#readme",
