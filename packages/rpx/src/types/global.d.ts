@@ -6,12 +6,9 @@ declare global {
   namespace globalThis {
     // eslint-disable-next-line vars-on-top, no-var
     var raipiotConfig: RaipiotConfig | null
-    // eslint-disable-next-line vars-on-top, no-var
-    var projectRootPath: string
   }
 }
 
 declare module 'inquirer-search-list'
 declare module 'inquirer-tree-prompt'
-
 export {}

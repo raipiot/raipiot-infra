@@ -6,17 +6,16 @@ import fuzzy from 'inquirer-fuzzy-path'
 // eslint-disable-next-line
 // @ts-ignore
 import isl from 'inquirer-search-list'
-import { red } from 'kolorist'
 
-import { recursionFindRaipiotConfig } from '../../utils'
 import { generateAPI } from './generateAPI'
+import { generateFeature } from './generateFeature'
 
 inquirer.registerPrompt('fuzzy-search', fuzzy)
 inquirer.registerPrompt('search-list', isl)
 
 enum CodeType {
   API = 'API',
-  ROUTE = 'Route',
+  FEATURE = 'Feature',
   CUSTOM_HOOK = 'Custom hook',
   COMPONENT = 'Component',
   TABLE = 'Table',
@@ -25,25 +24,16 @@ enum CodeType {
 
 export async function generateCode() {
   try {
-    const config = await recursionFindRaipiotConfig()
-    globalThis.raipiotConfig = config!.config
-    globalThis.projectRootPath = config!.rootPath
-    console.log(`projectRootPath: ${globalThis.projectRootPath}`)
-
-    // globalThis.globalConfigKey = globalConfig
-    if (globalThis.raipiotConfig === null) {
-      throw new Error(`${red('✖')} raipiot.config.js not found, you need to create one first`)
-    }
     const generateTypeChoices = [
-      {
-        title: CodeType.ROUTE,
-        value: CodeType.ROUTE,
-        description: 'Generate a new route'
-      },
       {
         title: CodeType.API,
         value: CodeType.API,
         description: 'Generate a new API'
+      },
+      {
+        title: CodeType.FEATURE,
+        value: CodeType.FEATURE,
+        description: 'Generate a new feature'
       },
       {
         title: CodeType.CUSTOM_HOOK,
@@ -80,7 +70,9 @@ export async function generateCode() {
       case CodeType.API:
         generateAPI()
         break
-
+      case CodeType.FEATURE:
+        generateFeature()
+        break
       default:
         break
     }

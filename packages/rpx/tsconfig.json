@@ -1,7 +1,7 @@
 {
   "extends": "@raipiot-infra/tsconfig/base.json",
   "include": ["src", "tsup.config.ts"],
-  "exclude": ["src/template/**/*"],
+  "exclude": ["node_modules", "public"],
   "compilerOptions": {
     "typeRoots": ["./src/types"]
   }

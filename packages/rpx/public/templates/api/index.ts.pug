@@ -1,4 +1,3 @@
-// @ts-nocheck
 import type HttpRequest from '@raipiot-2f/axios'
 
 import { BaseAPI } from '../../base'
@@ -12,7 +11,7 @@ export class #{apiClassPrefix}API extends BaseAPI {
   constructor(httpRequest: HttpRequest) {
     super(httpRequest)
     // TODO: 定义当前目录的前缀
-    this.#API_PREFIX = `${this.BASE_API_PREFIX}/#{routeName}`
+    this.#API_PREFIX = `${this.BASE_API_PREFIX}/#{apiName}`
   }
 
   /**
