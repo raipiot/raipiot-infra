@@ -17,6 +17,7 @@ export const generateFeature = async () => {
   const { targetPath, featureName } = await inquirer.prompt([
     {
       ...defaultFuzzySearchQuestion,
+      rootPath: process.cwd(),
       name: 'targetPath',
       message: 'Please select the feature directory you want to generate:'
     },

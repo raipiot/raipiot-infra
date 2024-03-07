@@ -3,8 +3,13 @@ export const defaultFuzzySearchQuestion = {
   name: 'targetPath',
   itemType: 'directory',
   depthLimit: 10,
-  excludePath: (nodePath: string) =>
-    nodePath.includes('node_modules') || /\/\.[a-zA-Z0-9]/.test(nodePath)
+  excludePath: (nodePath: string) => {
+    const pathSep = process.platform === 'win32' ? '\\' : '/'
+    return (
+      [/node_modules/, /dist/, /build/, /coverage/].some((reg) => reg.test(nodePath)) ||
+      nodePath.includes(`${pathSep}.`)
+    )
+  }
 }
 
 export const validate = (input: string) => {
