@@ -1,14 +1,13 @@
 import '../src/styles/main.scss'
 
 import type { Preview } from '@storybook/react'
-import { addons } from '@storybook/preview-api'
 import { themes } from '@storybook/theming'
 import { DocsContainer } from '@storybook/addon-docs'
 
 import { createElement } from 'react'
 import { useDarkMode } from 'storybook-dark-mode'
 
-import { ThemeProvider } from '@/components/ThemeProvider'
+import { ThemeProvider } from '../src/components'
 
 const preview: Preview = {
   parameters: {

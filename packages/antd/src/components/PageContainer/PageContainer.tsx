@@ -1,11 +1,12 @@
+import { PageHeader } from '../PageHeader'
 import type { PageContainerProps } from './PageContainer.types'
 
 function PageContainer(props?: PageContainerProps) {
-  const { header, footer } = props ?? {}
+  const { header, footer, fixedHeader, affixProps, rootProps, children } = props ?? {}
   return (
-    <div className="text-red-500 dark:text-blue-500">
-      {header && header}
-      标题
+    <div {...rootProps}>
+      {header && <PageHeader />}
+      {children}
       {footer && footer}
     </div>
   )
