@@ -63,6 +63,7 @@ raipiot infra 是我们的基础建设仓库，是基于 [`Turborepo`](https://t
 - [x] [`theme`](packages/theme): 通用的主题配置
 - [x] [`tsconfig`](packages/tsconfig): 通用的 tsconfig 配置，用于 TypeScript
 - [x] [`utils`](packages/utils): 通用的工具类库
+- [x] [`hooks`](packages/hooks): 通用 hooks 库
 
 ## IDE 设置
 
