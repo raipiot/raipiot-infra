@@ -1,6 +1,6 @@
-export const use#{ccFeatureName}Mutation = () =>
+export const use#{pcFeatureName}Mutation = () =>
   useMutation({
-    mutationFn: (ids: string) => #{pcFeatureName}API.remove(ids),
+    mutationFn: (ids: string) => #{ccFeatureName}API.remove(ids),
     onSuccess: () => {
       // MAYBE SHOULD CALL INVALIDATE QUERY
     }

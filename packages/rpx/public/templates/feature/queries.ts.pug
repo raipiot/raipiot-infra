@@ -1,9 +1,9 @@
-import { #{pcFeatureName}QK } from './query-keys'
+import { #{ccFeatureName}QK } from './query-keys'
 
-export const #{pcFeatureName}QueryOptions = () =>
+export const #{ccFeatureName}QueryOptions = () =>
   queryOptions({
-    queryKey: #{pcFeatureName}QK(),
-    queryFn: ({ signal }) => #{pcFeatureName}API.info({ signal })
+    queryKey: #{ccFeatureName}QK(),
+    queryFn: ({ signal }) => #{ccFeatureName}API.info({ signal })
   })
 
-export const use#{ccFeatureName}SusptenseQuery = () => useSuspenseQuery(#{pcFeatureName}QueryOptions())
+export const use#{pcFeatureName}SusptenseQuery = () => useSuspenseQuery(#{ccFeatureName}QueryOptions())

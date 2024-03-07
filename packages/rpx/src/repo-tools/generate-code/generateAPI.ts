@@ -1,15 +1,18 @@
-import fs from 'fs'
+// eslint-disable-next-line
+// @ts-ignore
 import inquirer from 'inquirer'
-import path from 'path'
-import { transferTemplateAndGenerateResult } from '../../utils'
+// eslint-disable-next-line
+// @ts-ignore
 import { createSpinner } from 'nanospinner'
+import path from 'path'
+
+import { transferTemplateAndGenerateResult } from '../../utils'
 import {
   defaultFuzzySearchQuestion,
   generateCamelCase,
   generatePascalCase,
   validate
 } from './common'
-import { generateCodeEnum } from '../../types'
 
 export const generateAPI = async () => {
   // 找到路由目录，确认是否存在
@@ -27,18 +30,16 @@ export const generateAPI = async () => {
       validate
     }
   ])
-  const spinner = createSpinner('Generating API...', {
+  const spinner = createSpinner('Generating...', {
     color: 'green'
   })
   const targetFileFullPath = path.join(targetPath, apiName)
-  // 创建文件夹
-  fs.mkdirSync(targetFileFullPath, { recursive: true })
   // 加载模板，修改模板，写入文件
-  await transferTemplateAndGenerateResult(generateCodeEnum.api, targetFileFullPath, {
-    apiName: generatePascalCase(apiName),
-    apiClassPrefix: generateCamelCase(apiName)
+  await transferTemplateAndGenerateResult('API', targetFileFullPath, {
+    apiName: generateCamelCase(apiName),
+    apiClassPrefix: generatePascalCase(apiName)
   })
   spinner.stop({
-    text: 'API generated successfully'
+    text: `${apiName} generated successfully!`
   })
 }

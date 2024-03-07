@@ -5,10 +5,3 @@ export interface RaipiotConfig {
   org: string
   repo: string
 }
-
-export enum generateCodeEnum {
-  api = 'api',
-  feature = 'feature',
-  component = 'component',
-  storybook = 'storybook'
-}

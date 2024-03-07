@@ -20,13 +20,13 @@ export const validate = (input: string) => {
 }
 
 // 基于传入的变量名，生成大驼峰命名法
-export const generateCamelCase = (input: string) => {
+export const generatePascalCase = (input: string) => {
   const words = input.split(/[-\s]/)
   return words.map((word) => word[0].toUpperCase() + word.slice(1).toLowerCase()).join('')
 }
 
 // 基于传入的变量名，生成小驼峰命名法
-export const generatePascalCase = (input: string) => {
+export const generateCamelCase = (input: string) => {
   const words = input.split(/[-\s]/)
   return (
     words[0].toLowerCase() +

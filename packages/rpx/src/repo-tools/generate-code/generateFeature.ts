@@ -1,16 +1,19 @@
-import fs from 'fs'
+// eslint-disable-next-line
+// @ts-ignore
 import inquirer from 'inquirer'
-import path from 'path'
-import { transferTemplateAndGenerateResult } from '../../utils'
+// eslint-disable-next-line
+// @ts-ignore
 import { createSpinner } from 'nanospinner'
+import path from 'path'
+
+import { transferTemplateAndGenerateResult } from '../../utils'
 import {
   defaultFuzzySearchQuestion,
-  generatePascalCase,
+  generateCamelCase,
   generateConstantCase,
-  validate,
-  generateCamelCase
+  generatePascalCase,
+  validate
 } from './common'
-import { generateCodeEnum } from '../../types'
 
 export const generateFeature = async () => {
   // 找到路由目录，确认是否存在
@@ -28,19 +31,17 @@ export const generateFeature = async () => {
       validate
     }
   ])
-  const spinner = createSpinner('Generating API...', {
+  const spinner = createSpinner('Generating...', {
     color: 'green'
   })
   const targetFileFullPath = path.join(targetPath, featureName)
-  // 创建文件夹
-  fs.mkdirSync(targetFileFullPath, { recursive: true })
   // 加载模板，修改模板，写入文件
-  await transferTemplateAndGenerateResult(generateCodeEnum.feature, targetFileFullPath, {
+  await transferTemplateAndGenerateResult('FEATURE', targetFileFullPath, {
     pcFeatureName: generatePascalCase(featureName),
     constFeatureName: generateConstantCase(featureName),
     ccFeatureName: generateCamelCase(featureName)
   })
   spinner.stop({
-    text: 'new feature generated successfully'
+    text: `${featureName} generated successfully!`
   })
 }
