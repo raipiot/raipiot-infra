@@ -87,6 +87,7 @@ export const reactPresets: (ImportsMap | PresetName | InlinePreset)[] = [
     from: '@raipiot-infra/hooks',
     imports: [
       'useBoolean',
+      'useRrefresh',
       'useToggle',
       'configResponsive',
       'useAsyncEffect',
