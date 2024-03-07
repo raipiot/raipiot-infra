@@ -1,6 +1,6 @@
 {
   "name": "@raipiot-infra/prettier",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "description": "raipiot infra 通用 Prettier 配置",
   "author": "Bruce Song <recall4056@gmail.com> (https://github.com/recallwei/)",
   "homepage": "https://github.com/raipiot/raipiot-infra#readme",

@@ -1,5 +1,11 @@
 # @raipiot-infra/cspell
 
+## 0.1.11
+
+### Patch Changes
+
+- release
+
 ## 0.1.10
 
 ### Patch Changes
