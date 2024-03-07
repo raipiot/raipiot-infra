@@ -6,7 +6,7 @@ export const reactPresets: (ImportsMap | PresetName | InlinePreset)[] = [
   'react-i18next',
   {
     from: 'react',
-    imports: ['Suspense']
+    imports: ['Suspense', 'Fragment', 'cloneElement', 'createElement', 'createContext']
   },
   {
     from: '@tanstack/react-query',

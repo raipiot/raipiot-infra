@@ -12,7 +12,13 @@ const project = !fs.existsSync(join(process.cwd(), 'tsconfig.eslint.json'))
   ? resolve(process.cwd(), 'tsconfig.json')
   : resolve(process.cwd(), 'tsconfig.eslint.json')
 
-const defaultIgnorePatterns = ['node_modules', 'dist', 'src-tauri', '@types/auto-imports.d.ts']
+const defaultIgnorePatterns = [
+  'node_modules',
+  'dist',
+  'src-tauri',
+  '@types/auto-imports.d.ts',
+  'storybook-static'
+]
 
 const jsOverrides = {
   files: ['*.{js,cjs,mjs,jsx}'],

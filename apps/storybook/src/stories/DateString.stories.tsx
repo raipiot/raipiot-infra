@@ -6,7 +6,6 @@ const { DateString } = DetailField
 const meta = {
   title: 'raipiot 设计系统/数据展示/DateString',
   component: DateString,
-  parameters: {},
   tags: ['autodocs']
 } satisfies Meta<typeof DateString>
 

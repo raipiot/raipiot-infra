@@ -2,12 +2,11 @@ import { PageContainer } from '@raipiot-infra/antd'
 import type { Meta, StoryObj } from '@storybook/react'
 import { Button, Space } from 'antd'
 
-import { View } from '@/components'
+import { ViewBox } from '@/components'
 
 const meta = {
   title: 'raipiot 设计系统/布局/PageContainer',
   component: PageContainer,
-  parameters: {},
   tags: ['autodocs']
 } satisfies Meta<typeof PageContainer>
 
@@ -23,7 +22,7 @@ export const Base: Story = {
 export const Footer: Story = {
   name: '底部操作栏',
   render: () => (
-    <View>
+    <ViewBox>
       <PageContainer
         footer={
           <Space>
@@ -33,6 +32,6 @@ export const Footer: Story = {
           </Space>
         }
       />
-    </View>
+    </ViewBox>
   )
 }
