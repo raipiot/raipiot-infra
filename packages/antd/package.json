@@ -1,6 +1,6 @@
 {
   "name": "@raipiot-infra/antd",
-  "version": "0.1.10",
+  "version": "0.1.12",
   "description": "raipiot infra antd 组件库",
   "author": "Bruce Song <recall4056@gmail.com> (https://github.com/recallwei/)",
   "homepage": "https://github.com/raipiot/raipiot-infra#readme",
@@ -37,7 +37,7 @@
     "prettier:fix": "prettier --write --cache --ignore-unknown --ignore-path=../../.prettierignore ."
   },
   "peerDependencies": {
-    "antd": ">=5.15.0",
+    "antd": ">=5.15.1",
     "react": ">=18.2.0"
   },
   "dependencies": {
@@ -51,8 +51,8 @@
     "@testing-library/react": "^14.2.1",
     "@testing-library/user-event": "^14.5.2",
     "@types/lodash-es": "^4.17.12",
-    "@types/react": "^18.2.62",
-    "@types/react-dom": "^18.2.19",
+    "@types/react": "^18.2.64",
+    "@types/react-dom": "^18.2.21",
     "@vitejs/plugin-react-swc": "^3.6.0",
     "esbuild-sass-plugin": "^3.1.0",
     "sass": "^1.71.1",

@@ -82,5 +82,18 @@ export const reactPresets: (ImportsMap | PresetName | InlinePreset)[] = [
   {
     from: '@raipiot-infra/utils',
     imports: ['AuthUtils', 'BrowserUtils', 'DateUtils', 'I18nUtils', 'LangUtils', 'ThemeUtils']
+  },
+  {
+    from: '@raipiot-infra/hooks',
+    imports: [
+      'useBoolean',
+      'useRrefresh',
+      'useToggle',
+      'configResponsive',
+      'useAsyncEffect',
+      'useFullscreen',
+      'useResponsive',
+      'useSize'
+    ]
   }
 ]

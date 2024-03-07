@@ -1,6 +1,6 @@
 {
   "name": "@raipiot-infra/rpx",
-  "version": "0.1.10",
+  "version": "0.1.12",
   "description": "raipiot infra 命令行工具",
   "author": "Bruce Song <recall4056@gmail.com> (https://github.com/recallwei/)",
   "homepage": "https://github.com/raipiot/raipiot-infra#readme",

@@ -1,0 +1,7 @@
+{
+  "extends": "@raipiot-infra/tsconfig/react.json",
+  "compilerOptions": {
+    "types": ["vitest/globals"]
+  },
+  "include": ["src", "tsup.config.ts"]
+}

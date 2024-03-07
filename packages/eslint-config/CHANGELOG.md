@@ -1,5 +1,21 @@
 # @raipiot-infra/eslint-config
 
+## 0.1.12
+
+### Patch Changes
+
+- release
+- Updated dependencies
+  - @raipiot-infra/eslint-config-react@0.1.12
+
+## 0.1.11
+
+### Patch Changes
+
+- release
+- Updated dependencies
+  - @raipiot-infra/eslint-config-react@0.1.11
+
 ## 0.1.10
 
 ### Patch Changes
