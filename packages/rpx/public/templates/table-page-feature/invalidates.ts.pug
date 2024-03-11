@@ -1,0 +1,17 @@
+import { #{constName}_VALUES_QK, #{constName}S_QK, #{ccName}QK } from './query-keys'
+
+export const invalidate#{pcName}sQueries = () =>
+  queryClient.invalidateQueries({
+    queryKey: [#{constName}S_QK]
+  })
+
+export const invalidate#{pcName}ValuesQueries = () =>
+  queryClient.invalidateQueries({
+    queryKey: [#{constName}_VALUES_QK]
+  })
+
+export const invalidate#{pcName}Query = (id: string) =>
+  queryClient.invalidateQueries({
+    queryKey: #{ccName}QK(id),
+    refetchType: 'all'
+  })

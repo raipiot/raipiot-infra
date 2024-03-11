@@ -3,6 +3,7 @@ export const defaultFuzzySearchQuestion = {
   name: 'targetPath',
   itemType: 'directory',
   depthLimit: 10,
+  rootPath: process.cwd(),
   excludePath: (nodePath: string) => {
     const pathSep = process.platform === 'win32' ? '\\' : '/'
     return (
@@ -22,7 +23,7 @@ export const validate = (input: string) => {
 // 基于传入的变量名，生成大驼峰命名法
 export const generatePascalCase = (input: string) => {
   const words = input.split(/[-\s]/)
-  return words.map((word) => word[0].toUpperCase() + word.slice(1).toLowerCase()).join('')
+  return words.map((word) => word[0].toUpperCase() + word.slice(1)).join('')
 }
 
 // 基于传入的变量名，生成小驼峰命名法

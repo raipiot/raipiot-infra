@@ -6,7 +6,7 @@ import path from 'path'
 
 // import { GenerateCodeEnum } from '../../types'
 import { transferTemplateAndGenerateResult } from '../../utils'
-import { defaultFuzzySearchQuestion } from './common'
+import { defaultFuzzySearchQuestion, generatePascalCase } from './common'
 
 export const generateComponent = async () => {
   // 找到路由目录，确认是否存在
@@ -36,7 +36,8 @@ export const generateComponent = async () => {
 
   // 加载模板，修改模板，写入文件
   await transferTemplateAndGenerateResult('COMPONENT', targetFileFullPath, {
-    componentName
+    componentName,
+    pcComponentName: generatePascalCase(componentName)
   })
   spinner.stop({
     text: `${componentName} generated successfully!`

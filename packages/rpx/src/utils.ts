@@ -1,7 +1,9 @@
+import fs from 'node:fs'
 import path from 'node:path'
+import { fileURLToPath } from 'node:url'
 
-import fs from 'fs'
-import { fileURLToPath } from 'url'
+import inquirer from 'inquirer'
+import { red } from 'kolorist'
 
 import type { CodeTypeKey } from './repo-tools'
 import type { RaipiotConfig } from './types'
@@ -14,6 +16,34 @@ export const getRaipiotConfig = async (): Promise<RaipiotConfig | null> => {
     return config ?? null
   } catch {
     return null
+  }
+}
+
+// 向上获取 raipiot.config.js 文件所在的目录作为根目录
+// eslint-disable-next-line consistent-return
+export const getRaipiotConfigRootPath = async (): Promise<string> => {
+  try {
+    if (process.cwd() === '/') {
+      const { rootPath } = await inquirer.prompt([
+        {
+          type: 'text',
+          name: 'rootPath',
+          message: 'Please input the root path of project:'
+        }
+      ])
+      if (!fs.existsSync(rootPath)) {
+        throw new Error('The root path is not exist')
+      }
+      return rootPath
+    }
+    if (fs.existsSync('raipiot.config.js')) {
+      return process.cwd()
+    }
+    process.chdir('..')
+    return await getRaipiotConfigRootPath()
+  } catch (error) {
+    console.log(red('Error: raipiot.config.js not found'))
+    process.exit(1)
   }
 }
 
@@ -48,7 +78,8 @@ export const transferTemplateAndGenerateResult = async <
   fs.mkdirSync(targetPath, { recursive: true })
   const dirname = getDirname()
   // 加载模板，修改模板，写入文件
-  const templatePath = path.join(dirname, 'templates', type)
+  // 带空格的类型需要转换为 - 分割的字符串作为路径
+  const templatePath = path.join(dirname, 'templates', type.toLowerCase().replace(/[\s_]/g, '-'))
   const templates = fs
     .readdirSync(templatePath, {
       withFileTypes: true,
@@ -74,6 +105,8 @@ export const transferTemplateAndGenerateResult = async <
       fileName = fileName.replace('*', slot.componentName)
     } else if (type === 'HOOK') {
       fileName = fileName.replace('*', slot.hookName)
+    } else if (type === 'TABLE_PAGE_FEATURE') {
+      fileName = fileName.replace('*', slot.pcName)
     }
 
     // 创建文件
@@ -87,4 +120,17 @@ export const transferTemplateAndGenerateResult = async <
 export function getDirname() {
   const filename = fileURLToPath(import.meta.url)
   return path.dirname(filename)
+}
+
+// 目录字符串转换为小驼峰，目录字符串使用 - 分割
+export function transferPathToCamelCase(pathString: string) {
+  return pathString
+    .split('-')
+    .map((item, index) => {
+      if (index === 0) {
+        return item
+      }
+      return item.charAt(0).toUpperCase() + item.slice(1)
+    })
+    .join('')
 }

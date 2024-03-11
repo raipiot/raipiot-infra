@@ -12,6 +12,7 @@ import { generateAPI } from './generateAPI'
 import { generateComponent } from './generateComponent'
 import { generateFeature } from './generateFeature'
 import { generateHook } from './generateHook'
+import { generateTablePage } from './generateTablePage'
 
 inquirer.registerPrompt('fuzzy-search', fuzzy)
 inquirer.registerPrompt('search-list', isl)
@@ -23,7 +24,8 @@ enum CodeType {
   COMPONENT = 'Component',
   TABLE = 'Table',
   MODAL = 'Modal',
-  STANDARD_PAGE = 'StandardPage'
+  STANDARD_TABLE_PAGE = 'Standard table page',
+  TABLE_PAGE_FEATURE = 'Table page feature'
 }
 
 export type CodeTypeKey = keyof typeof CodeType
@@ -52,20 +54,20 @@ export async function generateCode() {
         description: 'Generate a new component'
       },
       {
-        title: CodeType.STANDARD_PAGE,
-        value: CodeType.STANDARD_PAGE,
+        title: CodeType.STANDARD_TABLE_PAGE,
+        value: CodeType.STANDARD_TABLE_PAGE,
         description: 'Generate a new standard page with table/modal/search bar/toolbar...'
-      },
-      {
-        title: CodeType.TABLE,
-        value: CodeType.TABLE,
-        description: 'Generate a new table'
-      },
-      {
-        title: CodeType.MODAL,
-        value: CodeType.MODAL,
-        description: 'Generate a new modal'
       }
+      // {
+      //   title: CodeType.TABLE,
+      //   value: CodeType.TABLE,
+      //   description: 'Generate a new table'
+      // },
+      // {
+      //   title: CodeType.MODAL,
+      //   value: CodeType.MODAL,
+      //   description: 'Generate a new modal'
+      // }
     ]
 
     const choiceCache = generateTypeChoices.find(
@@ -100,6 +102,9 @@ export async function generateCode() {
         break
       case CodeType.HOOK:
         await generateHook()
+        break
+      case CodeType.STANDARD_TABLE_PAGE:
+        await generateTablePage()
         break
       default:
         break
