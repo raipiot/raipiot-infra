@@ -1,5 +1,11 @@
 # @raipiot-infra/config
 
+## 0.1.13
+
+### Patch Changes
+
+- release
+
 ## 0.1.12
 
 ### Patch Changes
