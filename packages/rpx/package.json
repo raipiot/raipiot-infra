@@ -1,6 +1,6 @@
 {
   "name": "@raipiot-infra/rpx",
-  "version": "0.1.12",
+  "version": "0.1.13",
   "description": "raipiot infra 命令行工具",
   "author": "Bruce Song <recall4056@gmail.com> (https://github.com/recallwei/)",
   "homepage": "https://github.com/raipiot/raipiot-infra#readme",
@@ -41,12 +41,17 @@
     "commander": "^12.0.0",
     "cross-fetch": "^4.0.0",
     "cross-spawn": "^7.0.3",
+    "inquirer": "8.2.5",
+    "inquirer-fuzzy-path": "^2.3.0",
+    "inquirer-search-list": "^1.2.6",
     "kolorist": "^1.8.0",
+    "nanospinner": "^1.1.0",
     "prompts": "^2.4.2"
   },
   "devDependencies": {
     "@types/cross-spawn": "^6.0.6",
     "@types/degit": "^2.8.6",
+    "@types/inquirer": "^9.0.7",
     "@types/prompts": "^2.4.9",
     "tsup": "^8.0.2"
   },

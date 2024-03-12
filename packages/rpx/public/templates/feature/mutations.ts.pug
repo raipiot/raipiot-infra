@@ -1,0 +1,7 @@
+export const use#{pcFeatureName}Mutation = () =>
+  useMutation({
+    mutationFn: (ids: string) => #{ccFeatureName}API.remove(ids),
+    onSuccess: () => {
+      // MAYBE SHOULD CALL INVALIDATE QUERY
+    }
+  })

@@ -1,0 +1,27 @@
+import { #{pcName}SearchFormModel } from '../types'
+
+export const use#{pcName}sSearchForm = () => {
+  const { t } = useTranslation('#{constName}')
+  const { createResponsiveFormItems } = useFormCreator<#{pcName}SearchFormModel>()
+  const [searchForm] = AForm.useForm()
+
+  return {
+    searchForm,
+    searchFormItems: createResponsiveFormItems([
+      {
+        type: 'input',
+        formItemProps: {
+          name: 'code',
+          label: t('#{constName}.CODE')
+        }
+      },
+      {
+        type: 'input',
+        formItemProps: {
+          name: 'dictValue',
+          label: t('#{constName}.VALUE')
+        }
+      }
+    ])
+  }
+}

@@ -1,0 +1,59 @@
+import type { #{pcName}SubmitFormModel } from '../types'
+
+export const use#{pcName}sModalForm = () => {
+  const { t } = useTranslation(['#{constName}', 'COMMON'])
+  const { createResponsiveFormItems } = useFormCreator<#{pcName}SubmitFormModel>()
+  const [modalForm] = AForm.useForm<#{pcName}SubmitFormModel>()
+
+  return {
+    modalForm,
+    modalFormItems: createResponsiveFormItems([
+      {
+        type: 'input',
+        formItemProps: {
+          name: 'code',
+          label: t('#{constName}.CODE'),
+          rules: [{ required: true }]
+        }
+      },
+      {
+        type: 'input',
+        formItemProps: {
+          name: 'dictValue',
+          label: t('#{constName}.VALUE'),
+          rules: [{ required: true }]
+        }
+      },
+      {
+        type: 'input-number',
+        formItemProps: {
+          name: 'sort',
+          label: t('COMMON:SORT'),
+          rules: [{ required: true }]
+        },
+        inputNumberProps: {
+          style: { width: '100%' }
+        }
+      },
+      {
+        type: 'switch',
+        formItemProps: {
+          name: 'isSealed',
+          label: t('COMMON:IS.SEALED'),
+          rules: [{ required: true }]
+        }
+      },
+      {
+        type: 'text-area',
+        colProps: { span: 24 },
+        formItemProps: {
+          name: 'remark',
+          label: t('COMMON:REMARK')
+        },
+        textAreaProps: {
+          rows: 3
+        }
+      }
+    ])
+  }
+}

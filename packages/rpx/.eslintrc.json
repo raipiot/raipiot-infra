@@ -1,3 +1,4 @@
 {
-  "extends": "@raipiot-infra/eslint-config-ts"
+  "extends": "@raipiot-infra/eslint-config-ts",
+  "ignorePatterns": ["src/template"]
 }

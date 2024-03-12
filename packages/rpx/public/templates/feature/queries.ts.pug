@@ -1,0 +1,9 @@
+import { #{ccFeatureName}QK } from './query-keys'
+
+export const #{ccFeatureName}QueryOptions = () =>
+  queryOptions({
+    queryKey: #{ccFeatureName}QK(),
+    queryFn: ({ signal }) => #{ccFeatureName}API.info({ signal })
+  })
+
+export const use#{pcFeatureName}SusptenseQuery = () => useSuspenseQuery(#{ccFeatureName}QueryOptions())

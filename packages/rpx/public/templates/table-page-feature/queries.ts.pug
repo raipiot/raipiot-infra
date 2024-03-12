@@ -1,0 +1,16 @@
+import type { #{pcName}PageDto, #{pcName}ValuePageDto } from '@raipiot-2f/api'
+
+import { #{ccName}QK, #{ccName}sQK, #{ccName}TreeQK, #{ccName}ValuesQK } from './query-keys'
+
+export const #{ccName}QueryOptions = (id: string) =>
+  queryOptions({
+    queryKey: #{ccName}QK(id),
+    queryFn: ({ signal }) => #{apiPrefix}#{ccName}sAPI.detail(id, signal)
+  })
+
+export const #{ccName}sQueryOptions = (params: #{pcName}PageDto) =>
+  queryOptions({
+    queryKey: #{ccName}sQK(params),
+    queryFn: ({ signal }) => #{apiPrefix}#{ccName}sAPI.list(params, signal),
+    placeholderData: keepPreviousData
+  })

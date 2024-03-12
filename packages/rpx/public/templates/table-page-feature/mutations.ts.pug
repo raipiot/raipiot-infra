@@ -1,0 +1,36 @@
+import type { #{pcName}SubmitDto } from '@raipiot-2f/api'
+
+import {
+  invalidate#{pcName}Query,
+  invalidate#{pcName}sQueries,
+  invalidate#{pcName}ValuesQueries
+} from './invalidates'
+
+export const use#{pcName}RemoveMutation = () => {
+  const { t } = useTranslation()
+  const { message } = AApp.useApp()
+  return useMutation({
+    mutationFn: (ids: string) => #{apiPrefix}#{pcName}sAPI.remove(ids),
+    onSuccess: () => {
+      message.success(t('OPERATION.SUCCESS'))
+      invalidate#{pcName}sQueries()
+      invalidate#{pcName}ValuesQueries()
+    }
+  })
+}
+
+export const use#{pcName}SubmitMutation = () => {
+  const { t } = useTranslation()
+  const { message } = AApp.useApp()
+  return useMutation({
+    mutationFn: (data: #{pcName}SubmitDto) => #{apiPrefix}#{pcName}sAPI.submit(data),
+    onSuccess: (_, variables) => {
+      message.success(t('OPERATION.SUCCESS'))
+      if (variables.id) {
+        invalidate#{pcName}Query(variables.id)
+      }
+      invalidate#{pcName}sQueries()
+      invalidate#{pcName}ValuesQueries()
+    }
+  })
+}

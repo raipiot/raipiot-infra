@@ -1,0 +1,9 @@
+import type { Page } from '../../types'
+import type { #{pcName}SubmitDto } from './dto'
+
+export interface #{pcName}Vo extends #{pcName}SubmitDto {
+  id?: string
+}
+
+
+export type #{pcName}sVo = Page<PostVo>

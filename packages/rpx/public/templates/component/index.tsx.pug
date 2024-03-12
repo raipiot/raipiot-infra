@@ -1,0 +1,16 @@
+import type { #{componentName}Props } from './#{componentName}.types'
+
+function #{componentName}({className = '', ...props}: #{componentName}Props) {
+  return (
+    <div {...props} className={`${className}`}>
+      #{componentName}
+
+      {/* Maybe */}
+      {props?.children}
+    </div>
+  );
+}
+
+#{componentName}.displayName = '#{componentName}';
+
+export default #{componentName};
