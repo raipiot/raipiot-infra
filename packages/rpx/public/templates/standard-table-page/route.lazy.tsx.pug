@@ -85,7 +85,7 @@ function #{pcName}Table() {
         pagination={pagination({
           total,
           // 事件：分页预渲染
-          onPrefetch: (values) => queryClient.prefetchQuery(#{ccName}QueryOptions(values))
+          onPrefetch: (values) => queryClient.prefetchQuery(#{ccName}sQueryOptions(values))
         })}
         // 刷新加载
         refreshLoading={isPending}

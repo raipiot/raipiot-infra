@@ -2,9 +2,11 @@ import type HttpRequest from '@raipiot-2f/axios'
 
 import { BaseAPI } from ''
 import type { #{pcName}PageDto, #{pcName}SubmitDto } from './dto'
+import type { #{pcName}sVo } from './vo'
 
 export * from './dto'
 export * from './vo'
+
 
 export class #{apiPrefix}#{pcName}API extends BaseAPI {
   #API_PREFIX: string
@@ -18,10 +20,10 @@ export class #{apiPrefix}#{pcName}API extends BaseAPI {
   /**
    * 获取
    */
-  info({ signal }: { signal?: AbortSignal }) {
+  detail({ signal }: { signal?: AbortSignal }) {
     // TODO: 添加泛型响应类型
     return this.httpRequest.get(
-      `${this.#API_PREFIX}/info`,
+      `${this.#API_PREFIX}/detail`,
       {},
       {
         signal
@@ -32,8 +34,10 @@ export class #{apiPrefix}#{pcName}API extends BaseAPI {
   /**
    * 列表
    */
-  list(params: #{pcName}PageDto) {
-    return this.httpRequest.get(`${this.#API_PREFIX}/list`, params)
+  list(params: #{pcName}PageDto, signal?: AbortSignal) {
+    return this.httpRequest.get(`${this.#API_PREFIX}/list`, params, {
+      signal
+    })
   }
 
   /**
