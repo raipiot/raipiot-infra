@@ -1,7 +1,7 @@
 import type { #{pcName}SubmitFormModel } from '../types'
 
-export const useDictsModalForm = () => {
-  const { t } = useTranslation([#{constName}, 'COMMON'])
+export const use#{pcName}sModalForm = () => {
+  const { t } = useTranslation(['#{constName}', 'COMMON'])
   const { createResponsiveFormItems } = useFormCreator<#{pcName}SubmitFormModel>()
   const [modalForm] = AForm.useForm<#{pcName}SubmitFormModel>()
 

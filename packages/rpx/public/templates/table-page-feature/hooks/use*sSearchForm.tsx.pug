@@ -1,4 +1,6 @@
-export const useDictsSearchForm = () => {
+import { #{pcName}SearchFormModel } from '../types'
+
+export const use#{pcName}sSearchForm = () => {
   const { t } = useTranslation('#{constName}')
   const { createResponsiveFormItems } = useFormCreator<#{pcName}SearchFormModel>()
   const [searchForm] = AForm.useForm()

@@ -1,17 +1,18 @@
 import type HttpRequest from '@raipiot-2f/axios'
 
-import { BaseAPI } from '../../base'
+import { BaseAPI } from ''
+import type { #{pcName}PageDto, #{pcName}SubmitDto } from './dto'
 
 export * from './dto'
 export * from './vo'
 
-export class #{apiClassPrefix}API extends BaseAPI {
+export class #{apiPrefix}#{pcName}API extends BaseAPI {
   #API_PREFIX: string
 
   constructor(httpRequest: HttpRequest) {
     super(httpRequest)
     // TODO: 定义当前目录的前缀
-    this.#API_PREFIX = `${this.BASE_API_PREFIX}/#{apiName}`
+    this.#API_PREFIX = `${this.BASE_API_PREFIX}/#{apiPrefix}/#{ccName}`
   }
 
   /**
@@ -26,6 +27,20 @@ export class #{apiClassPrefix}API extends BaseAPI {
         signal
       }
     )
+  }
+
+  /**
+   * 列表
+   */
+  list(params: #{pcName}PageDto) {
+    return this.httpRequest.get(`${this.#API_PREFIX}/list`, params)
+  }
+
+  /**
+   * 提交
+   */
+  async submit(data: #{pcName}SubmitDto) {
+    return this.httpRequest.post(`${this.#API_PREFIX}/submit`, data)
   }
 
   /**

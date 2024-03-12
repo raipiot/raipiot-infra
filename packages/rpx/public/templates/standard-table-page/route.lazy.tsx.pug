@@ -1,12 +1,12 @@
 import type { #{pcName}PageDto, #{pcName}Vo } from '@raipiot-2f/api'
 
 import {
-  #{pcName}sQueryOptions,
-  use#{pcName}Columns,
-  use#{pcName}ModalForm,
-  use#{pcName}SearchForm,
+  #{ccName}sQueryOptions,
+  use#{pcName}sColumns,
+  use#{pcName}sModalForm,
+  use#{pcName}sSearchForm,
   use#{pcName}RemoveMutation,
-  use#{pcName}ubmitMutation
+  use#{pcName}SubmitMutation,
 } from '@/features/#{featureName}'
 
 function #{pcName}Table() {
@@ -18,17 +18,17 @@ function #{pcName}Table() {
   // 弹窗
   const modal = useModal()
   // 搜索表单
-  const { searchForm, searchFormItems } = use#{pcName}SearchForm()
+  const { searchForm, searchFormItems } = use#{pcName}sSearchForm()
   // 弹窗表单
-  const { modalForm, modalFormItems } = use#{pcName}ModalForm()
+  const { modalForm, modalFormItems } = use#{pcName}sModalForm()
   // 表格列
-  const { columns } = use#{pcName}Columns({ modal, form: modalForm })
+  const { columns } = use#{pcName}sColumns({ modal, form: modalForm })
 
   // 异步查询：列表数据
   const {
     data: { records, total },
     refetch
-  } = useSuspenseQuery(#{ccName}QueryOptions(PageUtils.mergeParams(pageParams)))
+  } = useSuspenseQuery(#{ccName}sQueryOptions(PageUtils.mergeParams(pageParams)))
   // 异步删除
   const { mutateAsync: removeMutateAsync, isPending: isRemovePending } =
     use#{pcName}RemoveMutation()
@@ -68,12 +68,12 @@ function #{pcName}Table() {
         // 事件：预渲染
         onPrefetch={(values) =>
           queryClient.prefetchQuery(
-            #{ccName}QueryOptions(PageUtils.mergeParams(pageParams, values))
+            #{ccName}sQueryOptions(PageUtils.mergeParams(pageParams, values))
           )
         }
       />
       {/* 表格 */}
-      <RpBasicTable<DictVo>
+      <RpBasicTable<#{pcName}Vo>
         rowKey={(record) => record.id!}
         // 批量选择选项
         rowSelection={rowSelection}
