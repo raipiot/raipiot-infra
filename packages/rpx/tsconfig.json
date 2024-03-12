@@ -1,5 +1,4 @@
 {
   "extends": "@raipiot-infra/tsconfig/base.json",
-  "include": ["src", "tsup.config.ts"],
-  "exclude": ["node_modules", "public"]
+  "include": ["src", "tsup.config.ts"]
 }
