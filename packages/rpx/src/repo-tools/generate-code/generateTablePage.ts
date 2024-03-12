@@ -6,7 +6,6 @@ import inquirer from 'inquirer'
 // @ts-ignore
 import { createSpinner } from 'nanospinner'
 
-// import { GenerateCodeEnum } from '../../types'
 import {
   getRaipiotConfigRootPath,
   transferPathToCamelCase,

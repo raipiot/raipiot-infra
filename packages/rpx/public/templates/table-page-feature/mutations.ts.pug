@@ -10,7 +10,7 @@ export const use#{pcName}RemoveMutation = () => {
   const { t } = useTranslation()
   const { message } = AApp.useApp()
   return useMutation({
-    mutationFn: (ids: string) => system#{pcName}sAPI.remove(ids),
+    mutationFn: (ids: string) => #{apiPrefix}#{pcName}sAPI.remove(ids),
     onSuccess: () => {
       message.success(t('OPERATION.SUCCESS'))
       invalidate#{pcName}sQueries()
@@ -23,7 +23,7 @@ export const use#{pcName}SubmitMutation = () => {
   const { t } = useTranslation()
   const { message } = AApp.useApp()
   return useMutation({
-    mutationFn: (data: #{pcName}SubmitDto) => system#{pcName}sAPI.submit(data),
+    mutationFn: (data: #{pcName}SubmitDto) => #{apiPrefix}#{pcName}sAPI.submit(data),
     onSuccess: (_, variables) => {
       message.success(t('OPERATION.SUCCESS'))
       if (variables.id) {

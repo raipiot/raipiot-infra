@@ -11,6 +11,6 @@ export const #{ccName}QueryOptions = (id: string) =>
 export const #{ccName}sQueryOptions = (params: #{pcName}PageDto) =>
   queryOptions({
     queryKey: #{ccName}sQK(params),
-    queryFn: ({ signal }) => #{apiPrefix}#{ccName}sAPI.parentList(params, signal),
+    queryFn: ({ signal }) => #{apiPrefix}#{ccName}sAPI.list(params, signal),
     placeholderData: keepPreviousData
   })

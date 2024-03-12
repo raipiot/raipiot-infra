@@ -5,15 +5,15 @@ import { createSpinner } from 'nanospinner'
 import path from 'path'
 
 // import { GenerateCodeEnum } from '../../types'
-import { transferTemplateAndGenerateResult } from '../../utils'
+import { getRaipiotConfigRootPath, transferTemplateAndGenerateResult } from '../../utils'
 import { defaultFuzzySearchQuestion, generatePascalCase } from './common'
 
 export const generateComponent = async () => {
-  // 找到路由目录，确认是否存在
+  const rootPath = await getRaipiotConfigRootPath() // 找到路由目录，确认是否存在
   const { targetPath, componentName } = await inquirer.prompt([
     {
       ...defaultFuzzySearchQuestion,
-      rootPath: process.cwd(),
+      rootPath,
       name: 'targetPath',
       message: 'Please select the component directory you want to generate:'
     },

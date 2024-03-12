@@ -5,15 +5,15 @@ import { createSpinner } from 'nanospinner'
 import path from 'path'
 
 // import { GenerateCodeEnum } from '../../types'
-import { transferTemplateAndGenerateResult } from '../../utils'
+import { getRaipiotConfigRootPath, transferTemplateAndGenerateResult } from '../../utils'
 import { defaultFuzzySearchQuestion } from './common'
 
 export const generateHook = async () => {
-  // 找到目录，确认是否存在
+  const rootPath = await getRaipiotConfigRootPath() // 找到目录，确认是否存在
   const { targetPath, hookName } = await inquirer.prompt([
     {
       ...defaultFuzzySearchQuestion,
-      rootPath: process.cwd(),
+      rootPath,
       name: 'targetPath',
       message: 'Please select the target directory you want to generate:'
     },
