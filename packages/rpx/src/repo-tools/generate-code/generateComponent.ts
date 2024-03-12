@@ -1,6 +1,4 @@
 import inquirer from 'inquirer'
-// eslint-disable-next-line
-// @ts-ignore
 import { createSpinner } from 'nanospinner'
 import path from 'path'
 

@@ -13,7 +13,6 @@ export class #{apiPrefix}#{pcName}API extends BaseAPI {
 
   constructor(httpRequest: HttpRequest) {
     super(httpRequest)
-    // TODO: 定义当前目录的前缀
     this.#API_PREFIX = `${this.BASE_API_PREFIX}/#{apiPrefix}/#{ccName}`
   }
 
@@ -21,7 +20,6 @@ export class #{apiPrefix}#{pcName}API extends BaseAPI {
    * 获取
    */
   detail(id: string, signal: AbortSignal) {
-    // TODO: 添加泛型响应类型
     return this.httpRequest.get<#{pcName}Vo>(
       `${this.#API_PREFIX}/detail`,
       { id },

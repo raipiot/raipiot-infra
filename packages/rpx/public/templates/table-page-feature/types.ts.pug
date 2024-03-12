@@ -2,6 +2,5 @@ import type { #{pcName}PageDto, #{pcName}SubmitDto } from '@raipiot-2f/api'
 
 export interface #{pcName}SearchFormModel extends Pick<#{pcName}PageDto, 'code' | '#{ccName}Value'> {}
 
-export interface #{pcName}SubmitFormModel extends Omit<#{pcName}SubmitDto, 'isSealed'> {
-  isSealed?: boolean
+export interface #{pcName}SubmitFormModel extends #{pcName}SubmitDto {
 }

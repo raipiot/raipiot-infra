@@ -3,7 +3,6 @@ import type { #{pcName}SubmitDto } from '@raipiot-2f/api'
 import {
   invalidate#{pcName}Query,
   invalidate#{pcName}sQueries,
-  invalidate#{pcName}ValuesQueries
 } from './invalidates'
 
 export const use#{pcName}RemoveMutation = () => {
@@ -14,7 +13,6 @@ export const use#{pcName}RemoveMutation = () => {
     onSuccess: () => {
       message.success(t('OPERATION.SUCCESS'))
       invalidate#{pcName}sQueries()
-      invalidate#{pcName}ValuesQueries()
     }
   })
 }
@@ -30,7 +28,6 @@ export const use#{pcName}SubmitMutation = () => {
         invalidate#{pcName}Query(variables.id)
       }
       invalidate#{pcName}sQueries()
-      invalidate#{pcName}ValuesQueries()
     }
   })
 }

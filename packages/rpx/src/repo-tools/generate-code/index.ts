@@ -1,5 +1,3 @@
-// eslint-disable-next-line
-// @ts-ignore
 import inquirer from 'inquirer'
 // eslint-disable-next-line
 // @ts-ignore
