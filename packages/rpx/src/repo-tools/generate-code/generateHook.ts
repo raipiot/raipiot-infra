@@ -1,6 +1,7 @@
+import path from 'node:path'
+
 import inquirer from 'inquirer'
 import { createSpinner } from 'nanospinner'
-import path from 'path'
 
 // import { GenerateCodeEnum } from '../../types'
 import { getRaipiotConfigRootPath, transferTemplateAndGenerateResult } from '../../utils'

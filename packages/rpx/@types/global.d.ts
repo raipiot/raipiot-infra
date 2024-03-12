@@ -1,7 +1,5 @@
-// 在 globalThis 中定义一个属性，然后在其他文件中使用它
-
-import type { CodeTypeKey } from '../repo-tools'
-import type { RaipiotConfig } from '.'
+import type { CodeTypeKey } from '../src/repo-tools'
+import type { RaipiotConfig } from '../src/types'
 
 declare global {
   namespace globalThis {

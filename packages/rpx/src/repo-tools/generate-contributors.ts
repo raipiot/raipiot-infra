@@ -1,7 +1,7 @@
 import fs from 'node:fs'
+import path from 'node:path'
 
 import fetch from 'cross-fetch'
-import path from 'path'
 
 import { t } from '../i18n'
 import { Logger } from '../log'
