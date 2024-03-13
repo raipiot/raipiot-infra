@@ -1,10 +1,7 @@
-// eslint-disable-next-line
-// @ts-ignore
+import path from 'node:path'
+
 import inquirer from 'inquirer'
-// eslint-disable-next-line
-// @ts-ignore
 import { createSpinner } from 'nanospinner'
-import path from 'path'
 
 import { getRaipiotConfigRootPath, transferTemplateAndGenerateResult } from '../../utils'
 import {
