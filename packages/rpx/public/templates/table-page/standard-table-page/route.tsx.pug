@@ -1,0 +1,11 @@
+import { #{ccNames}QueryOptions } from '@/features/#{featureName}'
+
+const t = i18n.getFixedT(null, 'ROUTER')
+
+export const Route = createFileRoute('/')({
+  staticData: {
+    title: () => t(''),
+    icon: <MaterialSymbolsBook2Rounded />
+  },
+  loader: () => queryClient.ensureQueryData(#{ccNames}QueryOptions(PageUtils.initParams()))
+})

@@ -32,11 +32,15 @@ export const generateComponent = async () => {
     color: 'green'
   })
   const targetFileFullPath = path.join(targetPath, componentName)
-
-  // 加载模板，修改模板，写入文件
-  await transferTemplateAndGenerateResult('COMPONENT', targetFileFullPath, {
+  const slot = {
     componentName,
     pcComponentName: generatePascalCase(componentName)
+  }
+  // 加载模板，修改模板，写入文件
+  await transferTemplateAndGenerateResult({
+    type: 'COMPONENT',
+    slot,
+    targetPath: targetFileFullPath
   })
   spinner.stop({
     text: `${componentName} generated successfully!`

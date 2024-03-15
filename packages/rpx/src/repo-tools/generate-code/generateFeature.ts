@@ -32,11 +32,16 @@ export const generateFeature = async () => {
     color: 'green'
   })
   const targetFileFullPath = path.join(targetPath, featureName)
-  // 加载模板，修改模板，写入文件
-  await transferTemplateAndGenerateResult('FEATURE', targetFileFullPath, {
+  const slot = {
     pcFeatureName: generatePascalCase(featureName),
     constFeatureName: generateConstantCase(featureName),
     ccFeatureName: generateCamelCase(featureName)
+  }
+  // 加载模板，修改模板，写入文件
+  await transferTemplateAndGenerateResult({
+    type: 'FEATURE',
+    slot,
+    targetPath: targetFileFullPath
   })
   spinner.stop({
     text: `${featureName} generated successfully!`

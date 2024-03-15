@@ -1,0 +1,7 @@
+import type { PropsWithChildren } from 'react'
+
+import { BaseModalProvider } from './BaseModalProvider'
+
+export function #{pcNames}Provider(props: PropsWithChildren) {
+  return <BaseModalProvider>{props.children}</BaseModalProvider>
+}

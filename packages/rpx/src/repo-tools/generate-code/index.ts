@@ -1,32 +1,12 @@
 import inquirer from 'inquirer'
-// eslint-disable-next-line
-// @ts-ignore
-import fuzzy from 'inquirer-fuzzy-path'
-// eslint-disable-next-line
-// @ts-ignore
-import isl from 'inquirer-search-list'
 
+import type { CodeTypeKey } from '../../types/genCode'
+import { CodeType } from '../../types/genCode'
 import { generateAPI } from './generateAPI'
 import { generateComponent } from './generateComponent'
 import { generateFeature } from './generateFeature'
 import { generateHook } from './generateHook'
 import { generateTablePage } from './generateTablePage'
-
-inquirer.registerPrompt('fuzzy-search', fuzzy)
-inquirer.registerPrompt('search-list', isl)
-
-enum CodeType {
-  API = 'API',
-  FEATURE = 'Feature',
-  HOOK = 'Hook',
-  COMPONENT = 'Component',
-  TABLE = 'Table',
-  MODAL = 'Modal',
-  STANDARD_TABLE_PAGE = 'Standard table page',
-  TABLE_PAGE_FEATURE = 'Table page feature'
-}
-
-export type CodeTypeKey = keyof typeof CodeType
 
 export async function generateCode() {
   try {
@@ -102,7 +82,10 @@ export async function generateCode() {
         await generateHook()
         break
       case CodeType.STANDARD_TABLE_PAGE:
-        await generateTablePage()
+        await generateTablePage(true)
+        break
+      case CodeType.TREE_TABLE_PAGE:
+        await generateTablePage(false)
         break
       default:
         break

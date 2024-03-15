@@ -2,11 +2,12 @@ import fs from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 
+import { GoogleGenerativeAI } from '@google/generative-ai'
 import inquirer from 'inquirer'
 import { red } from 'kolorist'
 
-import type { CodeTypeKey } from './repo-tools'
 import type { RaipiotConfig } from './types'
+import type { CodeTypeKey } from './types/genCode'
 
 // 仅支持 raipiot.config.js 文件
 export const getRaipiotConfig = async (): Promise<RaipiotConfig | null> => {
@@ -64,22 +65,38 @@ export async function recursionFindRaipiotConfig() {
   }
 }
 
-// 复制 API 代码到指定目录，并且进行替换
+/**
+ * 复制 API 代码到指定目录，并且进行替换
+ * @param type 替换类型
+ * @param targetPath 目标目录，用于生成文件，如果不存在会自动创建
+ * @param slot 插槽对象，用于替换模板中的占位符
+ */
 export const transferTemplateAndGenerateResult = async <
   T extends {
     [key: string]: string
   }
->(
-  type: CodeTypeKey,
-  targetPath: string,
+>({
+  type,
+  targetPath,
+  slot,
+  templatePrefixPath = ''
+}: {
+  type: CodeTypeKey
+  targetPath: string
   slot: T
-) => {
+  templatePrefixPath?: string
+}) => {
   // 创建文件夹
   fs.mkdirSync(targetPath, { recursive: true })
   const dirname = getDirname()
   // 加载模板，修改模板，写入文件
   // 带空格的类型需要转换为 - 分割的字符串作为路径
-  const templatePath = path.join(dirname, 'templates', type.toLowerCase().replace(/[\s_]/g, '-'))
+  const templatePath = path.join(
+    dirname,
+    'templates',
+    templatePrefixPath,
+    type.toLowerCase().replace(/[\s_]/g, '-')
+  )
   const templates = fs
     .readdirSync(templatePath, {
       withFileTypes: true,
@@ -105,8 +122,10 @@ export const transferTemplateAndGenerateResult = async <
       fileName = fileName.replace('*', slot.componentName)
     } else if (type === 'HOOK') {
       fileName = fileName.replace('*', slot.hookName)
-    } else if (type === 'TABLE_PAGE_FEATURE') {
-      fileName = fileName.replace('*', slot.pcName)
+    } else if (type === 'STANDARD_TABLE_PAGE' || type === 'TREE_TABLE_PAGE') {
+      //  文件名仅存在单个星号或两个星号的情况，因此不需要考虑多个星号的情况
+      fileName = fileName.replace(/\*\*/, slot.pcNames)
+      fileName = fileName.replace(/\*/, slot.pcName)
     }
 
     // 创建文件
@@ -133,4 +152,61 @@ export function transferPathToCamelCase(pathString: string) {
       return item.charAt(0).toUpperCase() + item.slice(1)
     })
     .join('')
+}
+
+// 从环境变量中读取 Gemini Key
+export async function getGeminiKey() {
+  let geminiKey = process.env.GEMINI_API
+  if (!geminiKey) {
+    const { key } = await inquirer.prompt([
+      {
+        type: 'text',
+        name: 'key',
+        message: 'Please input the Gemini Key:'
+      }
+    ])
+    const isValid = await testGeminiKey(key)
+    if (isValid) {
+      geminiKey = key
+      process.env.GEMINI_API = key
+    } else {
+      return getGeminiKey()
+    }
+  }
+  return geminiKey
+}
+
+// 测试 Gemini Key 是否有效
+export async function testGeminiKey(key: string) {
+  const genAI = new GoogleGenerativeAI(key)
+  try {
+    const robot = genAI.getGenerativeModel({
+      model: 'gemini-pro'
+    })
+    const result = await robot.generateContent('Hello')
+    await result.response.text()
+    return true
+  } catch {
+    return false
+  }
+}
+
+export async function askForGeminiKey(question: string) {
+  const geminiKey = await getGeminiKey()
+  const genAI = new GoogleGenerativeAI(geminiKey!)
+  const robot = genAI.getGenerativeModel({
+    model: 'gemini-pro'
+  })
+  const result = await robot.generateContent(question)
+  const response = await result.response
+  return response.text()
+}
+
+// 询问目标单词的单复数分别是什么
+export async function askForPluralAndSingular(word: string) {
+  const rawString = await askForGeminiKey(
+    `What is the plural and singular of ${word}?Connect singular and plural words with symbol *.For example:user*users`
+  )
+  const [singular, plural] = rawString.split('*')
+  return { singular, plural } as { plural: string; singular: string }
 }

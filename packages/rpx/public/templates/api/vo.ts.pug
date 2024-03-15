@@ -1,9 +1,10 @@
 import type { Page } from '../../types'
 import type { #{pcName}SubmitDto } from './dto'
 
+// 单条数据 Vo, 基于提交的数据类型
 export interface #{pcName}Vo extends #{pcName}SubmitDto {
-  id?: string
 }
 
 
-export type #{pcName}sVo = Page<PostVo>
+// 分页数据 Vo
+export type #{pcNames}Vo = Page<#{pcName}Vo>

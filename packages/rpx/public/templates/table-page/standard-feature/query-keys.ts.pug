@@ -1,0 +1,10 @@
+import type { #{pcName}PageDto } from '@raipiot-2f/api'
+
+export const #{constNames}_QK = '#{queryKeyPrefix}#{ccNames}'
+
+export const #{constName}_QK = '#{queryKeyPrefix}#{ccName}'
+
+export const #{ccNames}QK = (params?: #{pcName}PageDto) => [#{constNames}_QK, params]
+
+export const #{ccName}QK = (id?: string) => [#{constName}_QK, { id }]
+

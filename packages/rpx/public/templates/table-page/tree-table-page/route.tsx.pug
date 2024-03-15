@@ -1,0 +1,13 @@
+const t = i18n.getFixedT(null, 'ROUTER')
+
+export const Route = createFileRoute('/')({
+  staticData: {
+    title: () => t(),
+    icon: <MaterialSymbolsGroupsRounded />
+  },
+  loader: () =>
+    Promise.all([
+      queryClient.ensureQueryData(#{pcNames}.listQueryOptions()),
+      queryClient.ensureQueryData(#{pcNames}.treeQueryOptions()),
+    ])
+})

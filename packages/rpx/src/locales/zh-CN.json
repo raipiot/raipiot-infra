@@ -16,5 +16,14 @@
   "Need.Org.Or.Repo": "需要在 raipiot.config.js 中指定 org 和 repo",
   "Display.Current.Version": "显示当前版本",
   "Display.Help.Command": "显示帮助命令",
-  "Action.Not.Match": "该命令不存在，请通过调用 -h 检查"
+  "Action.Not.Match": "该命令不存在，请通过调用 -h 检查",
+  "Generate.Code": {
+    "Select_Route_Dir": "请选择路由所在的目录",
+    "Input_Route_Name": "请输入路由名称",
+    "Select_API_Dir": "请选择 API 所在的目录",
+    "Input_API_Name": "请输入 API 名称",
+    "Select_Feature_Dir": "请选择 Feature 所在的目录",
+    "Input_Feature_Name": "请输入 Feature 名称",
+    "Input_API_Prefix": "请输入接口前缀，默认是 '/raipiot-system'"
+  }
 }

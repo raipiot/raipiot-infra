@@ -1,0 +1,17 @@
+import { #{constName}_TREE_QK, #{ccName}QK, #{constNames}_QK } from './query-keys'
+
+export const invalidateListQuery = () =>
+  queryClient.invalidateQueries({
+    queryKey: [#{constNames}_QK]
+  })
+
+export const invalidateDetailQuery = (id?: string) =>
+  queryClient.invalidateQueries({
+    queryKey: #{ccName}QK(id),
+    refetchType: 'all'
+  })
+
+export const invalidateTreeQuery = () =>
+  queryClient.invalidateQueries({
+    queryKey: [#{constName}_TREE_QK]
+  })
