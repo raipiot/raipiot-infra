@@ -18,11 +18,18 @@ import {
 
 export const generateTablePage = async (isStandard: boolean) => {
   const rootPath = await getRaipiotConfigRootPath()
+  const { routeName } = await inquirer.prompt([
+    {
+      type: 'text',
+      name: 'routeName',
+      message: t('Generate.Code.Input_Route_Name')
+    }
+  ])
+  const { plural: pluralName, singular: singularName } = await askForPluralAndSingular(routeName)
 
   // 找到路由目录，确认是否存在
   const {
     routeDir,
-    routeName,
     featureDir,
     apiDir,
     apiPrefix = '/raipiot-system',
@@ -53,11 +60,6 @@ export const generateTablePage = async (isStandard: boolean) => {
     // }
     {
       type: 'text',
-      name: 'routeName',
-      message: t('Generate.Code.Input_Route_Name')
-    },
-    {
-      type: 'text',
       name: 'apiPrefix',
       message: t('Generate.Code.Input_API_Prefix')
     },
@@ -67,8 +69,6 @@ export const generateTablePage = async (isStandard: boolean) => {
       message: 'Please input the prefix of query key:'
     }
   ])
-
-  const { plural: pluralName, singular: singularName } = await askForPluralAndSingular(routeName)
 
   const routePath = path.join(routeDir, pluralName)
   const featurePath = path.join(featureDir, pluralName)
@@ -99,7 +99,8 @@ export const generateTablePage = async (isStandard: boolean) => {
   await transferTemplateAndGenerateResult({
     slot,
     type: isStandard ? 'STANDARD_FEATURE' : 'TREE_FEATURE',
-    targetPath: featurePath
+    targetPath: featurePath,
+    templatePrefixPath: 'table-page'
   })
   await transferTemplateAndGenerateResult({
     slot,

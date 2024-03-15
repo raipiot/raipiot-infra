@@ -203,10 +203,18 @@ export async function askForGeminiKey(question: string) {
 }
 
 // 询问目标单词的单复数分别是什么
-export async function askForPluralAndSingular(word: string) {
-  const rawString = await askForGeminiKey(
-    `What is the plural and singular of ${word}?Connect singular and plural words with symbol *.For example:user*users`
-  )
-  const [singular, plural] = rawString.split('*')
-  return { singular, plural } as { plural: string; singular: string }
+export async function askForPluralAndSingular(word: string, isRetry = false) {
+  try {
+    const rawString = await askForGeminiKey(
+      `What is the plural and singular of ${word}?Connect singular and plural words with symbol *.For example:user*users`
+    )
+    const [singular, plural] = rawString.split('*')
+    return { singular, plural } as { plural: string; singular: string }
+  } catch (error) {
+    if (isRetry) {
+      console.log(red('Error: Failed to get plural and singular'))
+      process.exit(1)
+    }
+    return askForPluralAndSingular(word, true)
+  }
 }

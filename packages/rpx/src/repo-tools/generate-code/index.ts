@@ -34,7 +34,12 @@ export async function generateCode() {
       {
         title: CodeType.STANDARD_TABLE_PAGE,
         value: CodeType.STANDARD_TABLE_PAGE,
-        description: 'Generate a new standard page with table/modal/search bar/toolbar...'
+        description: 'Generate a new standard table page.'
+      },
+      {
+        title: CodeType.TREE_TABLE_PAGE,
+        value: CodeType.TREE_TABLE_PAGE,
+        description: 'Generate a new tree table page.'
       }
       // {
       //   title: CodeType.TABLE,
