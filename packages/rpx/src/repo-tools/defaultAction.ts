@@ -37,7 +37,7 @@ export async function defaultAction() {
         }
       ])
       const command = spawn('pnpm', [script])
-      const colorList = [
+      let colorList = [
         'teen',
         'mind',
         'morning',
@@ -54,10 +54,12 @@ export async function defaultAction() {
       command.stdout.on('data', (data) => {
         const rawString = data.toString() as string
         const lines = rawString.split('\n')
-        lines.forEach((line) => {
-          const color = shuffle(colorList)[0]
+        lines.forEach((line, idx) => {
           const [title, ...rest] = line.split(' ')
-
+          if (idx === 0 || !lines[idx - 1].includes(title)) {
+            colorList = shuffle(colorList)
+          }
+          const color = colorList[0]
           // @ts-ignore
           console.log(gradient[color](title), ' ', rest.join(' '))
         })
