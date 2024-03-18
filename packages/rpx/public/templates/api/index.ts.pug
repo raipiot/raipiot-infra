@@ -1,6 +1,6 @@
 import type HttpRequest from '@raipiot-2f/axios'
 
-import type { #{pcName}PageDto, #{pcName}SubmitDto } from './dto'
+import type { #{pcNames}PageDto, #{pcNames}SubmitDto } from './dto'
 import type { #{pcNames}Vo, #{pcName}Vo } from './vo'
 
 export * from './dto'
@@ -18,7 +18,7 @@ export class #{pcNames}API extends BaseAPI {
   /**
    * 获取
    */
-  detail(id: string, signal?: AbortSignal) {
+  async detail(id: string, signal?: AbortSignal) {
     return this.httpRequest.get<#{pcName}Vo>(
       `${this.#API_PREFIX}/detail`,
       { id },
@@ -31,7 +31,7 @@ export class #{pcNames}API extends BaseAPI {
   /**
    * 列表
    */
-  list(params: #{pcName}PageDto, signal?: AbortSignal) {
+  async list(params?: #{pcNames}PageDto, signal?: AbortSignal) {
     return this.httpRequest.get<#{pcNames}Vo>(`${this.#API_PREFIX}/list`, params, {
       signal
     })
@@ -40,14 +40,14 @@ export class #{pcNames}API extends BaseAPI {
   /**
    * 提交
    */
-  async submit(data: #{pcName}SubmitDto) {
+  async submit(data: #{pcNames}SubmitDto) {
     return this.httpRequest.post(`${this.#API_PREFIX}/submit`, data)
   }
 
   /**
    * 删除
    */
-  remove(ids: string) {
+  async remove(ids: string) {
     return this.httpRequest.post(
       `${this.#API_PREFIX}/remove`,
       {},

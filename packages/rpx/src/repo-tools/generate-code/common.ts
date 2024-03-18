@@ -22,12 +22,18 @@ export const validate = (input: string) => {
 
 // 基于传入的变量名，生成大驼峰命名法
 export const generatePascalCase = (input: string) => {
+  if (input.length === 0) {
+    return ''
+  }
   const words = input.split(/[-\s]/)
   return words.map((word) => word[0].toUpperCase() + word.slice(1)).join('')
 }
 
 // 基于传入的变量名，生成小驼峰命名法
 export const generateCamelCase = (input: string) => {
+  if (input.length === 0) {
+    return ''
+  }
   const words = input.split(/[-\s]/)
   return (
     words[0].toLowerCase() +
@@ -40,6 +46,9 @@ export const generateCamelCase = (input: string) => {
 
 // 基于传入的变量名，生成下划线间隔的大写常量
 export const generateConstantCase = (input: string) => {
+  if (input.length === 0) {
+    return ''
+  }
   const words = input.split(/[-\s]/)
   return words.map((word) => word.toUpperCase()).join('_')
 }

@@ -2,7 +2,7 @@ import { treeQueryOptions } from '../queries'
 import type { SubmitFormModal } from '../types'
 
 export const useModalForm = () => {
-  const { t } = useTranslation([#{constApiPrefix}/#{constNames}', 'COMMON'])
+  const { t } = useTranslation(['#{constApiPrefix}/#{constNames}', 'COMMON'])
   const { createModalForm } = useFormCreator<SubmitFormModal>()
   const [modalForm] = AForm.useForm<SubmitFormModal>()
 

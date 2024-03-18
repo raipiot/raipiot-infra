@@ -108,7 +108,7 @@ export const generateTablePage = async (isStandard: boolean) => {
     targetPath: apiPath
   })
   // // 更新 api 目录下的 index.ts，追加一行导入语句
-  const apiIndexFile = path.join(apiPath, 'index.ts')
+  const apiIndexFile = path.join(apiPath, apiPrefix, 'index.ts')
   if (fs.existsSync(apiIndexFile) && fs.statSync(apiIndexFile).isFile()) {
     fs.appendFileSync(apiIndexFile, `export * from './${singularName}`)
   }
