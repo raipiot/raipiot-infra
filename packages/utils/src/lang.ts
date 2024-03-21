@@ -1,4 +1,4 @@
-import { Lang } from '@raipiot-infra/enums'
+import { Lang } from './enums'
 
 /**
  * 语言工具类

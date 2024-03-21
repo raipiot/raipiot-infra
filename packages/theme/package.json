@@ -1,6 +1,6 @@
 {
   "name": "@raipiot-infra/theme",
-  "version": "0.1.13",
+  "version": "0.0.1",
   "description": "raipiot infra 通用主题配置",
   "author": "Bruce Song <recall4056@gmail.com> (https://github.com/recallwei/)",
   "homepage": "https://github.com/raipiot/raipiot-infra#readme",
@@ -32,15 +32,12 @@
     "prettier:fix": "prettier --write --cache --ignore-unknown --ignore-path=../../.prettierignore ."
   },
   "peerDependencies": {
-    "antd": "^5.15.0"
+    "antd": "^5.15.3"
   },
   "peerDependenciesMeta": {
     "antd": {
       "optional": true
     }
-  },
-  "devDependencies": {
-    "tsup": "^8.0.2"
   },
   "publishConfig": {
     "access": "public"

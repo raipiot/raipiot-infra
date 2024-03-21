@@ -1,6 +1,6 @@
 {
   "name": "@raipiot-infra/axios",
-  "version": "0.1.13",
+  "version": "0.0.1",
   "description": "raipiot infra 通用 Axios 模块",
   "author": "Bruce Song <recall4056@gmail.com> (https://github.com/recallwei/)",
   "homepage": "https://github.com/raipiot/raipiot-infra#readme",
@@ -32,10 +32,13 @@
     "prettier:fix": "prettier --write --cache --ignore-unknown --ignore-path=../../.prettierignore ."
   },
   "peerDependencies": {
-    "axios": "^1.6.7"
+    "@tanstack/react-router": "^1.21.0",
+    "antd": "^5.15.3",
+    "axios": "^1.6.8",
+    "i18next": "^23.10.1"
   },
-  "devDependencies": {
-    "tsup": "^8.0.2"
+  "dependencies": {
+    "@raipiot-infra/utils": "workspace:^"
   },
   "publishConfig": {
     "access": "public"

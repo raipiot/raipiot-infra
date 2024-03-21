@@ -1,5 +1,5 @@
 const {
-  project,
+  buildProject,
   defaultIgnorePatterns,
   buildOverrides,
   buildRules
@@ -28,7 +28,7 @@ module.exports = {
   settings: {
     'import/resolver': {
       typescript: {
-        project
+        project: buildProject()
       },
       node: {
         extensions: ['.js', '.cjs', '.mjs', '.ts', '.cts', '.mts', '.tsx', '.d.ts']

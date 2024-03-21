@@ -1,6 +1,6 @@
 {
   "name": "@raipiot-infra/auto-import",
-  "version": "0.1.13",
+  "version": "0.0.1",
   "description": "raipiot infra 自动引入模块",
   "author": "Bruce Song <recall4056@gmail.com> (https://github.com/recallwei/)",
   "homepage": "https://github.com/raipiot/raipiot-infra#readme",
@@ -36,7 +36,6 @@
     "unplugin-auto-import-ahooks": "^0.0.2"
   },
   "devDependencies": {
-    "tsup": "^8.0.2",
     "unimport": "^3.7.1"
   },
   "publishConfig": {
