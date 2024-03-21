@@ -1,19 +1,7 @@
 # @raipiot-infra/hooks
 
-## 0.1.13
+## 0.0.1
 
 ### Patch Changes
 
-- release
-
-## 0.1.12
-
-### Patch Changes
-
-- release
-
-## 0.1.11
-
-### Patch Changes
-
-- release
+- init packages

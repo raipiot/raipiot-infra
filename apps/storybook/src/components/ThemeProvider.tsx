@@ -1,13 +1,12 @@
 import { px2remTransformer, StyleProvider } from '@ant-design/cssinjs'
 import { HappyProvider } from '@ant-design/happy-work-theme'
 import { getDefaultLocale } from '@raipiot-infra/antd'
-import { Theme } from '@raipiot-infra/enums'
 import {
   darkThemeConfigPresets,
   lightThemeConfigPresets,
   messageConfig
 } from '@raipiot-infra/theme'
-import { ThemeUtils } from '@raipiot-infra/utils'
+import { Theme, ThemeUtils } from '@raipiot-infra/utils'
 import { addons } from '@storybook/preview-api'
 import { App, ConfigProvider } from 'antd'
 import type { PropsWithChildren } from 'react'

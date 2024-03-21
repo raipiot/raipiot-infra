@@ -1,6 +1,6 @@
 {
   "name": "@raipiot-infra/utils",
-  "version": "0.1.13",
+  "version": "0.0.1",
   "description": "raipiot infra 通用工具类库",
   "author": "Bruce Song <recall4056@gmail.com> (https://github.com/recallwei/)",
   "homepage": "https://github.com/raipiot/raipiot-infra#readme",
@@ -41,13 +41,6 @@
     "dayjs": {
       "optional": true
     }
-  },
-  "dependencies": {
-    "@raipiot-infra/enums": "workspace:*"
-  },
-  "devDependencies": {
-    "tsup": "^8.0.2",
-    "vitest": "^1.3.1"
   },
   "publishConfig": {
     "access": "public"

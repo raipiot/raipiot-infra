@@ -1,6 +1,6 @@
 {
   "name": "@raipiot-infra/rpx",
-  "version": "0.1.13",
+  "version": "0.0.1",
   "description": "raipiot infra 命令行工具",
   "author": "Bruce Song <recall4056@gmail.com> (https://github.com/recallwei/)",
   "homepage": "https://github.com/raipiot/raipiot-infra#readme",
@@ -52,8 +52,7 @@
     "@types/cross-spawn": "^6.0.6",
     "@types/degit": "^2.8.6",
     "@types/inquirer": "^9.0.7",
-    "@types/prompts": "^2.4.9",
-    "tsup": "^8.0.2"
+    "@types/prompts": "^2.4.9"
   },
   "publishConfig": {
     "access": "public"

@@ -1,6 +1,6 @@
 {
   "name": "@raipiot-infra/eslint-config-base",
-  "version": "0.1.13",
+  "version": "0.0.1",
   "description": "raipiot infra 通用 ESLint 基础配置",
   "author": "Bruce Song <recall4056@gmail.com> (https://github.com/recallwei/)",
   "homepage": "https://github.com/raipiot/raipiot-infra#readme",
@@ -27,7 +27,7 @@
     "prettier:check": "prettier --check --cache --ignore-unknown --ignore-path=../../.prettierignore .",
     "prettier:fix": "prettier --write --cache --ignore-unknown --ignore-path=../../.prettierignore ."
   },
-  "peerDependencies": {
+  "dependencies": {
     "eslint-plugin-jsx-a11y": "^6.8.0"
   },
   "publishConfig": {

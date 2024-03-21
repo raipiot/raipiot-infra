@@ -1,13 +1,6 @@
-import { RAxios } from '@raipiot-infra/axios'
+import HttpRequest from '@raipiot-infra/axios'
 
-const instance = new RAxios(
-  {
-    baseURL: 'https://api.iconify.design'
-  },
-  {
-    onFulfilled: (r) => r.data
-  }
-)
+const instance = new HttpRequest({})
 
 type IconCollectionsResponse = {
   [key: string]: {

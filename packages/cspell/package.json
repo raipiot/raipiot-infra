@@ -1,6 +1,6 @@
 {
   "name": "@raipiot-infra/cspell",
-  "version": "0.1.13",
+  "version": "0.0.1",
   "description": "raipiot infra 通用字典",
   "author": "Bruce Song <recall4056@gmail.com> (https://github.com/recallwei/)",
   "homepage": "https://github.com/raipiot/raipiot-infra#readme",
@@ -31,7 +31,7 @@
     "cspell:sort:dict": "sort -u -o dict/raipiot.txt dict/raipiot.txt"
   },
   "peerDependencies": {
-    "cspell": "^8.5.0"
+    "cspell": "^8.6.0"
   },
   "publishConfig": {
     "access": "public"

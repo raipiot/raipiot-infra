@@ -1,6 +1,6 @@
 {
   "name": "@raipiot-infra/config",
-  "version": "0.1.13",
+  "version": "0.0.1",
   "description": "raipiot infra 通用配置模块",
   "author": "Bruce Song <recall4056@gmail.com> (https://github.com/recallwei/)",
   "homepage": "https://github.com/raipiot/raipiot-infra#readme",
@@ -30,9 +30,6 @@
     "eslint:fix": "eslint . --color --cache --fix",
     "prettier:check": "prettier --check --cache --ignore-unknown --ignore-path=../../.prettierignore .",
     "prettier:fix": "prettier --write --cache --ignore-unknown --ignore-path=../../.prettierignore ."
-  },
-  "devDependencies": {
-    "tsup": "^8.0.2"
   },
   "publishConfig": {
     "access": "public"
