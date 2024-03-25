@@ -14,7 +14,7 @@ export const defaultFuzzySearchQuestion = {
 }
 
 export const validate = (input: string) => {
-  if (/^[A-Za-z0-9]*$/.test(input)) {
+  if (/^[A-Za-z][a-zA-Z0-9-]*$/.test(input)) {
     return true
   }
   return 'API name must start with a lowercase letter and only contain letters and numbers'

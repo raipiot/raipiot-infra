@@ -55,7 +55,11 @@ export async function defaultAction() {
         const rawString = data.toString() as string
         const lines = rawString.split('\n')
         lines.forEach((line, idx) => {
-          const [title, ...rest] = line.split(' ')
+          const [rawTitle, ...rest] = line.split(' ')
+          // 匹配ANSI转义序列的正则表达式
+          // eslint-disable-next-line no-control-regex
+          const ansiRegex = /\u001b\[[0-9;]+m/g
+          const title = rawTitle.replace(ansiRegex, '')
           if (idx === 0 || !lines[idx - 1].includes(title)) {
             colorList = shuffle(colorList)
           }
