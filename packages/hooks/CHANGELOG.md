@@ -1,5 +1,11 @@
 # @raipiot-infra/hooks
 
+## 0.0.6
+
+### Patch Changes
+
+- 更新格式类函数
+
 ## 0.0.5
 
 ### Patch Changes

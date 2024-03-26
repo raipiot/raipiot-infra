@@ -1,6 +1,6 @@
 {
   "name": "@raipiot-infra/hooks",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "raipiot 通用 Hooks",
   "author": "Aaron <rivenqinyy@gmail.com> (https://github.com/Developer27149/)",
   "homepage": "https://github.com/raipiot/raipiot-infra#readme",
