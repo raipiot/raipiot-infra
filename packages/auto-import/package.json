@@ -1,6 +1,6 @@
 {
   "name": "@raipiot-infra/auto-import",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "raipiot infra 自动引入模块",
   "author": "Bruce Song <recall4056@gmail.com> (https://github.com/recallwei/)",
   "homepage": "https://github.com/raipiot/raipiot-infra#readme",

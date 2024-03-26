@@ -1,5 +1,13 @@
 # @raipiot-infra/eslint-config-react-native
 
+## 0.0.5
+
+### Patch Changes
+
+- 新增数组对象的复原函数
+- Updated dependencies
+  - @raipiot-infra/eslint-config-base@0.0.5
+
 ## 0.0.4
 
 ### Patch Changes

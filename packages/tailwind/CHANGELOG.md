@@ -1,5 +1,13 @@
 # @raipiot-infra/tailwind
 
+## 0.0.5
+
+### Patch Changes
+
+- 新增数组对象的复原函数
+- Updated dependencies
+  - @raipiot-infra/theme@0.0.5
+
 ## 0.0.4
 
 ### Patch Changes
