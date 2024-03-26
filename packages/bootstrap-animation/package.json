@@ -1,6 +1,6 @@
 {
   "name": "@raipiot-infra/bootstrap-animation",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "description": "raipiot infra 启动动画模块",
   "author": "Bruce Song <recall4056@gmail.com> (https://github.com/recallwei/)",
   "homepage": "https://github.com/raipiot/raipiot-infra#readme",

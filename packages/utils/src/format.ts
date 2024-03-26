@@ -57,7 +57,12 @@ export class FormatUtils {
     return result
   }
 
-  static translateSimpleObjectWithArray<T extends Record<string, any>>(obj: T) {
+  /**
+   * 对单层存在数组的数据进行处理，将数组转化为字符串
+   * @param obj api 通信的简单对象，只有一层结构
+   * @returns
+   */
+  static simpleArrayToString<T extends Record<string, any>>(obj: T) {
     const newObject = structuredClone(obj)
     Object.entries(obj).forEach(([key, value]) => {
       if (Array.isArray(value)) {
@@ -65,5 +70,19 @@ export class FormatUtils {
       }
     })
     return newObject
+  }
+
+  /**
+   * 将数据对象指定的属性的值转化为数组，逆操作 simpleArrayToString
+   * @param obj api 传输对象，已经将数组转换为字符串的对象
+   * @param keys 指定的 key
+   */
+  static arrayStringRecoveryByKeys<T extends Record<string, any>>(obj: T, keys: (keyof T)[]) {
+    const newObject = structuredClone(obj)
+    Object.keys(obj).forEach((key) => {
+      if (keys.includes(key as keyof T)) {
+        Object.setPrototypeOf(newObject[key], Object.getPrototypeOf(obj[key]).split(','))
+      }
+    })
   }
 }
