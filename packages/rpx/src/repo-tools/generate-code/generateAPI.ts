@@ -32,10 +32,15 @@ export const generateAPI = async () => {
     color: 'green'
   })
   const targetFileFullPath = path.join(targetPath, apiName)
-  // 加载模板，修改模板，写入文件
-  await transferTemplateAndGenerateResult('API', targetFileFullPath, {
+  const slot = {
     ccName: generateCamelCase(apiName),
     pcName: generatePascalCase(apiName)
+  }
+  // 加载模板，修改模板，写入文件
+  await transferTemplateAndGenerateResult({
+    type: 'API',
+    slot,
+    targetPath: targetFileFullPath
   })
   spinner.stop({
     text: `${apiName} generated successfully!`

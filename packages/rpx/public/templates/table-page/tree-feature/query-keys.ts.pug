@@ -1,0 +1,13 @@
+import type { #{pcNames}PageDto } from '@raipiot-2f/api'
+
+export const #{constNames}_QK = '#{queryKeyPrefix}:#{ccNames}'
+
+export const #{constName}_QK = '#{queryKeyPrefix}:#{ccName}'
+
+export const #{constName}_TREE_QK = '#{queryKeyPrefix}:#{ccName}-tree'
+
+export const #{ccNames}QK = (params?: #{pcNames}PageDto) => [#{constNames}_QK, params]
+
+export const #{ccName}QK = (id?: string) => [#{constName}_QK, { id }]
+
+export const #{ccName}TreeQK = () => [#{constName}_TREE_QK]

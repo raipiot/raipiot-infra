@@ -1,0 +1,96 @@
+import type { #{pcName}Vo } from '@raipiot-2f/api'
+import { isMobile } from 'react-device-detect'
+
+import { tenantsQueryOptions } from '../../tenants'
+import { useBaseModalContext } from '../context'
+import { useRemoveMutation } from '../mutations'
+import { detailQueryOptions } from '../queries'
+
+export const useBaseColumns = () => {
+  const { modal, form } = useBaseModalContext()
+  const { t } = useTranslation(['#{constApiPrefix}/#{constNames}', 'COMMON'])
+  const { createActions, createColumns } = useTableCreator<#{pcName}Vo>()
+
+  const { mutateAsync, isPending } = useRemoveMutation()
+  const {
+    data: { records }
+  } = useSuspenseQuery(tenantsQueryOptions({ current: 1, size: 1000 }))
+
+  return {
+    columns: createColumns<#{pcName}Vo>([
+      {
+        title: t('NAME'),
+        dataIndex: '#{ccName}Name'
+      },
+      {
+        title: t('TENANT'),
+        dataIndex: 'tenantId',
+        render: (value) => (
+          <RpTagString value={records.find((i) => i.tenantId === value)?.tenantName ?? '-'} />
+        )
+      },
+      {
+        title: t('FULLNAME'),
+        dataIndex: 'fullName'
+      },
+      {
+        title: t('TYPE'),
+        dataIndex: '#{ccName}CategoryName',
+        render: (value) => <RpTagString value={value} />
+      },
+      {
+        title: t('SORT'),
+        dataIndex: 'sort',
+        width: 60
+      },
+      {
+        title: t('COMMON:REMARK'),
+        dataIndex: 'remark',
+        width: 200,
+        ellipsis: { showTitle: false },
+        render: (value) => <ATooltip title={value}>{value}</ATooltip>
+      },
+      createActions({
+        width: 140,
+        render: (_, record) => (
+          // rp-table-action 用于非 Hover 表格行上隐藏操作按钮
+          <ASpace className={clsx(!isMobile && 'rp-table-action', 'transition-all ease-out')}>
+            <RpButton
+              variant="view"
+              size="small"
+              onMouseEnter={() => queryClient.prefetchQuery(detailQueryOptions(record.id!))}
+              onClick={async () => {
+                modal.openRead()
+                modal.setMeta(record.id!)
+                form.setFieldsValue(
+                  await queryClient.ensureQueryData(detailQueryOptions(record.id!))
+                )
+              }}
+            />
+            <RpButton
+              variant="edit"
+              size="small"
+              onMouseEnter={() => queryClient.prefetchQuery(detailQueryOptions(record.id!))}
+              onClick={async () => {
+                modal.openEdit()
+                modal.setMeta(record.id!)
+                form.setFieldsValue(
+                  await queryClient.ensureQueryData(detailQueryOptions(record.id!))
+                )
+              }}
+            />
+            <RpDeletePopconfirm
+              okBtnLoading={isPending}
+              onConfirm={() => mutateAsync(record.id!)}
+            >
+              <RpButton
+                variant="delete"
+                size="small"
+              />
+            </RpDeletePopconfirm>
+          </ASpace>
+        )
+      })
+    ])
+  }
+}

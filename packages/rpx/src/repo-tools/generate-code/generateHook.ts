@@ -3,7 +3,6 @@ import path from 'node:path'
 import inquirer from 'inquirer'
 import { createSpinner } from 'nanospinner'
 
-// import { GenerateCodeEnum } from '../../types'
 import { getRaipiotConfigRootPath, transferTemplateAndGenerateResult } from '../../utils'
 import { defaultFuzzySearchQuestion } from './common'
 
@@ -32,10 +31,14 @@ export const generateHook = async () => {
     color: 'green'
   })
   const targetFileFullPath = path.join(targetPath, hookName)
-
-  // 加载模板，修改模板，写入文件
-  await transferTemplateAndGenerateResult('HOOK', targetFileFullPath, {
+  const slot = {
     hookName
+  }
+  // 加载模板，修改模板，写入文件
+  await transferTemplateAndGenerateResult({
+    targetPath: targetFileFullPath,
+    type: 'HOOK',
+    slot
   })
   spinner.stop({
     text: `${hookName} generated successfully!`

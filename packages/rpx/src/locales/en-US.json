@@ -16,5 +16,14 @@
   "Need.Org.Or.Repo": "No org or repo found in raipiot.config.js",
   "Display.Current.Version": "Display the current version",
   "Display.Help.Command": "Display help for command",
-  "Action.Not.Match": "Action not match! Please check the command by 'tornado-x -h'"
+  "Action.Not.Match": "Action not match! Please check the command by 'tornado-x -h'",
+  "Generate.Code": {
+    "Select_Route_Dir": "Select the directory where the route is located",
+    "Input_Route_Name": "Enter the route name",
+    "Select_API_Dir": "Select the directory where the API is located",
+    "Input_API_Name": "Enter the API name",
+    "Select_Feature_Dir": "Select the directory where the Feature is located",
+    "Input_Feature_Name": "Enter the Feature name",
+    "Input_API_Prefix": "Enter the API prefix, default is '/raipiot-system'"
+  }
 }

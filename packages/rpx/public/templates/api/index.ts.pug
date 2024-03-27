@@ -1,25 +1,24 @@
 import type HttpRequest from '@raipiot-2f/axios'
 
-import { BaseAPI } from ''
-import type { #{pcName}PageDto, #{pcName}SubmitDto } from './dto'
-import type { #{pcName}sVo, #{pcName}Vo } from './vo'
+import type { #{pcNames}PageDto, #{pcNames}SubmitDto } from './dto'
+import type { #{pcNames}Vo, #{pcName}Vo } from './vo'
 
 export * from './dto'
 export * from './vo'
 
 
-export class #{apiPrefix}#{pcName}API extends BaseAPI {
+export class #{pcNames}API extends BaseAPI {
   #API_PREFIX: string
 
   constructor(httpRequest: HttpRequest) {
     super(httpRequest)
-    this.#API_PREFIX = `${this.BASE_API_PREFIX}/#{apiPrefix}/#{ccName}`
+    this.#API_PREFIX = `${this.BASE_API_PREFIX}#{apiPrefix}/#{ccName}`
   }
 
   /**
    * 获取
    */
-  detail(id: string, signal: AbortSignal) {
+  async detail(id: string, signal?: AbortSignal) {
     return this.httpRequest.get<#{pcName}Vo>(
       `${this.#API_PREFIX}/detail`,
       { id },
@@ -32,8 +31,8 @@ export class #{apiPrefix}#{pcName}API extends BaseAPI {
   /**
    * 列表
    */
-  list(params: #{pcName}PageDto, signal?: AbortSignal) {
-    return this.httpRequest.get<#{pcName}sVo>(`${this.#API_PREFIX}/list`, params, {
+  async list(params?: #{pcNames}PageDto, signal?: AbortSignal) {
+    return this.httpRequest.get<#{pcNames}Vo>(`${this.#API_PREFIX}/list`, params, {
       signal
     })
   }
@@ -41,14 +40,14 @@ export class #{apiPrefix}#{pcName}API extends BaseAPI {
   /**
    * 提交
    */
-  async submit(data: #{pcName}SubmitDto) {
+  async submit(data: #{pcNames}SubmitDto) {
     return this.httpRequest.post(`${this.#API_PREFIX}/submit`, data)
   }
 
   /**
    * 删除
    */
-  remove(ids: string) {
+  async remove(ids: string) {
     return this.httpRequest.post(
       `${this.#API_PREFIX}/remove`,
       {},

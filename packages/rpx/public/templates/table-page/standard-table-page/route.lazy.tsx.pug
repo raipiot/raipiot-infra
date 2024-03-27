@@ -1,15 +1,21 @@
 import type { #{pcName}PageDto, #{pcName}Vo } from '@raipiot-2f/api'
 
 import {
-  #{ccName}sQueryOptions,
-  use#{pcName}sColumns,
-  use#{pcName}sModalForm,
-  use#{pcName}sSearchForm,
-  use#{pcName}RemoveMutation,
+  #{ccNames}QueryOptions,
+  use#{pcNames}Columns,
+  use#{pcNames}ModalForm,
+  use#{pcNames}SearchForm,
+  use#{pcNames}RemoveMutation,
   use#{pcName}SubmitMutation,
 } from '@/features/#{featureName}'
 
-function #{pcName}Table() {
+
+
+export const Route = createLazyFileRoute('/')({
+  component: RouteComponent
+})
+
+function RouteComponent() {
   // 分页器
   const { pageParams, setPageParams, pagination, isPending, startTransition } =
     usePagination<#{pcName}PageDto>()
@@ -18,20 +24,20 @@ function #{pcName}Table() {
   // 弹窗
   const modal = useModal()
   // 搜索表单
-  const { searchForm, searchFormItems } = use#{pcName}sSearchForm()
+  const { searchForm, searchFormItems } = use#{pcNames}SearchForm()
   // 弹窗表单
-  const { modalForm, modalFormItems } = use#{pcName}sModalForm()
+  const { modalForm, modalFormItems } = use#{pcNames}ModalForm()
   // 表格列
-  const { columns } = use#{pcName}sColumns({ modal, form: modalForm })
+  const { columns } = use#{pcNames}Columns({ modal, form: modalForm })
 
   // 异步查询：列表数据
   const {
     data: { records, total },
     refetch
-  } = useSuspenseQuery(#{ccName}sQueryOptions(PageUtils.mergeParams(pageParams)))
+  } = useSuspenseQuery(#{ccNames}QueryOptions(PageUtils.mergeParams(pageParams)))
   // 异步删除
   const { mutateAsync: removeMutateAsync, isPending: isRemovePending } =
-    use#{pcName}RemoveMutation()
+    use#{pcNames}RemoveMutation()
   // 异步提交
   const { mutateAsync: submitMutateAsync, isPending: isSubmitPending } =
     use#{pcName}SubmitMutation()
@@ -68,7 +74,7 @@ function #{pcName}Table() {
         // 事件：预渲染
         onPrefetch={(values) =>
           queryClient.prefetchQuery(
-            #{ccName}sQueryOptions(PageUtils.mergeParams(pageParams, values))
+            #{ccNames}QueryOptions(PageUtils.mergeParams(pageParams, values))
           )
         }
       />
@@ -85,7 +91,7 @@ function #{pcName}Table() {
         pagination={pagination({
           total,
           // 事件：分页预渲染
-          onPrefetch: (values) => queryClient.prefetchQuery(#{ccName}sQueryOptions(values))
+          onPrefetch: (values) => queryClient.prefetchQuery(#{ccNames}QueryOptions(values))
         })}
         // 刷新加载
         refreshLoading={isPending}
@@ -131,24 +137,16 @@ function #{pcName}Table() {
           mode={modal.type}
           // 表单初始值
           initialValues={{
-            sort: 1,
-            isSealed: false
           }}
           // 表单提交
-          onFinish={async () => {
+          onFinish={() => {
             const values = modalForm.getFieldsValue(true)
-            await submitMutateAsync({
-              ...values,
-              isSealed: FormatUtils.toDbNum(values.isSealed)
+            submitMutateAsync(values, {
+              onSuccess: modal.close
             })
-            modal.close()
           }}
         />
       </RpModal>
     </RpPageContainer>
   )
 }
-
-export const Route = createLazyFileRoute('/')({
-  component: #{pcName}Table
-})
