@@ -12,7 +12,6 @@ import { INVALID_PARAMS } from '../common'
  */
 export const useBoolean = (initialValue = false, callback?: (newValue?: boolean) => unknown) => {
   const [value, setValue] = useState(!!initialValue)
-
   const toggleWithCallback = (cb = callback) => {
     setValue((prev) => {
       // 确保回调拿到的是最新的值
